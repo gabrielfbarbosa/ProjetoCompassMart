@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">CompassMart</string>
+
+    <!-- Botões -->
+    <string name="btn_login">Login</string>
+    <string name="btn_entrar">Entrar</string>
+    <string name="btn_cadastrar">Cadastre-se</string>
+    <string name="btn_continuar">Continuar</string>
+    <string name="btn_voltar">Voltar</string>
+    <string name="btn_voltar_inicio">Voltar ao início </string>
+    <string name="btn_home">Ir às compras!</string>
+    <string name="btn_comprar">Comprar</string>
+    <string name="btn_add_produto_carrinho">Adicionar no carrinho</string>
+    <string name="btn_add_produto">Adicionar mais produtos</string>
+    <string name="btn_compras">Ver minhas compras</string>
+    <string name="btn_finalizar">Finalizar compra</string>
+
+    <!-- Títulos das telas -->
+    <string name="categorias">Categorias</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="perfil">Perfil do Usuário</string>
+    <string name="carrinho_compras">Carrinho de Compras</string>
+    <string name="cadastro">Crie sua conta</string>
+    <string name="endereco">Endereço de Entrega</string>
+    <string name="pagamento">Forma de Pagamento</string>
+    <string name="confirmacao">Confirme seu endereço e produtos</string>
+    <string name="parabenização">Parabéns!</string>
+
+    <!-- Títulos das subcategorias -->
+    <string name="acessorios">Acessórios</string>
+    <string name="capas">Capas</string>
+    <string name="peliculas">Películas</string>
+    <string name="powerbanks">Powerbanks</string>
+    <string name="smartphones">Smartphones</string>
+
+    <!-- Frases da tela de Onboarding -->
+    <string-array name="onboarding">
+        <item>O melhor da tecnologia na palma da sua mão!</item>
+        <item>Smartphones, capas, powerbanks, películas e muito mais!</item>
+        <item>Rápido, fácil e prático!</item>
+        <item>Escolha os melhores produtos e a melhor forma de pagamento sem nenhuma dificuldade.</item>
+        <item>Tenha o poder que você merece!</item>
+        <item>Comece a comprar agora mesmo para mudar a sua vida!</item>
+    </string-array>
+
+    <!-- Frases da tela de Perfil -->
+    <string name="info">Informações</string>
+    <string name="minhas_compras">Minhas compras</string>
+
+    <!-- Frases da tela de Produto -->
+    <string name="produto">Produto</string>
+    <string name="mais_info">Mais informações</string>
+
+    <!-- Frases da tela de Carrinho de Compras -->
+    <string name="quantidade">Quantidade</string>
+
+    <!-- Frases da tela de Confirmação -->
+    <string name="valor">Valor total:</string>
+    <string name="produtos_escolhidos">Produto(s) escolhido(s):</string>
+
+    <!-- Frases da tela de Pagamento -->
+    <string name="compass_pay">Compass Pay</string>
+    <string name="pix">Pix</string>
+
+    <!-- Frases da tela de Parabenização -->
+    <string name="frase_parabenização">Você acabou de adquirir o poder que merece!</string>
+
+    <!-- Campos dos formulários -->
+    <string name="nome">Nome completo</string>
+    <string name="email">E-mail</string>
+    <string name="senha">Senha</string>
+    <string name="confirma_senha">Confirme sua senha</string>
+    <string name="logradouro">Logradouro</string>
+    <string name="cep">CEP</string>
+    <string name="numero">N°</string>
+    <string name="bairro">Bairro</string>
+    <string name="cidade">Cidade</string>
+    <string name="uf">UF</string>
+
+</resources>
