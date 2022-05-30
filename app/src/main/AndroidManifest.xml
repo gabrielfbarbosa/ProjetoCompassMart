@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CompassMart"
         tools:targetApi="31">
+        <activity
+            android:name=".TelaOnboardingActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
