@@ -4,40 +4,29 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import br.com.compass.compassmart.R
+import br.com.compass.compassmart.databinding.FragmentOnboardingMainBinding
+import br.com.compass.compassmart.ui.onboarding.model.InformacoesModel
 
 class OnboardingMain : Fragment() {
 
-    // Busca as "bolinhas" de progresso
-    private lateinit var progresso1: ImageView
-    private lateinit var progresso2: ImageView
-    private lateinit var progresso3: ImageView
-
-    // Busca intens de visualização
-    private lateinit var viewPager2: ViewPager2
-    private var tituloList = mutableListOf<String>()
-    private var descricaoList = mutableListOf<String>()
-    private var imagemList = mutableListOf<Int>()
+    //Para chamar apenas os ids do Layout que estou trabalhando
+    private val binding: FragmentOnboardingMainBinding by lazy {
+        FragmentOnboardingMainBinding.inflate(layoutInflater)
+    }
+    private var data = mutableListOf<InformacoesModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_onboarding_main, container, false)
-
-        viewPager2 = view.findViewById(R.id.onboarding_main_view_pager)
-        progresso1 = view.findViewById(R.id.onboarding_main_progresso_esquerda)
-        progresso2 = view.findViewById(R.id.onboarding_main_progresso_centro)
-        progresso3 = view.findViewById(R.id.onboarding_main_progresso_direita)
 
         conteudo()
-        viewPager2.adapter = OnboardingAdpter(tituloList, descricaoList, imagemList)
+        binding.onboardingMainViewPager.adapter = OnboardingAdpter(data)
 
-        viewPager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            binding.onboardingMainViewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
 
             override fun onPageScrolled(
                 position: Int,
@@ -47,27 +36,20 @@ class OnboardingMain : Fragment() {
                 super.onPageScrolled(position, positionOffset, positionOffsetPixels)
                 mudarCorBolinhaProgresso()
             }
-
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
             }
-
             override fun onPageScrollStateChanged(state: Int) {
                 super.onPageScrollStateChanged(state)
                 mudarCorBolinhaProgresso()
             }
         })
-        return view
+        return binding.root
     }
-
-
     // Adiciona os conteudos dos cards
     fun adicionaNaLista(titulo : String, descricao : String, imagem: Int){
-        tituloList.add(titulo)
-        descricaoList.add(descricao)
-        imagemList.add(imagem)
+        data.add(InformacoesModel(titulo, descricao, imagem))
     }
-
     // Conteudo de cada cards
     fun conteudo() {
         adicionaNaLista("O melhor da tecnologia\n" + "na palma da sua mão!",
@@ -82,27 +64,24 @@ class OnboardingMain : Fragment() {
             "Comece a comprar agora mesmo\n" + "para mudar a sua vida!",
             R.drawable.img_onboarding3)
     }
-
     // Faz a mudança da cor das bolinhas de progresso
     private fun mudarCorBolinhaProgresso() {
-        when (viewPager2.currentItem) {
+        when (binding.onboardingMainViewPager.currentItem) {
             0 -> {
-                progresso1.setBackgroundResource(R.color.orange_700)
-                progresso2.setBackgroundResource(R.color.orange_200)
-                progresso3.setBackgroundResource(R.color.orange_200)
+                binding.onboardingMainProgressoEsquerda.setBackgroundResource(R.color.orange_700)
+                binding.onboardingMainProgressoCentro.setBackgroundResource(R.color.orange_200)
+                binding.onboardingMainProgressoDireita.setBackgroundResource(R.color.orange_200)
             }
             1 -> {
-                progresso1.setBackgroundResource(R.color.orange_200)
-                progresso2.setBackgroundResource(R.color.orange_700)
-                progresso3.setBackgroundResource(R.color.orange_200)
+                binding.onboardingMainProgressoEsquerda.setBackgroundResource(R.color.orange_200)
+                binding.onboardingMainProgressoCentro.setBackgroundResource(R.color.orange_700)
+                binding.onboardingMainProgressoDireita.setBackgroundResource(R.color.orange_200)
             }
             2 -> {
-                progresso1.setBackgroundResource(R.color.orange_200)
-                progresso2.setBackgroundResource(R.color.orange_200)
-                progresso3.setBackgroundResource(R.color.orange_700)
+                binding.onboardingMainProgressoEsquerda.setBackgroundResource(R.color.orange_200)
+                binding.onboardingMainProgressoCentro.setBackgroundResource(R.color.orange_200)
+                binding.onboardingMainProgressoDireita.setBackgroundResource(R.color.orange_700)
             }
         }
     }
-
-
 }

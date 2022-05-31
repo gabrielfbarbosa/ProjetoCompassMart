@@ -82,12 +82,13 @@
 
     <Button
         android:id="@+id/onboarding_main_botao_comecar_comprar"
-        android:layout_width="wrap_content"
+        android:layout_width="275dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/onboarding_main_view_pager"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="40dp"
-        android:text="Começar a comprar"
+        android:text="Ir para às compras!"
+        app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -3,34 +3,38 @@ package br.com.compass.compassmart.ui.onboarding
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import br.com.compass.compassmart.R
+import br.com.compass.compassmart.databinding.ItemOnboardingBinding
+import br.com.compass.compassmart.ui.onboarding.model.InformacoesModel
+/*
+ Em vez de receber separadamente cada item que sera apresentado,
+ Recebe apenas um data, com o modelo dos item a serem apresentados
+*/
+class OnboardingAdpter(
 
-class OnboardingAdpter(private val titulo: List<String>, private val descricao: List<String>, private val imagem: List<Int>) : RecyclerView.Adapter<OnboardingAdpter.PaginasViewHolder>() {
+    private val data: List<InformacoesModel>
 
-    class PaginasViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
-        val itemTitulo : TextView = itemView.findViewById(R.id.informacao_inicial_titulo)
-        val itemDescricao : TextView = itemView.findViewById(R.id.informacao_inicial_descricao)
-        val itemImagem : ImageView = itemView.findViewById(R.id.informacao_inicial_imagem)
+) : RecyclerView.Adapter<OnboardingAdpter.PaginasViewHolder>() {
+
+    class PaginasViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        // Utilizando Binding para trazer os ids apenas do layout que estou trabalhando aqui
+        val binding: ItemOnboardingBinding = ItemOnboardingBinding.bind(itemView)
     }
-
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
     ): OnboardingAdpter.PaginasViewHolder {
-        return PaginasViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.informacao_inicial, parent, false))
+        val view = ItemOnboardingBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return PaginasViewHolder(
+            view.root
+        )
     }
-
     override fun getItemCount(): Int {
-        return titulo.size
+        return data.size
     }
-
     override fun onBindViewHolder(holder: OnboardingAdpter.PaginasViewHolder, position: Int) {
-        holder.itemTitulo.text = titulo[position]
-        holder.itemDescricao.text = descricao[position]
-        holder.itemImagem.setImageResource(imagem[position])
-
+        holder.binding.informacaoInicialTitulo.text = data[position].tiulo
+        holder.binding.informacaoInicialDescricao.text = data[position].descricao
+        holder.binding.informacaoInicialImagem.setImageResource(data[position].drawableId)
     }
 }

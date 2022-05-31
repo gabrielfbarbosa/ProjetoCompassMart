@@ -1,8 +1,8 @@
-package br.com.compass.compassmart.ui.onboarding
+package br.com.compass.compassmart.ui.onboarding.model
 
 import androidx.annotation.DrawableRes
 
-data class Informacoes (
+data class InformacoesModel (
     val tiulo: String,
     val descricao : String,
     @DrawableRes val drawableId: Int
