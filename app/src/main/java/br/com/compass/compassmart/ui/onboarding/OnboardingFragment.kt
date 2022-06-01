@@ -7,13 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import br.com.compass.compassmart.R
-import br.com.compass.compassmart.databinding.FragmentOnboardingMainBinding
+import br.com.compass.compassmart.databinding.FragmentOnboardingBinding
 import br.com.compass.compassmart.ui.onboarding.model.InformacoesModel
 
 class OnboardingFragment : Fragment() {
 
-    private val binding: FragmentOnboardingMainBinding by lazy {
-        FragmentOnboardingMainBinding.inflate(layoutInflater)
+    private val binding: FragmentOnboardingBinding by lazy {
+        FragmentOnboardingBinding.inflate(layoutInflater)
     }
     private var data = mutableListOf<InformacoesModel>()
 
