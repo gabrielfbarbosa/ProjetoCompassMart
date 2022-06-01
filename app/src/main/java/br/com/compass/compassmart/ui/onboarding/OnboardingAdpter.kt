@@ -6,14 +6,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.compass.compassmart.databinding.ItemOnboardingBinding
 import br.com.compass.compassmart.ui.onboarding.model.InformacoesModel
-/*
- Em vez de receber separadamente cada item que sera apresentado,
- Recebe apenas um data, com o modelo dos item a serem apresentados
-*/
+
 class OnboardingAdpter(
-
     private val data: List<InformacoesModel>
-
 ) : RecyclerView.Adapter<OnboardingAdpter.PaginasViewHolder>() {
 
     class PaginasViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -25,9 +20,7 @@ class OnboardingAdpter(
         viewType: Int
     ): OnboardingAdpter.PaginasViewHolder {
         val view = ItemOnboardingBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return PaginasViewHolder(
-            view.root
-        )
+        return PaginasViewHolder(view.root)
     }
     override fun getItemCount(): Int {
         return data.size

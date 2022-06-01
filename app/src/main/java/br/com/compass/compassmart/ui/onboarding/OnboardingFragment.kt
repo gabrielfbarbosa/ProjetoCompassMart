@@ -10,9 +10,8 @@ import br.com.compass.compassmart.R
 import br.com.compass.compassmart.databinding.FragmentOnboardingMainBinding
 import br.com.compass.compassmart.ui.onboarding.model.InformacoesModel
 
-class OnboardingMain : Fragment() {
+class OnboardingFragment : Fragment() {
 
-    //Para chamar apenas os ids do Layout que estou trabalhando
     private val binding: FragmentOnboardingMainBinding by lazy {
         FragmentOnboardingMainBinding.inflate(layoutInflater)
     }
@@ -50,7 +49,7 @@ class OnboardingMain : Fragment() {
     fun adicionaNaLista(titulo : String, descricao : String, imagem: Int){
         data.add(InformacoesModel(titulo, descricao, imagem))
     }
-    // Conteudo de cada cards
+    // Conteudo de cada card
     fun conteudo() {
         adicionaNaLista("O melhor da tecnologia\n" + "na palma da sua mão!",
             "Smartphones, Capas, powebanks, \n" + "películas e muito mais!",
