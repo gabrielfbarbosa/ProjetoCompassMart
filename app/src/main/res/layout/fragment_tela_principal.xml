@@ -3,11 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TelaPrincipalFragment">
+    tools:context="br.com.compass.compassmart.ui.telaprincipal.TelaPrincipalFragment">
+
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/placeholder_main" />
+        android:text="@string/hello_blank_fragment" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
