@@ -12,9 +12,8 @@ import br.com.compass.compassmart.ui.onboarding.model.InformacoesModel
 
 class OnboardingFragment : Fragment() {
 
-    private val binding: FragmentOnboardingBinding by lazy {
-        FragmentOnboardingBinding.inflate(layoutInflater)
-    }
+    private var _binding: FragmentOnboardingBinding? = null
+    private val binding get() = _binding!!
     private var data = mutableListOf<InformacoesModel>()
 
     override fun onCreateView(
@@ -22,10 +21,17 @@ class OnboardingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        conteudo()
-        binding.onboardingMainViewPager.adapter = OnboardingAdpter(data)
+        _binding = FragmentOnboardingBinding.inflate(inflater, container, false)
 
-            binding.onboardingMainViewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+        conteudo()
+        setupViewPager()
+        return binding.root
+    }
+
+    private fun setupViewPager() {
+        binding.onboardingMainViewPager.adapter = OnboardingAdpter(data)
+        binding.onboardingMainViewPager.registerOnPageChangeCallback(object :
+            ViewPager2.OnPageChangeCallback() {
 
             override fun onPageScrolled(
                 position: Int,
@@ -35,34 +41,41 @@ class OnboardingFragment : Fragment() {
                 super.onPageScrolled(position, positionOffset, positionOffsetPixels)
                 mudarCorBolinhaProgresso()
             }
+
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
             }
+
             override fun onPageScrollStateChanged(state: Int) {
                 super.onPageScrollStateChanged(state)
                 mudarCorBolinhaProgresso()
             }
         })
-        return binding.root
     }
+
     // Adiciona os conteudos dos cards
-    fun adicionaNaLista(titulo : String, descricao : String, imagem: Int){
+    private fun adicionaNaLista(titulo : String, descricao : String, imagem: Int){
         data.add(InformacoesModel(titulo, descricao, imagem))
     }
+
     // Conteudo de cada card
-    fun conteudo() {
-        adicionaNaLista("O melhor da tecnologia\n" + "na palma da sua mão!",
-            "Smartphones, Capas, powebanks, \n" + "películas e muito mais!",
+    private fun conteudo() {
+
+        val onboardingText = resources.getStringArray((R.array.onboarding))
+
+        adicionaNaLista(onboardingText[0],
+            onboardingText[1],
             R.drawable.img_onboarding1)
 
-        adicionaNaLista("Rápido, fácil\n" + "e prático!",
-            "Escolha os melhores produtos\n" + "e a melhor forma de pagamento\n" + "sem nenhuma dificuldade!",
+        adicionaNaLista(onboardingText[2],
+            onboardingText[3],
             R.drawable.img_onboarding2)
 
-        adicionaNaLista("Tenha o poder que \n" + "você merece!",
-            "Comece a comprar agora mesmo\n" + "para mudar a sua vida!",
+        adicionaNaLista(onboardingText[4],
+            onboardingText[5],
             R.drawable.img_onboarding3)
     }
+
     // Faz a mudança da cor das bolinhas de progresso
     private fun mudarCorBolinhaProgresso() {
         when (binding.onboardingMainViewPager.currentItem) {

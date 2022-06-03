@@ -87,7 +87,7 @@
         android:layout_below="@+id/onboarding_main_view_pager"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="40dp"
-        android:text="Ir para às compras!"
+        android:text="@string/btn_onboarding"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

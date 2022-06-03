@@ -12,7 +12,6 @@ class OnboardingAdpter(
 ) : RecyclerView.Adapter<OnboardingAdpter.PaginasViewHolder>() {
 
     class PaginasViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        // Utilizando Binding para trazer os ids apenas do layout que estou trabalhando aqui
         val binding: ItemOnboardingBinding = ItemOnboardingBinding.bind(itemView)
     }
     override fun onCreateViewHolder(
