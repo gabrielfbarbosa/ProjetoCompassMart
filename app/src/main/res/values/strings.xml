@@ -14,6 +14,8 @@
     <string name="btn_add_produto">Adicionar mais produtos</string>
     <string name="btn_compras">Ver minhas compras</string>
     <string name="btn_finalizar">Finalizar compra</string>
+    <string name="rodape_login">Não tem conta? Faça o cadastro!</string>
+    <string name="rodape_cadastro">Não tem conta? Faça o login!</string>
 
     <!-- Títulos das telas -->
     <string name="categorias">Categorias</string>
