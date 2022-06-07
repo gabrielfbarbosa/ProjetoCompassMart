@@ -20,12 +20,14 @@ class OnboardingFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         _binding = FragmentOnboardingBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         conteudo()
         setupViewPager()
-        return binding.root
     }
 
     private fun setupViewPager() {
@@ -54,7 +56,7 @@ class OnboardingFragment : Fragment() {
     }
 
     // Adiciona os conteudos dos cards
-    private fun adicionaNaLista(titulo : String, descricao : String, imagem: Int){
+    private fun adicionaNaLista(titulo: String, descricao: String, imagem: Int) {
         data.add(InformacoesModel(titulo, descricao, imagem))
     }
 
@@ -63,17 +65,23 @@ class OnboardingFragment : Fragment() {
 
         val onboardingText = resources.getStringArray((R.array.onboarding))
 
-        adicionaNaLista(onboardingText[0],
+        adicionaNaLista(
+            onboardingText[0],
             onboardingText[1],
-            R.drawable.img_onboarding1)
+            R.drawable.img_onboarding1
+        )
 
-        adicionaNaLista(onboardingText[2],
+        adicionaNaLista(
+            onboardingText[2],
             onboardingText[3],
-            R.drawable.img_onboarding2)
+            R.drawable.img_onboarding2
+        )
 
-        adicionaNaLista(onboardingText[4],
+        adicionaNaLista(
+            onboardingText[4],
             onboardingText[5],
-            R.drawable.img_onboarding3)
+            R.drawable.img_onboarding3
+        )
     }
 
     // Faz a mudança da cor das bolinhas de progresso
