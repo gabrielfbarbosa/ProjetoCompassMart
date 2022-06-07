@@ -11,9 +11,6 @@ class OnboardingAdpter(
     private val data: List<InformacoesModel>
 ) : RecyclerView.Adapter<OnboardingAdpter.PaginasViewHolder>() {
 
-    class PaginasViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val binding: ItemOnboardingBinding = ItemOnboardingBinding.bind(itemView)
-    }
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -21,12 +18,22 @@ class OnboardingAdpter(
         val view = ItemOnboardingBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return PaginasViewHolder(view.root)
     }
+
     override fun getItemCount(): Int {
         return data.size
     }
+
     override fun onBindViewHolder(holder: OnboardingAdpter.PaginasViewHolder, position: Int) {
-        holder.binding.informacaoInicialTitulo.text = data[position].tiulo
-        holder.binding.informacaoInicialDescricao.text = data[position].descricao
-        holder.binding.informacaoInicialImagem.setImageResource(data[position].drawableId)
+       holder.bind(data[position])
+    }
+
+    class PaginasViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        private val binding: ItemOnboardingBinding = ItemOnboardingBinding.bind(itemView)
+
+        fun bind( informacoesModel: InformacoesModel) {
+            binding.informacaoInicialTitulo.text = informacoesModel.tiulo
+            binding.informacaoInicialDescricao.text = informacoesModel.descricao
+            binding.informacaoInicialImagem.setImageResource(informacoesModel.drawableId)
+        }
     }
 }
