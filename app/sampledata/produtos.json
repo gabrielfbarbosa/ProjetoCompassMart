@@ -1,0 +1,19 @@
+{
+  "produtos": [
+    {
+      "modelo": "Galaxy A52 5G",
+      "preco": "R$ 1799,00",
+      "imagem": "@drawable/produto_galaxy_a52"
+    },
+    {
+      "modelo": "Galaxy A32",
+      "preco": "R$ 1399,00",
+      "imagem": "@drawable/produto_galaxy_a32"
+    },
+    {
+      "modelo": "Google Pixel 5",
+      "preco": "R$2099,00",
+      "imagem": "@drawable/produto_pixel_5"
+    }
+  ]
+}
