@@ -10,16 +10,16 @@ import br.com.compass.compassmart.databinding.FragmentProdutosBinding
 
 class ProdutosFragment : Fragment() {
 
-    private var produtosBinding: FragmentProdutosBinding? = null
-    private val binding get() = produtosBinding!!
+    private var _binding: FragmentProdutosBinding? = null
+    private val binding get() = _binding!!
     private var data = mutableListOf<Produto>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        produtosBinding = FragmentProdutosBinding.inflate(inflater, container, false)
+    ): View? {
+        _binding = FragmentProdutosBinding.inflate(inflater, container, false)
         return binding.root
     }
 

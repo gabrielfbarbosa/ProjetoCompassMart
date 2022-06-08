@@ -13,27 +13,30 @@
         android:orientation="vertical">
 
         <ImageView
+            android:id="@+id/item_produto_imagem"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
-            tools:srcCompat="@drawable/ic_launcher_background" />
+            tools:srcCompat="@sample/produtos.json/produtos/imagem" />
 
         <TextView
+            android:id="@+id/item_produto_modelo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="18sp"
-            tools:text="Produto" />
+            tools:text="@sample/produtos.json/produtos/modelo" />
 
         <TextView
+            android:id="@+id/item_produto_preco"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="18sp"
-            tools:text="R$ XXXX,XX" />
+            tools:text="@sample/produtos.json/produtos/preco" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
