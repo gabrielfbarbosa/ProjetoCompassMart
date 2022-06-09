@@ -2,8 +2,8 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph_onboarding"
-    app:startDestination="@id/onboardingFragment">
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/carrinhoComprasFragment">
     <fragment
         android:id="@+id/onboardingFragment"
         android:name="br.com.compass.compassmart.ui.onboarding.OnboardingFragment"

@@ -19,18 +19,18 @@ class OnboardingAdapter(
         return PaginasViewHolder(view.root)
     }
 
-    override fun getItemCount(): Int {
-        return data.size
+    override fun onBindViewHolder(holder: OnboardingAdapter.PaginasViewHolder, position: Int) {
+       holder.bindInformacoes(data[position])
     }
 
-    override fun onBindViewHolder(holder: OnboardingAdapter.PaginasViewHolder, position: Int) {
-       holder.bind(data[position])
+    override fun getItemCount(): Int {
+        return data.size
     }
 
     class PaginasViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val binding: ItemOnboardingBinding = ItemOnboardingBinding.bind(itemView)
 
-        fun bind( informacoesModel: InformacoesModel) {
+        fun bindInformacoes(informacoesModel: InformacoesModel) {
             binding.informacaoInicialTitulo.text = informacoesModel.tiulo
             binding.informacaoInicialDescricao.text = informacoesModel.descricao
             binding.informacaoInicialImagem.setImageResource(informacoesModel.drawableId)
