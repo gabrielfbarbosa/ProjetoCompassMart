@@ -2,11 +2,11 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph_onboarding"
-    app:startDestination="@id/onboardingFragment">
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/produtosFragment">
     <fragment
-        android:id="@+id/onboardingFragment"
-        android:name="br.com.compass.compassmart.ui.onboarding.OnboardingFragment"
-        android:label="fragment_onboarding"
-        tools:layout="@layout/fragment_onboarding" />
+        android:id="@+id/produtosFragment"
+        android:name="br.com.compass.compassmart.ui.tela_produtos.ProdutosFragment"
+        android:label="fragment_produtos"
+        tools:layout="@layout/fragment_produtos" />
 </navigation>

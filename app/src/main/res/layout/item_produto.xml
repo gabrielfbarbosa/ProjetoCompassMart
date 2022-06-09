@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
-            tools:srcCompat="@sample/produtos.json/produtos/imagem" />
+            tools:srcCompat="@drawable/produto_galaxy_a52" />
 
         <TextView
             android:id="@+id/item_produto_modelo"
@@ -27,7 +27,7 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="18sp"
-            tools:text="@sample/produtos.json/produtos/modelo" />
+            tools:text="Galaxy A52 5G" />
 
         <TextView
             android:id="@+id/item_produto_preco"
@@ -36,7 +36,7 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="18sp"
-            tools:text="@sample/produtos.json/produtos/preco" />
+            tools:text="R$ 1799,00" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
