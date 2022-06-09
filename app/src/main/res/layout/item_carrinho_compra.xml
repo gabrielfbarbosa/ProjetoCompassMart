@@ -31,7 +31,7 @@
             app:layout_constraintStart_toEndOf="@+id/item_carrinho_compra_imagem"
             app:layout_constraintTop_toTopOf="@+id/item_carrinho_compra_imagem"
             app:layout_constraintVertical_bias="0.0"
-            tools:text="Titulo do produto selecionado pelo usuario para a compra" />
+            tools:text="Galaxy A52 5G" />
 
         <TextView
             android:id="@+id/item_carrinho_compra_quantidade"
