@@ -20,17 +20,19 @@ class OnboardingFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         _binding = FragmentOnboardingBinding.inflate(inflater, container, false)
-
-        conteudo()
-        setupViewPager()
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        conteudo()
+        setupViewPager()
+    }
+
     private fun setupViewPager() {
-        binding.onboardingMainViewPager.adapter = OnboardingAdpter(data)
-        binding.onboardingMainViewPager.registerOnPageChangeCallback(object :
+        binding.fragmentOnboardingViewPager.adapter = OnboardingAdapter(data)
+        binding.fragmentOnboardingViewPager.registerOnPageChangeCallback(object :
             ViewPager2.OnPageChangeCallback() {
 
             override fun onPageScrolled(
@@ -54,7 +56,7 @@ class OnboardingFragment : Fragment() {
     }
 
     // Adiciona os conteudos dos cards
-    private fun adicionaNaLista(titulo : String, descricao : String, imagem: Int){
+    private fun adicionaNaLista(titulo: String, descricao: String, imagem: Int) {
         data.add(InformacoesModel(titulo, descricao, imagem))
     }
 
@@ -63,36 +65,42 @@ class OnboardingFragment : Fragment() {
 
         val onboardingText = resources.getStringArray((R.array.onboarding))
 
-        adicionaNaLista(onboardingText[0],
+        adicionaNaLista(
+            onboardingText[0],
             onboardingText[1],
-            R.drawable.img_onboarding1)
+            R.drawable.img_onboarding1
+        )
 
-        adicionaNaLista(onboardingText[2],
+        adicionaNaLista(
+            onboardingText[2],
             onboardingText[3],
-            R.drawable.img_onboarding2)
+            R.drawable.img_onboarding2
+        )
 
-        adicionaNaLista(onboardingText[4],
+        adicionaNaLista(
+            onboardingText[4],
             onboardingText[5],
-            R.drawable.img_onboarding3)
+            R.drawable.img_onboarding3
+        )
     }
 
     // Faz a mudança da cor das bolinhas de progresso
     private fun mudarCorBolinhaProgresso() {
-        when (binding.onboardingMainViewPager.currentItem) {
+        when (binding.fragmentOnboardingViewPager.currentItem) {
             0 -> {
-                binding.onboardingMainProgressoEsquerda.setBackgroundResource(R.color.orange_700)
-                binding.onboardingMainProgressoCentro.setBackgroundResource(R.color.orange_200)
-                binding.onboardingMainProgressoDireita.setBackgroundResource(R.color.orange_200)
+                binding.fragmentOnboardingProgressoEsquerda.setBackgroundResource(R.color.orange_700)
+                binding.fragmentOnboardingProgressoCentro.setBackgroundResource(R.color.orange_200)
+                binding.fragmentOnboardingProgressoDireita.setBackgroundResource(R.color.orange_200)
             }
             1 -> {
-                binding.onboardingMainProgressoEsquerda.setBackgroundResource(R.color.orange_200)
-                binding.onboardingMainProgressoCentro.setBackgroundResource(R.color.orange_700)
-                binding.onboardingMainProgressoDireita.setBackgroundResource(R.color.orange_200)
+                binding.fragmentOnboardingProgressoEsquerda.setBackgroundResource(R.color.orange_200)
+                binding.fragmentOnboardingProgressoCentro.setBackgroundResource(R.color.orange_700)
+                binding.fragmentOnboardingProgressoDireita.setBackgroundResource(R.color.orange_200)
             }
             2 -> {
-                binding.onboardingMainProgressoEsquerda.setBackgroundResource(R.color.orange_200)
-                binding.onboardingMainProgressoCentro.setBackgroundResource(R.color.orange_200)
-                binding.onboardingMainProgressoDireita.setBackgroundResource(R.color.orange_700)
+                binding.fragmentOnboardingProgressoEsquerda.setBackgroundResource(R.color.orange_200)
+                binding.fragmentOnboardingProgressoCentro.setBackgroundResource(R.color.orange_200)
+                binding.fragmentOnboardingProgressoDireita.setBackgroundResource(R.color.orange_700)
             }
         }
     }
