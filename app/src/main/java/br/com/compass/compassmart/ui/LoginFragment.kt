@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.NavHostFragment
+import br.com.compass.compassmart.R
 import br.com.compass.compassmart.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
@@ -26,7 +28,6 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         binding.fragmentLoginEdtxtEmail.requestFocus()
 
         binding.fragmentLoginBtnLogin.setOnClickListener{
@@ -40,14 +41,14 @@ class LoginFragment : Fragment() {
                 editor.putString(preferenceLoginKey, binding.fragmentLoginEdtxtEmail.text.toString())
                 editor.putString(preferenceLoginKey, binding.fragmentLoginEdtxtSenha.text.toString())
                 editor.apply()
-/*               NavHostFragment.findNavController(this@LoginFragment)
-                    .navigate(R.id.action_LoginFragment_to_CarrinhoComprasFragment)*/
+                NavHostFragment.findNavController(this@LoginFragment)
+                    .navigate(R.id.action_LoginFragment_to_CarrinhoComprasFragment)
             }
         }
 
-/*       binding.fragmentLoginTxtCadastro.setOnClickListener{
+       binding.fragmentLoginTxtCadastro.setOnClickListener{
              NavHostFragment.findNavController(this@LoginFragment)
                  .navigate(R.id.action_LoginFragment_to_CadastroFragment)
-       }*/
+       }
     }
 }

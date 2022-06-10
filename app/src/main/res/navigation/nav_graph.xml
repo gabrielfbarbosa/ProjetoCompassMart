@@ -10,6 +10,13 @@
         android:name="br.com.compass.compassmart.ui.LoginFragment"
         android:label="login_fragment_label"
         tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_LoginFragment_to_CarrinhoComprasFragment"
+            app:destination="@id/CarrinhoComprasFragment" />
+        <action
+            android:id="@+id/action_LoginFragment_to_CadastroFragment"
+            app:destination="@id/CadastroFragment" />
     </fragment>
 
 </navigation>
