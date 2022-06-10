@@ -1,6 +1,5 @@
 package br.com.compass.compassmart.ui.tela_produtos
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -27,7 +26,7 @@ class ProdutosFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.fragmentProdutosRecyclerView.layoutManager = GridLayoutManager(activity,2)
+        binding.fragmentProdutosRecyclerView.layoutManager = GridLayoutManager(activity, 2)
         binding.fragmentProdutosRecyclerView.adapter = ProdutosAdapter(dataProduto)
 
         val produto1 = Produto(
