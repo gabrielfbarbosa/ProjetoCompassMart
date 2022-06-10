@@ -9,7 +9,7 @@
     <string name="btn_voltar">Voltar</string>
     <string name="btn_voltar_inicio">Voltar ao início </string>
     <string name="btn_onboarding">Ir às compras!</string>
-    <string name="btn_comprar">Comprar</string>
+    <string name="btn_comprar">Comprar agora</string>
     <string name="btn_add_produto_carrinho">Adicionar no carrinho</string>
     <string name="btn_add_produto">Adicionar mais produtos</string>
     <string name="btn_compras">Ver minhas compras</string>
