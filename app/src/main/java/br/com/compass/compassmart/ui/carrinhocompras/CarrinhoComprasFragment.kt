@@ -29,10 +29,10 @@ class CarrinhoComprasFragment : Fragment() {
         binding.fragmentCarrinhoComprasRecyclerview.layoutManager = LinearLayoutManager(this.context)
 
         val produto1 = Produtos(
-            "Smartphone Samsung Galaxy A52s 128GB Preto 5G - 6GB RAM Tela 6,5” Câm Quádrupla + Selfie 32MP",
+            "Smartphone Samsung Galaxy A52 5G",
             "1",
-            "R$ 3.000,00",
-            R.drawable.img_onboarding1)
+            "R$ 1.799,00",
+            R.drawable.produto_galaxy_a52)
 
         dataProduto.add(produto1)
 

@@ -20,7 +20,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/img_onboarding1" />
+            app:srcCompat="@drawable/produto_galaxy_a52" />
 
         <TextView
             android:id="@+id/item_carrinho_compra_descricao"
@@ -32,7 +32,7 @@
             android:textAlignment="viewStart"
             app:layout_constraintStart_toEndOf="@+id/item_carrinho_compra_imagem"
             app:layout_constraintTop_toTopOf="@+id/item_carrinho_compra_imagem"
-            tools:text="Modelo do produto" />
+            tools:text="Galaxy A52 5G" />
 
         <TextView
             android:id="@+id/item_carrinho_compra_txt_quantidade"
@@ -75,7 +75,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/item_carrinho_compra_imagem"
             app:layout_constraintStart_toStartOf="@+id/item_carrinho_compra_descricao"
             app:layout_constraintTop_toBottomOf="@+id/item_carrinho_compra_descricao"
-            tools:text="R$ 3.000,00" />
+            tools:text="R$ 1.799,00" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
