@@ -1,7 +1,9 @@
 package br.com.compass.compassmart.ui.tela_produtos
 
-//data class Produto (
-//    val modelo: String,
-//    val preco: String,
-//    val imageResId: Int
-//)
+import androidx.annotation.DrawableRes
+
+data class Produto (
+    val modelo: String,
+    val preco: String,
+    @DrawableRes val drawableId: Int
+)
