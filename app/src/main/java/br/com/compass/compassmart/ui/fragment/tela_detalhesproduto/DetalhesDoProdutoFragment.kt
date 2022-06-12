@@ -1,16 +1,11 @@
-package br.com.compass.compassmart.ui.tela_detalhes
+package br.com.compass.compassmart.ui.fragment.tela_detalhesproduto
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
-import br.com.compass.compassmart.R
-import br.com.compass.compassmart.databinding.FragmentCarrinhoComprasBinding
 import br.com.compass.compassmart.databinding.FragmentDetalhesDoProdutoBinding
-import br.com.compass.compassmart.ui.carrinhocompras.CarrinhoCompraAdapter
-import br.com.compass.compassmart.ui.carrinhocompras.model.Produtos
 
 class DetalhesDoProdutoFragment : Fragment() {
 
@@ -20,7 +15,7 @@ class DetalhesDoProdutoFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentDetalhesDoProdutoBinding.inflate(inflater, container, false)
         return binding.root
     }

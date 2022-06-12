@@ -1,4 +1,4 @@
-package br.com.compass.compassmart.ui.tela_produtos
+package br.com.compass.compassmart.ui.fragment.tela_produtos
 
 import android.view.LayoutInflater
 import android.view.View
@@ -13,7 +13,7 @@ class ProdutosAdapter(
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): ProdutosAdapter.ProdutosViewHolder {
+    ): ProdutosViewHolder {
         val view = ItemProdutoBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ProdutosViewHolder(view.root)
     }
@@ -22,7 +22,7 @@ class ProdutosAdapter(
         return data.size
     }
 
-    override fun onBindViewHolder(holder: ProdutosAdapter.ProdutosViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ProdutosViewHolder, position: Int) {
         holder.bind(data[position])
     }
 

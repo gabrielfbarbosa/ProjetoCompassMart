@@ -1,4 +1,4 @@
-package br.com.compass.compassmart.ui.carrinhocompras
+package br.com.compass.compassmart.ui.fragment.tela_carrinhocompras
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.compass.compassmart.R
 import br.com.compass.compassmart.databinding.FragmentCarrinhoComprasBinding
-import br.com.compass.compassmart.ui.carrinhocompras.model.Produtos
+import br.com.compass.compassmart.ui.fragment.tela_carrinhocompras.model.Produtos
 
 class CarrinhoComprasFragment : Fragment() {
 
@@ -19,7 +19,7 @@ class CarrinhoComprasFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentCarrinhoComprasBinding.inflate(inflater, container, false)
         return binding.root
     }

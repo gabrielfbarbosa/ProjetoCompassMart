@@ -1,4 +1,4 @@
-package br.com.compass.compassmart.ui.tela_produtos
+package br.com.compass.compassmart.ui.fragment.tela_produtos
 
 import androidx.annotation.DrawableRes
 

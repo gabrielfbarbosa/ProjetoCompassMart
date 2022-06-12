@@ -1,4 +1,4 @@
-package br.com.compass.compassmart.ui.tela_produtos
+package br.com.compass.compassmart.ui.fragment.tela_produtos
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -18,7 +18,7 @@ class ProdutosFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentProdutosBinding.inflate(inflater, container, false)
         return binding.root
     }

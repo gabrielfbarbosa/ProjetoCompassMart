@@ -1,11 +1,11 @@
-package br.com.compass.compassmart.ui.carrinhocompras
+package br.com.compass.compassmart.ui.fragment.tela_carrinhocompras
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.compass.compassmart.databinding.ItemCarrinhoCompraBinding
-import br.com.compass.compassmart.ui.carrinhocompras.model.Produtos
+import br.com.compass.compassmart.ui.fragment.tela_carrinhocompras.model.Produtos
 
 class CarrinhoCompraAdapter(
     private val dataProduto: List<Produtos>
@@ -14,12 +14,12 @@ class CarrinhoCompraAdapter(
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): CarrinhoCompraAdapter.CarrinhoViewHolder {
+    ): CarrinhoViewHolder {
         val view = ItemCarrinhoCompraBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return CarrinhoViewHolder(view.root)
     }
 
-    override fun onBindViewHolder(holder: CarrinhoCompraAdapter.CarrinhoViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CarrinhoViewHolder, position: Int) {
         holder.bindProdutos(dataProduto[position])
     }
 
