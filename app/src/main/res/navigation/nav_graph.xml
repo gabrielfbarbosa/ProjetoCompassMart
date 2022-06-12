@@ -39,4 +39,15 @@
             android:id="@+id/action_LoginFragment_to_CadastroFragment"
             app:destination="@id/CadastroFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/CadastroFragment"
+        android:name="br.com.compass.compassmart.ui.fragment.tela_cadastro.CadastroFragment"
+        android:label="cadastro_fragment"
+        tools:layout="@layout/fragment_cadastro">
+
+        <action
+            android:id="@+id/action_CadastroFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
+    </fragment>
+
 </navigation>
