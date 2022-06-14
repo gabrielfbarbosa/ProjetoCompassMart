@@ -35,7 +35,7 @@ class CarrinhoComprasFragment : Fragment() {
             dataProduto.add(produto1)
         }
 
-        binding.fragmentCarrinhoComprasRecyclerview.adapter = CarrinhoCompraAdapter(dataProduto)
+        binding.fragmentCarrinhoComprasRecyclerview.adapter = CarrinhoComprasAdapter(dataProduto)
         super.onViewCreated(view, savedInstanceState)
     }
 }

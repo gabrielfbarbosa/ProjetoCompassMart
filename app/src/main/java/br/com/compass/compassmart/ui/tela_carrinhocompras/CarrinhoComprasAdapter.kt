@@ -9,7 +9,7 @@ import br.com.compass.compassmart.ui.tela_carrinhocompras.model.Produtos
 
 class CarrinhoComprasAdapter (
     private val dataProduto: List<Produtos>
-) : RecyclerView.Adapter<CarrinhoCompraAdapter.CarrinhoViewHolder>() {
+) : RecyclerView.Adapter<CarrinhoComprasAdapter.CarrinhoViewHolder>() {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
