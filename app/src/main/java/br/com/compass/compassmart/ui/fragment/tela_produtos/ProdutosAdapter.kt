@@ -1,10 +1,11 @@
-package br.com.compass.compassmart.ui.tela_produtos
+package br.com.compass.compassmart.ui.fragment.tela_produtos
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.compass.compassmart.databinding.ItemProdutoBinding
+import br.com.compass.compassmart.ui.Produto
 
 class ProdutosAdapter(
     private val data: List<Produto>

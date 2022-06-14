@@ -19,7 +19,7 @@
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="Tipo do Produto" />
+            android:text="Produtos" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/fragment_produtos_recycler_view"

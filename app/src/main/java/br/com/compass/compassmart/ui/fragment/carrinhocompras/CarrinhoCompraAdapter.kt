@@ -1,14 +1,14 @@
-package br.com.compass.compassmart.ui.carrinhocompras
+package br.com.compass.compassmart.ui.fragment.carrinhocompras
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.compass.compassmart.databinding.ItemCarrinhoCompraBinding
-import br.com.compass.compassmart.ui.carrinhocompras.model.Produtos
+import br.com.compass.compassmart.ui.Produto
 
 class CarrinhoCompraAdapter(
-    private val dataProduto: List<Produtos>
+    private val dataProduto: List<Produto>
 ) : RecyclerView.Adapter<CarrinhoCompraAdapter.CarrinhoViewHolder>() {
 
     override fun onCreateViewHolder(
@@ -20,7 +20,7 @@ class CarrinhoCompraAdapter(
     }
 
     override fun onBindViewHolder(holder: CarrinhoCompraAdapter.CarrinhoViewHolder, position: Int) {
-        holder.bindProdutos(dataProduto[position])
+        holder.bind(dataProduto[position])
     }
 
     override fun getItemCount(): Int = dataProduto.size
@@ -28,13 +28,11 @@ class CarrinhoCompraAdapter(
     class CarrinhoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val binding: ItemCarrinhoCompraBinding = ItemCarrinhoCompraBinding.bind(itemView)
 
-        fun bindProdutos(produtos: Produtos) {
-            binding.itemCarrinhoCompraDescricao.text = produtos.descricao
-            binding.itemCarrinhoCompraNumeroQuantidade.text = produtos.quantidade
-            binding.itemCarrinhoCompraPreco.text = produtos.preco
-            binding.itemCarrinhoCompraImagem.setImageResource(produtos.drawableId)
+        fun bind(produto: Produto) {
+            binding.itemCarrinhoCompraDescricao.text = produto.modelo
+            binding.itemCarrinhoCompraNumeroQuantidade.text = produto.quantidade
+            binding.itemCarrinhoCompraPreco.text = produto.preco
+            binding.itemCarrinhoCompraImagem.setImageResource(produto.drawableId)
         }
     }
-
-
 }
