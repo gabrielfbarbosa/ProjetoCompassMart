@@ -20,7 +20,7 @@ class DetalhesDoProdutoFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentDetalhesDoProdutoBinding.inflate(inflater, container, false)
         return binding.root
     }
