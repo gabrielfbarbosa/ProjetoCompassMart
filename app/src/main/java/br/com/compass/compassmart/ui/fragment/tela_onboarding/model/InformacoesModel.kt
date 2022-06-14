@@ -1,4 +1,4 @@
-package br.com.compass.compassmart.ui.onboarding.model
+package br.com.compass.compassmart.ui.fragment.tela_onboarding.model
 
 import androidx.annotation.DrawableRes
 

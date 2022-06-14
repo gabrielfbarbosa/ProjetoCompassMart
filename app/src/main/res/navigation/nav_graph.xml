@@ -6,7 +6,7 @@
     app:startDestination="@id/onboardingFragment">
     <fragment
         android:id="@+id/onboardingFragment"
-        android:name="br.com.compass.compassmart.ui.onboarding.OnboardingFragment"
+        android:name="br.com.compass.compassmart.ui.fragment.tela_onboarding.OnboardingFragment"
         android:label="fragment_onboarding"
         tools:layout="@layout/fragment_onboarding" >
     </fragment>
