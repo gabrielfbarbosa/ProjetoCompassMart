@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/LoginFragment">
+    app:startDestination="@id/OnboardingFragment">
 
     <fragment
         android:id="@+id/LoginFragment"
-        android:name="br.com.compass.compassmart.ui.LoginFragment"
+        android:name="br.com.compass.compassmart.ui.fragment.tela_login.LoginFragment"
         android:label="login_fragment_label"
         tools:layout="@layout/fragment_login">
 

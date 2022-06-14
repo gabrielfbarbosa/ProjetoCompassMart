@@ -1,4 +1,4 @@
-package br.com.compass.compassmart.ui
+package br.com.compass.compassmart.ui.fragment.tela_login
 
 import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
