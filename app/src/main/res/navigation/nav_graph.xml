@@ -6,12 +6,12 @@
     app:startDestination="@id/onboardingFragment">
     <fragment
         android:id="@+id/onboardingFragment"
-        android:name="br.com.compass.compassmart.ui.onboarding.OnboardingFragment"
+        android:name="br.com.compass.compassmart.ui.fragment.tela_onboarding.OnboardingFragment"
         android:label="fragment_onboarding"
         tools:layout="@layout/fragment_onboarding" />
     <fragment
         android:id="@+id/carrinhoComprasFragment"
-        android:name="br.com.compass.compassmart.ui.tela_carrinhocompras.CarrinhoComprasFragment"
+        android:name="br.com.compass.compassmart.ui.fragment.tela_carrinhocompras.CarrinhoComprasFragment"
         android:label="fragment_carrinho_compras"
         tools:layout="@layout/fragment_carrinho_compras" />
 </navigation>

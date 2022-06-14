@@ -1,4 +1,4 @@
-package br.com.compass.compassmart.ui.onboarding
+package br.com.compass.compassmart.ui.fragment.tela_onboarding
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import br.com.compass.compassmart.R
 import br.com.compass.compassmart.databinding.FragmentOnboardingBinding
-import br.com.compass.compassmart.ui.onboarding.model.InformacoesModel
+import br.com.compass.compassmart.ui.fragment.tela_onboarding.model.InformacoesModel
 
 class OnboardingFragment : Fragment() {
 

@@ -1,11 +1,11 @@
-package br.com.compass.compassmart.ui.tela_carrinhocompras
+package br.com.compass.compassmart.ui.fragment.tela_carrinhocompras
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.compass.compassmart.databinding.ItemCarrinhoCompraBinding
-import br.com.compass.compassmart.ui.tela_carrinhocompras.model.Produtos
+import br.com.compass.compassmart.ui.fragment.tela_carrinhocompras.model.Produtos
 
 class CarrinhoComprasAdapter (
     private val dataProduto: List<Produtos>

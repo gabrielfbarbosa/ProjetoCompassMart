@@ -1,4 +1,4 @@
-package br.com.compass.compassmart.ui.tela_carrinhocompras.model
+package br.com.compass.compassmart.ui.fragment.tela_carrinhocompras.model
 
 import androidx.annotation.DrawableRes
 

@@ -1,11 +1,11 @@
-package br.com.compass.compassmart.ui.onboarding
+package br.com.compass.compassmart.ui.fragment.tela_onboarding
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.compass.compassmart.databinding.ItemOnboardingBinding
-import br.com.compass.compassmart.ui.onboarding.model.InformacoesModel
+import br.com.compass.compassmart.ui.fragment.tela_onboarding.model.InformacoesModel
 
 class OnboardingAdapter(
     private val data: List<InformacoesModel>

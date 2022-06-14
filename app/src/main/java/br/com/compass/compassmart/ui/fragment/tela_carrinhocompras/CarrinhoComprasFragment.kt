@@ -1,4 +1,4 @@
-package br.com.compass.compassmart.ui.tela_carrinhocompras
+package br.com.compass.compassmart.ui.fragment.tela_carrinhocompras
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import br.com.compass.compassmart.R
 import br.com.compass.compassmart.databinding.FragmentCarrinhoComprasBinding
-import br.com.compass.compassmart.ui.tela_carrinhocompras.model.Produtos
+import br.com.compass.compassmart.ui.fragment.tela_carrinhocompras.model.Produtos
 
 class CarrinhoComprasFragment : Fragment() {
 
