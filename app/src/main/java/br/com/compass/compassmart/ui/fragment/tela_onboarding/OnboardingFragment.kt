@@ -31,7 +31,7 @@ class OnboardingFragment : Fragment() {
     }
 
     private fun setupViewPager() {
-        binding.fragmentOnboardingViewPager.adapter = OnboardingAdpter(data)
+        binding.fragmentOnboardingViewPager.adapter = OnboardingAdapter(data)
         binding.fragmentOnboardingViewPager.registerOnPageChangeCallback(object :
             ViewPager2.OnPageChangeCallback() {
 
