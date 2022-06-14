@@ -19,4 +19,10 @@
             app:destination="@id/CadastroFragment" />
     </fragment>
 
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="br.com.compass.compassmart.ui.fragment.tela_onboarding.OnboardingFragment"
+        android:label="fragment_onboarding"
+        tools:layout="@layout/fragment_onboarding" />
+
 </navigation>
