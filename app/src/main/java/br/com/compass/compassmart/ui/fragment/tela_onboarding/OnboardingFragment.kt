@@ -31,8 +31,10 @@ class OnboardingFragment : Fragment() {
     }
 
     private fun setupViewPager() {
-        binding.onboardingMainViewPager.adapter = OnboardingAdapter(data)
-        binding.onboardingMainViewPager.registerOnPageChangeCallback(object :
+
+        binding.fragmentOnboardingViewPager.adapter = OnboardingAdapter(data)
+
+        binding.fragmentOnboardingViewPager.registerOnPageChangeCallback(object :
             ViewPager2.OnPageChangeCallback() {
 
             override fun onPageScrolled(
@@ -86,21 +88,21 @@ class OnboardingFragment : Fragment() {
 
     // Faz a mudança da cor das bolinhas de progresso
     private fun mudarCorBolinhaProgresso() {
-        when (binding.onboardingMainViewPager.currentItem) {
+        when (binding.fragmentOnboardingViewPager.currentItem) {
             0 -> {
-                binding.onboardingMainProgressoEsquerda.setBackgroundResource(R.color.orange_700)
-                binding.onboardingMainProgressoCentro.setBackgroundResource(R.color.orange_200)
-                binding.onboardingMainProgressoDireita.setBackgroundResource(R.color.orange_200)
+                binding.fragmentOnboardingProgressoEsquerda.setBackgroundResource(R.color.orange_700)
+                binding.fragmentOnboardingProgressoCentro.setBackgroundResource(R.color.orange_200)
+                binding.fragmentOnboardingProgressoDireita.setBackgroundResource(R.color.orange_200)
             }
             1 -> {
-                binding.onboardingMainProgressoEsquerda.setBackgroundResource(R.color.orange_200)
-                binding.onboardingMainProgressoCentro.setBackgroundResource(R.color.orange_700)
-                binding.onboardingMainProgressoDireita.setBackgroundResource(R.color.orange_200)
+                binding.fragmentOnboardingProgressoEsquerda.setBackgroundResource(R.color.orange_200)
+                binding.fragmentOnboardingProgressoCentro.setBackgroundResource(R.color.orange_700)
+                binding.fragmentOnboardingProgressoDireita.setBackgroundResource(R.color.orange_200)
             }
             2 -> {
-                binding.onboardingMainProgressoEsquerda.setBackgroundResource(R.color.orange_200)
-                binding.onboardingMainProgressoCentro.setBackgroundResource(R.color.orange_200)
-                binding.onboardingMainProgressoDireita.setBackgroundResource(R.color.orange_700)
+                binding.fragmentOnboardingProgressoEsquerda.setBackgroundResource(R.color.orange_200)
+                binding.fragmentOnboardingProgressoCentro.setBackgroundResource(R.color.orange_200)
+                binding.fragmentOnboardingProgressoDireita.setBackgroundResource(R.color.orange_700)
             }
         }
     }
