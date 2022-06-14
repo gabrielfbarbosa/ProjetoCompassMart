@@ -21,7 +21,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/produto_galaxy_a52" />
+            app:srcCompat="@color/orange_200" />
 
         <TextView
             android:id="@+id/item_carrinho_compra_descricao"
