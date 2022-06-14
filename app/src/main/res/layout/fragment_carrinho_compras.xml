@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.carrinhocompras.CarrinhoComprasFragment">
+    tools:context=".ui.tela_carrinhocompras.CarrinhoComprasFragment">
 
     <TextView
         android:id="@+id/fragment_carrinho_compras_titulo"
