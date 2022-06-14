@@ -1,4 +1,4 @@
-package br.com.compass.compassmart.ui.tela_produtos
+package br.com.compass.compassmart.ui.fragment.tela_produtos
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import br.com.compass.compassmart.R
 import br.com.compass.compassmart.databinding.FragmentProdutosBinding
+import br.com.compass.compassmart.ui.Produto
 
 class ProdutosFragment : Fragment() {
 
@@ -26,40 +27,49 @@ class ProdutosFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.fragmentProdutosRecyclerView.layoutManager = GridLayoutManager(activity, 2)
+        preparaLista()
         binding.fragmentProdutosRecyclerView.adapter = ProdutosAdapter(dataProduto)
+    }
 
+    private fun preparaLista() {
         val produto1 = Produto(
             "Galaxy A52 5G",
+            "",
             "R$ 1779,00",
             R.drawable.produto_galaxy_a52
         )
 
         val produto2 = Produto(
             "Galaxy A52 5G",
+            "",
             "R$ 1779,00",
             R.drawable.produto_galaxy_a52
         )
 
         val produto3 = Produto(
             "Galaxy A52 5G",
+            "",
             "R$ 1779,00",
             R.drawable.produto_galaxy_a52
         )
 
         val produto4 = Produto(
             "Galaxy A52 5G",
+            "",
             "R$ 1779,00",
             R.drawable.produto_galaxy_a52
         )
 
         val produto5 = Produto(
             "Galaxy A52 5G",
+            "",
             "R$ 1779,00",
             R.drawable.produto_galaxy_a52
         )
 
         val produto6 = Produto(
             "Galaxy A52 5G",
+            "",
             "R$ 1779,00",
             R.drawable.produto_galaxy_a52
         )
