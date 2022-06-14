@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import br.com.compass.compassmart.R
 import br.com.compass.compassmart.databinding.FragmentOnboardingBinding
+import br.com.compass.compassmart.ui.fragment.tela_onboarding.OnboardingAdapter
 import br.com.compass.compassmart.ui.fragment.tela_onboarding.model.InformacoesModel
 
 class OnboardingFragment : Fragment() {
@@ -31,7 +32,7 @@ class OnboardingFragment : Fragment() {
     }
 
     private fun setupViewPager() {
-        binding.fragmentOnboardingViewPager.adapter = OnboardingAdpter(data)
+        binding.fragmentOnboardingViewPager.adapter = OnboardingAdapter(data)
         binding.fragmentOnboardingViewPager.registerOnPageChangeCallback(object :
             ViewPager2.OnPageChangeCallback() {
 

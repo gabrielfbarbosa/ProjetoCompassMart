@@ -2,11 +2,28 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph_onboarding"
+    android:id="@+id/nav_graph"
     app:startDestination="@id/onboardingFragment">
     <fragment
         android:id="@+id/onboardingFragment"
         android:name="br.com.compass.compassmart.ui.fragment.tela_onboarding.OnboardingFragment"
         android:label="fragment_onboarding"
-        tools:layout="@layout/fragment_onboarding" />
+        tools:layout="@layout/fragment_onboarding" >
+    </fragment>
+    <fragment
+        android:id="@+id/produtosFragment"
+        android:name="br.com.compass.compassmart.ui.fragment.tela_produtos.ProdutosFragment"
+        android:label="ProdutosFragment"
+        tools:layout="@layout/fragment_produtos"/>
+    <fragment
+        android:id="@+id/detalhesDoProdutoFragment"
+        android:name="br.com.compass.compassmart.ui.fragment.tela_detalhes.DetalhesDoProdutoFragment"
+        android:label="fragment_detalhes_do_produto"
+        tools:layout="@layout/fragment_detalhes_do_produto" />
+    <fragment
+        android:id="@+id/carrinhoComprasFragment"
+        android:name="br.com.compass.compassmart.ui.fragment.carrinhocompras.CarrinhoComprasFragment"
+        android:label="fragment_carrinho_compras"
+        tools:layout="@layout/fragment_carrinho_compras" >
+    </fragment>
 </navigation>
