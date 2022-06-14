@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import androidx.viewpager2.widget.ViewPager2
 import br.com.compass.compassmart.R
 import br.com.compass.compassmart.databinding.FragmentOnboardingBinding
@@ -29,6 +30,9 @@ class OnboardingFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         conteudo()
         setupViewPager()
+        binding.fragmentOnboardingBtnComecarComprar.setOnClickListener{
+            Navigation.findNavController(view).navigate(R.id.action_onboardingFragment_to_produtosFragment)
+        }
     }
 
     private fun setupViewPager() {
@@ -54,6 +58,7 @@ class OnboardingFragment : Fragment() {
                 mudarCorBolinhaProgresso()
             }
         })
+
     }
 
     // Adiciona os conteudos dos cards

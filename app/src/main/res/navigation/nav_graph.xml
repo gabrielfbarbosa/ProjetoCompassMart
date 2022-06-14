@@ -9,6 +9,9 @@
         android:name="br.com.compass.compassmart.ui.fragment.tela_onboarding.OnboardingFragment"
         android:label="fragment_onboarding"
         tools:layout="@layout/fragment_onboarding" >
+        <action
+            android:id="@+id/action_onboardingFragment_to_produtosFragment"
+            app:destination="@id/produtosFragment" />
     </fragment>
     <fragment
         android:id="@+id/produtosFragment"
