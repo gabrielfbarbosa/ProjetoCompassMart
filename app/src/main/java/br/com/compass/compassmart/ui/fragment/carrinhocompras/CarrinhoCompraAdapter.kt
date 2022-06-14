@@ -14,12 +14,13 @@ class CarrinhoCompraAdapter(
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): CarrinhoCompraAdapter.CarrinhoViewHolder {
-        val view = ItemCarrinhoCompraBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+    ): CarrinhoViewHolder {
+        val view =
+            ItemCarrinhoCompraBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return CarrinhoViewHolder(view.root)
     }
 
-    override fun onBindViewHolder(holder: CarrinhoCompraAdapter.CarrinhoViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CarrinhoViewHolder, position: Int) {
         holder.bind(dataProduto[position])
     }
 

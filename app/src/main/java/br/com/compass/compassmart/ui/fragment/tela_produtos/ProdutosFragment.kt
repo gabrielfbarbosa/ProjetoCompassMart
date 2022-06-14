@@ -14,7 +14,39 @@ class ProdutosFragment : Fragment() {
 
     private var _binding: FragmentProdutosBinding? = null
     private val binding get() = _binding!!
-    private var dataProduto = mutableListOf<Produto>()
+    private val produto = mutableListOf<Produto>(
+        Produto(
+            "Galaxy A52 5G",
+            "",
+            "R$ 1779,00",
+            R.drawable.produto_galaxy_a52
+        ), Produto(
+            "Galaxy A52 5G",
+            "",
+            "R$ 1779,00",
+            R.drawable.produto_galaxy_a52
+        ), Produto(
+            "Galaxy A52 5G",
+            "",
+            "R$ 1779,00",
+            R.drawable.produto_galaxy_a52
+        ), Produto(
+            "Galaxy A52 5G",
+            "",
+            "R$ 1779,00",
+            R.drawable.produto_galaxy_a52
+        ), Produto(
+            "Galaxy A52 5G",
+            "",
+            "R$ 1779,00",
+            R.drawable.produto_galaxy_a52
+        ), Produto(
+            "Galaxy A52 5G",
+            "",
+            "R$ 1779,00",
+            R.drawable.produto_galaxy_a52
+        )
+    )
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,58 +59,6 @@ class ProdutosFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.fragmentProdutosRecyclerView.layoutManager = GridLayoutManager(activity, 2)
-        preparaLista()
-        binding.fragmentProdutosRecyclerView.adapter = ProdutosAdapter(dataProduto)
-    }
-
-    private fun preparaLista() {
-        val produto1 = Produto(
-            "Galaxy A52 5G",
-            "",
-            "R$ 1779,00",
-            R.drawable.produto_galaxy_a52
-        )
-
-        val produto2 = Produto(
-            "Galaxy A52 5G",
-            "",
-            "R$ 1779,00",
-            R.drawable.produto_galaxy_a52
-        )
-
-        val produto3 = Produto(
-            "Galaxy A52 5G",
-            "",
-            "R$ 1779,00",
-            R.drawable.produto_galaxy_a52
-        )
-
-        val produto4 = Produto(
-            "Galaxy A52 5G",
-            "",
-            "R$ 1779,00",
-            R.drawable.produto_galaxy_a52
-        )
-
-        val produto5 = Produto(
-            "Galaxy A52 5G",
-            "",
-            "R$ 1779,00",
-            R.drawable.produto_galaxy_a52
-        )
-
-        val produto6 = Produto(
-            "Galaxy A52 5G",
-            "",
-            "R$ 1779,00",
-            R.drawable.produto_galaxy_a52
-        )
-
-        dataProduto.add(produto1)
-        dataProduto.add(produto2)
-        dataProduto.add(produto3)
-        dataProduto.add(produto4)
-        dataProduto.add(produto5)
-        dataProduto.add(produto6)
+        binding.fragmentProdutosRecyclerView.adapter = ProdutosAdapter(produto)
     }
 }

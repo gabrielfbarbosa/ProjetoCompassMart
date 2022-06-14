@@ -20,7 +20,7 @@ class OnboardingAdapter(
     }
 
     override fun onBindViewHolder(holder: OnboardingAdapter.PaginasViewHolder, position: Int) {
-        holder.bindInformacoes(data[position])
+        holder.bind(data[position])
     }
 
     override fun getItemCount(): Int {
@@ -30,7 +30,7 @@ class OnboardingAdapter(
     class PaginasViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val binding: ItemOnboardingBinding = ItemOnboardingBinding.bind(itemView)
 
-        fun bindInformacoes(informacoesModel: InformacoesModel) {
+        fun bind(informacoesModel: InformacoesModel) {
             binding.informacaoInicialTitulo.text = informacoesModel.tiulo
             binding.informacaoInicialDescricao.text = informacoesModel.descricao
             binding.informacaoInicialImagem.setImageResource(informacoesModel.drawableId)

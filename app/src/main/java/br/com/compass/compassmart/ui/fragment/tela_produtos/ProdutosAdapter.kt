@@ -36,5 +36,4 @@ class ProdutosAdapter(
             binding.itemProdutoImagem.setImageResource(produto.drawableId)
         }
     }
-
 }

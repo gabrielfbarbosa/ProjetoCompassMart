@@ -43,25 +43,6 @@
         <item>Comece a comprar agora mesmo para mudar a sua vida!</item>
     </string-array>
 
-    <!-- Modelos estáticos dos produtos da Tela de Produtos -->
-    <string-array name="produtos_modelos">
-        <item>Galaxy A52 5G</item>
-        <item>Galaxy S22</item>
-        <item>iPhone 12</item>
-        <item>Google Pixel 5</item>
-        <item>Poco F3</item>
-        <item>Xiaomi Mi 11</item>
-    </string-array>
-
-    <string-array name="produtos_precos">
-        <item>R$ 1.699,00</item>
-        <item>R$ 5.399,10</item>
-        <item>R$ 4.899,90</item>
-        <item>R$ 5.172,00</item>
-        <item>R$ 2.231,00</item>
-        <item>R$ 5.500,00</item>
-    </string-array>
-
     <!-- Frases da tela de Perfil -->
     <string name="info">Informações</string>
     <string name="minhas_compras">Minhas compras</string>

@@ -13,28 +13,25 @@ class CarrinhoComprasFragment : Fragment() {
 
     private var _binding: FragmentCarrinhoComprasBinding? = null
     private val binding get() = _binding!!
-    private var dataProduto = mutableListOf<Produto>()
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentCarrinhoComprasBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
-        val produto1 = Produto(
+    private val produto = mutableListOf<Produto>(
+        Produto(
             "Smartphone Samsung Galaxy A52 5G",
             "1",
             "R$ 1.799,00",
             R.drawable.produto_galaxy_a52
         )
+    )
 
-        dataProduto.add(produto1)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentCarrinhoComprasBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
-        binding.fragmentCarrinhoComprasRecyclerview.adapter = CarrinhoCompraAdapter(dataProduto)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.fragmentCarrinhoComprasRecyclerview.adapter = CarrinhoCompraAdapter(produto)
     }
 }
