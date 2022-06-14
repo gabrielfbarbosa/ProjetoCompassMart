@@ -25,7 +25,6 @@ class ProdutosFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         binding.fragmentProdutosRecyclerView.layoutManager = GridLayoutManager(activity, 2)
         binding.fragmentProdutosRecyclerView.adapter = ProdutosAdapter(dataProduto)
 

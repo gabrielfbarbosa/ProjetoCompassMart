@@ -20,7 +20,7 @@ class OnboardingAdapter(
     }
 
     override fun onBindViewHolder(holder: OnboardingAdapter.PaginasViewHolder, position: Int) {
-       holder.bindInformacoes(data[position])
+        holder.bindInformacoes(data[position])
     }
 
     override fun getItemCount(): Int {
