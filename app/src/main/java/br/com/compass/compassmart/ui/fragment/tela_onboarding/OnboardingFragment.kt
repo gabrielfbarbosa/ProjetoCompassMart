@@ -1,4 +1,4 @@
-package br.com.compass.compassmart.ui.onboarding
+package br.com.compass.compassmart.ui.fragment.tela_onboarding
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import br.com.compass.compassmart.R
 import br.com.compass.compassmart.databinding.FragmentOnboardingBinding
-import br.com.compass.compassmart.ui.onboarding.model.InformacoesModel
+import br.com.compass.compassmart.ui.fragment.tela_onboarding.model.InformacoesModel
 
 class OnboardingFragment : Fragment() {
 
@@ -19,7 +19,7 @@ class OnboardingFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentOnboardingBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -31,8 +31,8 @@ class OnboardingFragment : Fragment() {
     }
 
     private fun setupViewPager() {
-        binding.onboardingMainViewPager.adapter = OnboardingAdpter(data)
-        binding.onboardingMainViewPager.registerOnPageChangeCallback(object :
+        binding.fragmentOnboardingViewPager.adapter = OnboardingAdpter(data)
+        binding.fragmentOnboardingViewPager.registerOnPageChangeCallback(object :
             ViewPager2.OnPageChangeCallback() {
 
             override fun onPageScrolled(
@@ -86,21 +86,21 @@ class OnboardingFragment : Fragment() {
 
     // Faz a mudança da cor das bolinhas de progresso
     private fun mudarCorBolinhaProgresso() {
-        when (binding.onboardingMainViewPager.currentItem) {
+        when (binding.fragmentOnboardingViewPager.currentItem) {
             0 -> {
-                binding.onboardingMainProgressoEsquerda.setBackgroundResource(R.color.orange_700)
-                binding.onboardingMainProgressoCentro.setBackgroundResource(R.color.orange_200)
-                binding.onboardingMainProgressoDireita.setBackgroundResource(R.color.orange_200)
+                binding.fragmentOnboardingProgressoEsquerda.setBackgroundResource(R.color.orange_700)
+                binding.fragmentOnboardingProgressoCentro.setBackgroundResource(R.color.orange_200)
+                binding.fragmentOnboardingProgressoDireita.setBackgroundResource(R.color.orange_200)
             }
             1 -> {
-                binding.onboardingMainProgressoEsquerda.setBackgroundResource(R.color.orange_200)
-                binding.onboardingMainProgressoCentro.setBackgroundResource(R.color.orange_700)
-                binding.onboardingMainProgressoDireita.setBackgroundResource(R.color.orange_200)
+                binding.fragmentOnboardingProgressoEsquerda.setBackgroundResource(R.color.orange_200)
+                binding.fragmentOnboardingProgressoCentro.setBackgroundResource(R.color.orange_700)
+                binding.fragmentOnboardingProgressoDireita.setBackgroundResource(R.color.orange_200)
             }
             2 -> {
-                binding.onboardingMainProgressoEsquerda.setBackgroundResource(R.color.orange_200)
-                binding.onboardingMainProgressoCentro.setBackgroundResource(R.color.orange_200)
-                binding.onboardingMainProgressoDireita.setBackgroundResource(R.color.orange_700)
+                binding.fragmentOnboardingProgressoEsquerda.setBackgroundResource(R.color.orange_200)
+                binding.fragmentOnboardingProgressoCentro.setBackgroundResource(R.color.orange_200)
+                binding.fragmentOnboardingProgressoDireita.setBackgroundResource(R.color.orange_700)
             }
         }
     }
