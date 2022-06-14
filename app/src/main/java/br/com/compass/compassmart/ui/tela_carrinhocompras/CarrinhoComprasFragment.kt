@@ -31,7 +31,7 @@ class CarrinhoComprasFragment : Fragment() {
             "R$ 1.799,00",
             R.drawable.produto_galaxy_a52)
 
-        while (dataProduto.size <= 3 ) {
+        while (dataProduto.size < 3 ) {
             dataProduto.add(produto1)
         }
 
