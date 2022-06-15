@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.carrinhocompras.CarrinhoComprasFragment">
+    tools:context=".ui.fragment.tela_carrinhocompras.CarrinhoComprasFragment">
 
     <TextView
         android:id="@+id/fragment_carrinho_compras_titulo"
@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toTopOf="@+id/fragment_carrinho_compras_btn_continuar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,24 +33,23 @@
 
     <Button
         android:id="@+id/fragment_carrinho_compras_btn_continuar"
-        android:layout_width="255dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
+        android:layout_marginStart="3dp"
         android:text="@string/btn_continuar"
-        app:cornerRadius="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/fragment_carrinho_compras_btn_add_mais_produto"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fragment_carrinho_compras_btn_add_mais_produto"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/fragment_carrinho_compras_btn_add_mais_produto" />
 
     <Button
         android:id="@+id/fragment_carrinho_compras_btn_add_mais_produto"
-        android:layout_width="255dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="35dp"
+        android:layout_marginBottom="10dp"
         android:text="@string/btn_add_produto"
-        app:cornerRadius="20dp"
+        app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

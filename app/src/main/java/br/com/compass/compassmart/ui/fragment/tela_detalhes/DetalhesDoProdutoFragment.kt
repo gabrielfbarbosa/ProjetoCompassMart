@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
+import br.com.compass.compassmart.R
 import br.com.compass.compassmart.databinding.FragmentDetalhesDoProdutoBinding
 
 class DetalhesDoProdutoFragment : Fragment() {
@@ -18,5 +20,12 @@ class DetalhesDoProdutoFragment : Fragment() {
     ): View {
         _binding = FragmentDetalhesDoProdutoBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.btnComprarAgora.setOnClickListener{
+            Navigation.findNavController(view).navigate(R.id.action_detalhesDoProdutoFragment_to_carrinhoComprasFragment)
+        }
     }
 }

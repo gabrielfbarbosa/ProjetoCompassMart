@@ -10,7 +10,7 @@ import br.com.compass.compassmart.ui.Produto
 
 class ProdutosAdapter(
     private val data: List<Produto>,
-//    private val listener: MeuOnClickListener
+    private val listener: MeuOnClickListener
 ) : RecyclerView.Adapter<ProdutosAdapter.ProdutosViewHolder>() {
 
     override fun onCreateViewHolder(
@@ -36,12 +36,12 @@ class ProdutosAdapter(
             binding.itemProdutoModelo.text = produto.modelo
             binding.itemProdutoPreco.text = produto.preco
             binding.itemProdutoImagem.setImageResource(produto.drawableId)
-//            binding.root.setOnClickListener{
-//                listener.onClick(produto)
-//            }
+            binding.root.setOnClickListener{
+                listener.onClick(produto)
+            }
         }
     }
-//    interface MeuOnClickListener{
-//        fun onClick(produto: Produto)
-//    }
+    interface MeuOnClickListener{
+        fun onClick(produto: Produto)
+    }
 }

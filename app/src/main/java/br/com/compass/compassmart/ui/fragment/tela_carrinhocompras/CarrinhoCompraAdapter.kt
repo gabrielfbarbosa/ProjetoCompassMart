@@ -1,4 +1,4 @@
-package br.com.compass.compassmart.ui.fragment.carrinhocompras
+package br.com.compass.compassmart.ui.fragment.tela_carrinhocompras
 
 import android.view.LayoutInflater
 import android.view.View
