@@ -8,22 +8,39 @@
         android:id="@+id/onboardingFragment"
         android:name="br.com.compass.compassmart.ui.fragment.tela_onboarding.OnboardingFragment"
         android:label="fragment_onboarding"
-        tools:layout="@layout/fragment_onboarding" >
+        tools:layout="@layout/fragment_onboarding">
+        <action
+            android:id="@+id/action_onboardingFragment_to_produtosFragment"
+            app:destination="@id/produtosFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/produtosFragment"
         android:name="br.com.compass.compassmart.ui.fragment.tela_produtos.ProdutosFragment"
         android:label="ProdutosFragment"
-        tools:layout="@layout/fragment_produtos"/>
+        tools:layout="@layout/fragment_produtos">
+        <action
+            android:id="@+id/action_produtosFragment_to_detalhesDoProdutoFragment"
+            app:destination="@id/detalhesDoProdutoFragment" >
+        </action>
+    </fragment>
+
     <fragment
         android:id="@+id/detalhesDoProdutoFragment"
         android:name="br.com.compass.compassmart.ui.fragment.tela_detalhes.DetalhesDoProdutoFragment"
         android:label="fragment_detalhes_do_produto"
-        tools:layout="@layout/fragment_detalhes_do_produto" />
+        tools:layout="@layout/fragment_detalhes_do_produto">
+        <argument
+            android:name="produto"
+            app:argType="br.com.compass.compassmart.ui.Produto" />
+        <action
+            android:id="@+id/action_detalhesDoProdutoFragment_to_carrinhoComprasFragment"
+            app:destination="@id/carrinhoComprasFragment" />
+    </fragment>
+
     <fragment
         android:id="@+id/carrinhoComprasFragment"
-        android:name="br.com.compass.compassmart.ui.fragment.carrinhocompras.CarrinhoComprasFragment"
+        android:name="br.com.compass.compassmart.ui.fragment.tela_carrinhocompras.CarrinhoComprasFragment"
         android:label="fragment_carrinho_compras"
-        tools:layout="@layout/fragment_carrinho_compras" >
-    </fragment>
+        tools:layout="@layout/fragment_carrinho_compras"/>
 </navigation>
