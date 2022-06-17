@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/onboardingFragment">
+    app:startDestination="@id/meioPagamento">
     <fragment
         android:id="@+id/onboardingFragment"
         android:name="br.com.compass.compassmart.ui.fragment.tela_onboarding.OnboardingFragment"
@@ -43,4 +43,9 @@
         android:name="br.com.compass.compassmart.ui.fragment.tela_carrinhocompras.CarrinhoComprasFragment"
         android:label="fragment_carrinho_compras"
         tools:layout="@layout/fragment_carrinho_compras"/>
+    <fragment
+        android:id="@+id/meioPagamento"
+        android:name="br.com.compass.compassmart.ui.fragment.tela_meiopagamento.MeioPagamento"
+        android:label="fragment_meio_pagamento"
+        tools:layout="@layout/fragment_meio_pagamento" />
 </navigation>

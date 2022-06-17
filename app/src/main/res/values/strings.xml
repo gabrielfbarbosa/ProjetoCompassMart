@@ -59,6 +59,7 @@
     <string name="produtos_escolhidos">Produto(s) escolhido(s):</string>
 
     <!-- Frases da tela de Pagamento -->
+    <string name="escolha_pagamento">Escolha a melhor forma de pagamento para você</string>
     <string name="compass_pay">Compass Pay</string>
     <string name="pix">Pix</string>
 
