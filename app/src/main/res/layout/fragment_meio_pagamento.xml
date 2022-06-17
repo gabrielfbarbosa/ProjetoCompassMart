@@ -22,19 +22,23 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_compass_pay"
+        android:foreground="?selectableItemBackground"
+        android:clickable="true"
         android:layout_width="0dp"
         android:layout_height="65dp"
         android:layout_marginStart="80dp"
         android:layout_marginEnd="80dp"
-        app:cardBackgroundColor="@color/material_dynamic_neutral90"
+
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_continuar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.35000002">
+        app:layout_constraintVertical_bias="0.35000002"
+        android:focusable="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_compass_pay"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -43,6 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/compass_pay"
+                android:textStyle="bold"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -63,17 +68,20 @@
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/materialCardView"
+        android:id="@+id/card_pix"
+        android:foreground="?selectableItemBackground"
+        android:clickable="true"
         android:layout_width="0dp"
         android:layout_height="65dp"
         android:layout_marginTop="60dp"
-        app:cardBackgroundColor="@color/material_dynamic_neutral90"
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="@+id/card_compass_pay"
         app:layout_constraintStart_toStartOf="@+id/card_compass_pay"
-        app:layout_constraintTop_toBottomOf="@+id/card_compass_pay">
+        app:layout_constraintTop_toBottomOf="@+id/card_compass_pay"
+        android:focusable="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_pix"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -82,6 +90,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/pix"
+                android:textStyle="bold"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
