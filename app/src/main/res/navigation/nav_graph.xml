@@ -48,6 +48,9 @@
         <action
             android:id="@+id/action_CadastroFragment_to_LoginFragment"
             app:destination="@id/LoginFragment" />
+        <action
+            android:id="@+id/action_CadastroFragment_to_CarrinhoComprasFragment"
+            app:destination="@+id/CarrinhoComprasFragment" />
     </fragment>
 
 </navigation>
