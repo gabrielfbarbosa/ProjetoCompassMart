@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/fragment_parabenizacao_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/parabenizacao"
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/fragment_parabenizacao_subtitulo"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/frase_parabenizacao"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/fragment_parabenizacao_img"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="16dp"
+        app:srcCompat="@drawable/img_parabenizacao" />
+
+    <Button
+        android:id="@+id/fragment_parabenizacao_btn_inicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/btn_voltar_inicio" />
+
+    <Button
+        android:id="@+id/fragment_parabenizacao_btn_minhas_compras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/btn_compras"
+        style="?attr/materialButtonOutlinedStyle" />
+</LinearLayout>
