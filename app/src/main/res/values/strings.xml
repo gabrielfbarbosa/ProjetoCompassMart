@@ -7,7 +7,7 @@
     <string name="btn_cadastrar">Cadastre-se</string>
     <string name="btn_continuar">Continuar</string>
     <string name="btn_voltar">Voltar</string>
-    <string name="btn_voltar_inicio">Voltar ao início </string>
+    <string name="btn_voltar_inicio">Voltar ao início</string>
     <string name="btn_onboarding">Ir às compras!</string>
     <string name="btn_comprar">Comprar agora</string>
     <string name="btn_add_produto_carrinho">Adicionar no carrinho</string>
@@ -24,7 +24,7 @@
     <string name="endereco">Endereço de Entrega</string>
     <string name="pagamento">Forma de Pagamento</string>
     <string name="confirmacao">Confirme seu endereço e produtos</string>
-    <string name="parabenização">Parabéns!</string>
+    <string name="parabenizacao">Parabéns!</string>
 
     <!-- Títulos das subcategorias -->
     <string name="acessorios">Acessórios</string>
@@ -63,7 +63,7 @@
     <string name="pix">Pix</string>
 
     <!-- Frases da tela de Parabenização -->
-    <string name="frase_parabenização">Você acabou de adquirir o poder que merece!</string>
+    <string name="frase_parabenizacao">Você acabou de adquirir o poder que merece!</string>
 
     <!-- Campos dos formulários -->
     <string name="nome">Nome completo</string>
