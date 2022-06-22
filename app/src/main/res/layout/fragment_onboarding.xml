@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragment.tela_onboarding.OnboardingFragment">
 
-
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/fragment_onboarding_view_pager"
         android:layout_width="match_parent"
@@ -92,6 +91,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
