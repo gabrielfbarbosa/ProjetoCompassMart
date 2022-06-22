@@ -7,29 +7,29 @@
     <fragment
         android:id="@+id/OnboardingFragment"
         android:name="br.com.compass.compassmart.ui.fragment.tela_onboarding.OnboardingFragment"
-        android:label="fragment_onboarding"
+        android:label="onboarding_fragment"
         tools:layout="@layout/fragment_onboarding" >
     </fragment>
     <fragment
         android:id="@+id/ProdutosFragment"
         android:name="br.com.compass.compassmart.ui.fragment.tela_produtos.ProdutosFragment"
-        android:label="ProdutosFragment"
+        android:label="produtos_fragment"
         tools:layout="@layout/fragment_produtos"/>
     <fragment
         android:id="@+id/DetalhesDoProdutoFragment"
         android:name="br.com.compass.compassmart.ui.fragment.tela_detalhesproduto.DetalhesDoProdutoFragment"
-        android:label="fragment_detalhes_do_produto"
+        android:label="detalhes_do_produto_fragment"
         tools:layout="@layout/fragment_detalhes_do_produto" />
     <fragment
         android:id="@+id/CarrinhoComprasFragment"
         android:name="br.com.compass.compassmart.ui.fragment.tela_carrinhocompras.CarrinhoComprasFragment"
-        android:label="fragment_carrinho_compras"
+        android:label="carrinho_compras_fragment"
         tools:layout="@layout/fragment_carrinho_compras" >
     </fragment>
     <fragment
         android:id="@+id/LoginFragment"
         android:name="br.com.compass.compassmart.ui.fragment.tela_login.LoginFragment"
-        android:label="login_fragment_label"
+        android:label="login_fragment"
         tools:layout="@layout/fragment_login">
 
         <action
@@ -46,11 +46,11 @@
         tools:layout="@layout/fragment_cadastro">
 
         <action
-            android:id="@+id/action_CadastroFragment_to_LoginFragment"
-            app:destination="@id/LoginFragment" />
-        <action
             android:id="@+id/action_CadastroFragment_to_CarrinhoComprasFragment"
             app:destination="@+id/CarrinhoComprasFragment" />
+        <action
+            android:id="@+id/action_CadastroFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
     </fragment>
 
 </navigation>
