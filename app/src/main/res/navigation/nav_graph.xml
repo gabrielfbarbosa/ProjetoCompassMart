@@ -6,9 +6,9 @@
     app:startDestination="@id/onboardingFragment">
 
     <fragment
-        android:id="@+id/LoginFragment"
+        android:id="@+id/loginFragment"
         android:name="br.com.compass.compassmart.ui.fragment.tela_login.LoginFragment"
-        android:label="login_fragment_label"
+        android:label="login_fragment"
         tools:layout="@layout/fragment_login">
 
         <action

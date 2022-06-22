@@ -32,14 +32,14 @@ class LoginFragment : Fragment() {
 
         binding.fragmentLoginBtnLogin.setOnClickListener{
 
-            if (binding.fragmentLoginEdtxtEmail.text.toString().isEmpty() || binding.fragmentLoginEdtxtSenha.text.toString().isEmpty()) {
+            if (binding.fragmentLoginEdtxtEmail.editText?.text.toString().isEmpty() || binding.fragmentLoginEdtxtSenha.editText?.text.toString().isEmpty()) {
                 Toast.makeText(requireActivity(), "Preencha todos os campos!", Toast.LENGTH_SHORT).show()
             }
             else {
                 val sharedPreferences = requireActivity().getSharedPreferences(preferenceLoginKey, MODE_PRIVATE)
                 val editor : SharedPreferences.Editor = sharedPreferences.edit()
-                editor.putString(preferenceLoginKey, binding.fragmentLoginEdtxtEmail.text.toString())
-                editor.putString(preferenceLoginKey, binding.fragmentLoginEdtxtSenha.text.toString())
+                editor.putString(preferenceLoginKey, binding.fragmentLoginEdtxtEmail.editText?.text.toString())
+                editor.putString(preferenceLoginKey, binding.fragmentLoginEdtxtSenha.editText?.text.toString())
                 editor.apply()
                 NavHostFragment.findNavController(this@LoginFragment)
                     .navigate(R.id.action_LoginFragment_to_CarrinhoComprasFragment)
