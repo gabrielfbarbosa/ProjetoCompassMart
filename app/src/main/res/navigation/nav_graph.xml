@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/meioPagamento">
+    app:startDestination="@id/onboardingFragment"
+           
     <fragment
         android:id="@+id/onboardingFragment"
         android:name="br.com.compass.compassmart.ui.fragment.tela_onboarding.OnboardingFragment"
@@ -13,31 +14,19 @@
             android:id="@+id/action_onboardingFragment_to_produtosFragment"
             app:destination="@id/produtosFragment" />
     </fragment>
-
     <fragment
-        android:id="@+id/produtosFragment"
-        android:name="br.com.compass.compassmart.ui.fragment.tela_produtos.ProdutosFragment"
-        android:label="ProdutosFragment"
-        tools:layout="@layout/fragment_produtos">
-        <action
-            android:id="@+id/action_produtosFragment_to_detalhesDoProdutoFragment"
-            app:destination="@id/detalhesDoProdutoFragment" >
-        </action>
-    </fragment>
+        android:id="@+id/loginFragment"
+        android:name="br.com.compass.compassmart.ui.fragment.tela_login.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/fragment_login">
 
-    <fragment
-        android:id="@+id/detalhesDoProdutoFragment"
-        android:name="br.com.compass.compassmart.ui.fragment.tela_detalhes.DetalhesDoProdutoFragment"
-        android:label="fragment_detalhes_do_produto"
-        tools:layout="@layout/fragment_detalhes_do_produto">
-        <argument
-            android:name="produto"
-            app:argType="br.com.compass.compassmart.ui.Produto" />
         <action
-            android:id="@+id/action_detalhesDoProdutoFragment_to_carrinhoComprasFragment"
-            app:destination="@id/carrinhoComprasFragment" />
+            android:id="@+id/action_LoginFragment_to_CarrinhoComprasFragment"
+            app:destination="@id/CarrinhoComprasFragment" />
+        <action
+            android:id="@+id/action_LoginFragment_to_CadastroFragment"
+            app:destination="@id/CadastroFragment" />
     </fragment>
-
     <fragment
         android:id="@+id/carrinhoComprasFragment"
         android:name="br.com.compass.compassmart.ui.fragment.tela_carrinhocompras.CarrinhoComprasFragment"
