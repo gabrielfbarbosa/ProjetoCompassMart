@@ -45,9 +45,9 @@
         tools:layout="@layout/fragment_carrinho_compras"/>
 
     <fragment
-        android:id="@+id/parabenizacaoFragment"
+        android:id="@+id/ParabenizacaoFragment"
         android:name="br.com.compass.compassmart.ui.fragment.tela_parabenizacao.ParabenizacaoFragment"
-        android:label="ParabenizacaoFragment"
+        android:label="parabenizacao_fragment"
         tools:layout="@layout/fragment_parabenizacao">
     </fragment>
 </navigation>
