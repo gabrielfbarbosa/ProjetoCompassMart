@@ -14,6 +14,8 @@
     <string name="btn_add_produto">Adicionar mais produtos</string>
     <string name="btn_compras">Ver minhas compras</string>
     <string name="btn_finalizar">Finalizar compra</string>
+    <string name="rodape_login">Não tem conta? Faça o cadastro!</string>
+    <string name="rodape_cadastro">Não tem conta? Faça o login!</string>
 
     <!-- Títulos das telas -->
     <string name="categorias">Categorias</string>
@@ -59,6 +61,7 @@
     <string name="produtos_escolhidos">Produto(s) escolhido(s):</string>
 
     <!-- Frases da tela de Pagamento -->
+    <string name="escolha_pagamento">Escolha a melhor forma de pagamento para você</string>
     <string name="compass_pay">Compass Pay</string>
     <string name="pix">Pix</string>
 
@@ -79,7 +82,5 @@
 
     <!-- Frases da tela principal -->
     <string name="placeholder_main">Placeholder da tela principal</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
