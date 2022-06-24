@@ -89,12 +89,6 @@
     </fragment>
 
     <fragment
-        android:id="@+id/carrinhoComprasFragment"
-        android:name="br.com.compass.compassmart.ui.fragment.tela_carrinhocompras.CarrinhoComprasFragment"
-        android:label="fragment_carrinho_compras"
-        tools:layout="@layout/fragment_carrinho_compras"/>
-
-    <fragment
         android:id="@+id/parabenizacaoFragment"
         android:name="br.com.compass.compassmart.ui.fragment.tela_parabenizacao.ParabenizacaoFragment"
         android:label="fragment_parabenizacao"
