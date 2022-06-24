@@ -14,19 +14,7 @@
             android:id="@+id/action_onboardingFragment_to_produtosFragment"
             app:destination="@id/produtosFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/loginFragment"
-        android:name="br.com.compass.compassmart.ui.fragment.tela_login.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login">
 
-<!--        <action-->
-<!--            android:id="@+id/action_LoginFragment_to_CadastroFragment"-->
-<!--            app:destination="@id/cadastroFragment" />-->
-        <action
-            android:id="@+id/action_loginFragment_to_carrinhoComprasFragment"
-            app:destination="@id/carrinhoComprasFragment" />
-    </fragment>
     <fragment
         android:id="@+id/carrinhoComprasFragment"
         android:name="br.com.compass.compassmart.ui.fragment.tela_carrinhocompras.CarrinhoComprasFragment"
@@ -39,6 +27,7 @@
             android:id="@+id/action_carrinhoComprasFragment_to_produtosFragment"
             app:destination="@id/produtosFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/meioPagamento"
         android:name="br.com.compass.compassmart.ui.fragment.tela_meiopagamento.MeioPagamento"
@@ -53,6 +42,7 @@
             android:id="@+id/action_enderecoFragment_to_meioPagamento"
             app:destination="@id/meioPagamento" />
     </fragment>
+
     <fragment
         android:id="@+id/produtosFragment"
         android:name="br.com.compass.compassmart.ui.fragment.tela_produtos.ProdutosFragment"
@@ -61,6 +51,7 @@
             android:id="@+id/action_produtosFragment_to_detalhesDoProdutoFragment"
             app:destination="@id/detalhesDoProdutoFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/detalhesDoProdutoFragment"
         android:name="br.com.compass.compassmart.ui.fragment.tela_detalhes.DetalhesDoProdutoFragment"
@@ -68,6 +59,30 @@
         tools:layout="@layout/fragment_detalhes_do_produto">
         <action
             android:id="@+id/action_detalhesDoProdutoFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="br.com.compass.compassmart.ui.fragment.tela_login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_LoginFragment_to_CadastroFragment"
+            app:destination="@id/cadastroFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_carrinhoComprasFragment"
+            app:destination="@id/carrinhoComprasFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cadastroFragment"
+        android:name="br.com.compass.compassmart.ui.fragment.tela_cadastro.CadastroFragment"
+        android:label="cadastro_fragment"
+        tools:layout="@layout/fragment_cadastro">
+        <action
+            android:id="@+id/action_CadastroFragment_to_LoginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
 </navigation>
