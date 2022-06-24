@@ -59,14 +59,14 @@ class TelaPrincipalFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.fragmentTelaPrincipalRecyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
-        binding.fragmentTelaPrincipalRecyclerView.adapter = TelaPrincipalAdapter(produtos,
-            object : TelaPrincipalAdapter.MeuOnClickListener {
-                override fun onClick(produto: Produto) {
-                    findNavController().navigate(TelaPrincipalFragmentDirections.actionProdutosFragmentToDetalhesDoProdutoFragment(
-                        produto))
-                }
-            }
-        )
+        binding.fragmentTelaPrincipalRecyclerViewSelecionados.layoutManager = GridLayoutManager(requireContext(), 2)
+//        binding.fragmentTelaPrincipalRecyclerView.adapter = TelaPrincipalAdapter(produtos,
+//            object : TelaPrincipalAdapter.MeuOnClickListener {
+//                override fun onClick(produto: Produto) {
+//                    findNavController().navigate(TelaPrincipalFragmentDirections.actionProdutosFragmentToDetalhesDoProdutoFragment(
+//                        produto))
+//                }
+//            }
+//        )
     }
 }

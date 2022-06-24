@@ -130,7 +130,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/uf"
-            android:inputType="number" />
+            android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button

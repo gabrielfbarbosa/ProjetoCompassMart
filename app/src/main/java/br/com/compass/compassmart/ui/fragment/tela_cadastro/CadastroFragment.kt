@@ -39,7 +39,7 @@ class CadastroFragment : Fragment() {
                     binding.fragmentCadastroTxtInputConfirmaSenha.editText?.text.toString()) {
                     // TODO: Cadastra usuário
                     NavHostFragment.findNavController(this@CadastroFragment)
-                        .navigate(R.id.action_CadastroFragment_to_LoginFragment)
+                        .navigate(R.id.action_cadastroFragment_to_loginFragment)
                 }
                 else {
                     // TODO: Ambos os TextInput ficam vermelho e mostra mensagem de erro embaixo dele
@@ -50,7 +50,7 @@ class CadastroFragment : Fragment() {
 
         binding.fragmentCadastroTxtLogin.setOnClickListener{
             NavHostFragment.findNavController(this@CadastroFragment)
-                .navigate(R.id.action_CadastroFragment_to_LoginFragment)
+                .navigate(R.id.action_cadastroFragment_to_loginFragment)
         }
     }
 }
