@@ -32,7 +32,9 @@
         android:id="@+id/meioPagamento"
         android:name="br.com.compass.compassmart.ui.fragment.tela_meiopagamento.MeioPagamento"
         android:label="fragment_meio_pagamento"
-        tools:layout="@layout/fragment_meio_pagamento" />
+        tools:layout="@layout/fragment_meio_pagamento">
+    </fragment>
+
     <fragment
         android:id="@+id/enderecoFragment"
         android:name="br.com.compass.compassmart.ui.fragment.tela_endereco.EnderecoFragment"
@@ -46,7 +48,8 @@
     <fragment
         android:id="@+id/produtosFragment"
         android:name="br.com.compass.compassmart.ui.fragment.tela_produtos.ProdutosFragment"
-        android:label="ProdutosFragment">
+        android:label="fragment_produtos"
+        tools:layout="@layout/fragment_produtos">
         <action
             android:id="@+id/action_produtosFragment_to_detalhesDoProdutoFragment"
             app:destination="@id/detalhesDoProdutoFragment" />
@@ -67,7 +70,6 @@
         android:name="br.com.compass.compassmart.ui.fragment.tela_login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login">
-
         <action
             android:id="@+id/action_LoginFragment_to_CadastroFragment"
             app:destination="@id/cadastroFragment" />
@@ -79,10 +81,17 @@
     <fragment
         android:id="@+id/cadastroFragment"
         android:name="br.com.compass.compassmart.ui.fragment.tela_cadastro.CadastroFragment"
-        android:label="cadastro_fragment"
+        android:label="fragment_cadastro"
         tools:layout="@layout/fragment_cadastro">
         <action
             android:id="@+id/action_CadastroFragment_to_LoginFragment"
             app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/parabenizacaoFragment"
+        android:name="br.com.compass.compassmart.ui.fragment.tela_parabenizacao.ParabenizacaoFragment"
+        android:label="fragment_parabenizacao"
+        tools:layout="@layout/fragment_parabenizacao">
     </fragment>
 </navigation>
