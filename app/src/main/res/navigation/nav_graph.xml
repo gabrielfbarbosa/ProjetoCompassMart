@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/onboardingFragment">
-           
+
     <fragment
         android:id="@+id/onboardingFragment"
         android:name="br.com.compass.compassmart.ui.fragment.tela_onboarding.OnboardingFragment"
@@ -20,21 +20,54 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login">
 
+<!--        <action-->
+<!--            android:id="@+id/action_LoginFragment_to_CadastroFragment"-->
+<!--            app:destination="@id/cadastroFragment" />-->
         <action
-            android:id="@+id/action_LoginFragment_to_CarrinhoComprasFragment"
-            app:destination="@id/CarrinhoComprasFragment" />
-        <action
-            android:id="@+id/action_LoginFragment_to_CadastroFragment"
-            app:destination="@id/CadastroFragment" />
+            android:id="@+id/action_loginFragment_to_carrinhoComprasFragment"
+            app:destination="@id/carrinhoComprasFragment" />
     </fragment>
     <fragment
         android:id="@+id/carrinhoComprasFragment"
         android:name="br.com.compass.compassmart.ui.fragment.tela_carrinhocompras.CarrinhoComprasFragment"
         android:label="fragment_carrinho_compras"
-        tools:layout="@layout/fragment_carrinho_compras"/>
+        tools:layout="@layout/fragment_carrinho_compras">
+        <action
+            android:id="@+id/action_carrinhoComprasFragment_to_enderecoFragment"
+            app:destination="@id/enderecoFragment" />
+        <action
+            android:id="@+id/action_carrinhoComprasFragment_to_produtosFragment"
+            app:destination="@id/produtosFragment" />
+    </fragment>
     <fragment
         android:id="@+id/meioPagamento"
         android:name="br.com.compass.compassmart.ui.fragment.tela_meiopagamento.MeioPagamento"
         android:label="fragment_meio_pagamento"
         tools:layout="@layout/fragment_meio_pagamento" />
+    <fragment
+        android:id="@+id/enderecoFragment"
+        android:name="br.com.compass.compassmart.ui.fragment.tela_endereco.EnderecoFragment"
+        android:label="fragment_endereco"
+        tools:layout="@layout/fragment_endereco">
+        <action
+            android:id="@+id/action_enderecoFragment_to_meioPagamento"
+            app:destination="@id/meioPagamento" />
+    </fragment>
+    <fragment
+        android:id="@+id/produtosFragment"
+        android:name="br.com.compass.compassmart.ui.fragment.tela_produtos.ProdutosFragment"
+        android:label="ProdutosFragment">
+        <action
+            android:id="@+id/action_produtosFragment_to_detalhesDoProdutoFragment"
+            app:destination="@id/detalhesDoProdutoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalhesDoProdutoFragment"
+        android:name="br.com.compass.compassmart.ui.fragment.tela_detalhes.DetalhesDoProdutoFragment"
+        android:label="fragment_detalhes_do_produto"
+        tools:layout="@layout/fragment_detalhes_do_produto">
+        <action
+            android:id="@+id/action_detalhesDoProdutoFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
 </navigation>

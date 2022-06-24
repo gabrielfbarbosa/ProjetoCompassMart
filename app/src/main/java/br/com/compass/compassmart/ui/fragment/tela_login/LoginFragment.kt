@@ -42,13 +42,13 @@ class LoginFragment : Fragment() {
                 editor.putString(preferenceLoginKey, binding.fragmentLoginEdtxtSenha.editText?.text.toString())
                 editor.apply()
                 NavHostFragment.findNavController(this@LoginFragment)
-                    .navigate(R.id.action_LoginFragment_to_CarrinhoComprasFragment)
+                    .navigate(R.id.action_loginFragment_to_carrinhoComprasFragment)
             }
         }
 
-       binding.fragmentLoginTxtCadastro.setOnClickListener{
-             NavHostFragment.findNavController(this@LoginFragment)
-                 .navigate(R.id.action_LoginFragment_to_CadastroFragment)
-       }
+//       binding.fragmentLoginTxtCadastro.setOnClickListener{
+//             NavHostFragment.findNavController(this@LoginFragment)
+//                 .navigate(R.id.action_LoginFragment_to_CadastroFragment)
+//       }
     }
 }
