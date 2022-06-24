@@ -82,5 +82,7 @@
 
     <!-- Frases da tela principal -->
     <string name="placeholder_main">Placeholder da tela principal</string>
+    <string name="cat_texto">Categorias</string>
+    <string name="melhoresprod_texto">Os melhores produtos selecionados para você</string>
 
 </resources>
