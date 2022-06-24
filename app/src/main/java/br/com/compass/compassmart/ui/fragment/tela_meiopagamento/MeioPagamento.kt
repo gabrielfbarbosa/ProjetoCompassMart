@@ -20,7 +20,7 @@ class MeioPagamento : Fragment(), View.OnClickListener{
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
+    ): View {
         _binding = FragmentMeioPagamentoBinding.inflate(inflater, container, false)
         return binding.root
     }

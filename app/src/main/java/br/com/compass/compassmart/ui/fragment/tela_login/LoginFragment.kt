@@ -32,7 +32,8 @@ class LoginFragment : Fragment() {
 
         binding.fragmentLoginBtnLogin.setOnClickListener{
 
-            if (binding.fragmentLoginEdtxtEmail.editText?.text.toString().isEmpty() || binding.fragmentLoginEdtxtSenha.editText?.text.toString().isEmpty()) {
+            if (binding.fragmentLoginEdtxtEmail.editText?.text.toString().isEmpty() ||
+                binding.fragmentLoginEdtxtSenha.editText?.text.toString().isEmpty()) {
                 Toast.makeText(requireActivity(), "Preencha todos os campos!", Toast.LENGTH_SHORT).show()
             }
             else {
@@ -42,7 +43,7 @@ class LoginFragment : Fragment() {
                 editor.putString(preferenceLoginKey, binding.fragmentLoginEdtxtSenha.editText?.text.toString())
                 editor.apply()
                 NavHostFragment.findNavController(this@LoginFragment)
-                    .navigate(R.id.action_LoginFragment_to_CarrinhoComprasFragment)
+                    .navigate(R.id.action_loginFragment_to_carrinhoComprasFragment)
             }
         }
 
