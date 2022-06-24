@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.NavHostFragment
 import br.com.compass.compassmart.R
 import br.com.compass.compassmart.databinding.FragmentCarrinhoComprasBinding
 import br.com.compass.compassmart.ui.Produto
@@ -33,5 +34,13 @@ class CarrinhoComprasFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.fragmentCarrinhoComprasRecyclerview.adapter = CarrinhoCompraAdapter(produto)
+        binding.fragmentCarrinhoComprasBtnContinuar.setOnClickListener {
+            NavHostFragment.findNavController(this@CarrinhoComprasFragment)
+                .navigate(R.id.action_carrinhoComprasFragment_to_enderecoFragment)
+        }
+        binding.fragmentCarrinhoComprasBtnAddMaisProduto.setOnClickListener {
+            NavHostFragment.findNavController(this@CarrinhoComprasFragment)
+                .navigate(R.id.action_carrinhoComprasFragment_to_produtosFragment)
+        }
     }
 }
