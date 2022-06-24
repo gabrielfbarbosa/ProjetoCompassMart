@@ -43,7 +43,8 @@
     <fragment
         android:id="@+id/produtosFragment"
         android:name="br.com.compass.compassmart.ui.fragment.tela_produtos.ProdutosFragment"
-        android:label="ProdutosFragment" >
+        android:label="fragment_produtos"
+        tools:layout="@layout/fragment_produtos" >
         <action
             android:id="@+id/action_produtosFragment_to_detalhesDoProdutoFragment"
             app:destination="@id/detalhesDoProdutoFragment" />
@@ -54,7 +55,7 @@
         android:label="fragment_detalhes_do_produto"
         tools:layout="@layout/fragment_detalhes_do_produto" >
         <argument
-            android:name="produto"
+            android:name="fragment_detalhes_produto"
             app:argType="br.com.compass.compassmart.ui.Produto" />
         <action
             android:id="@+id/action_detalhesDoProdutoFragment_to_loginFragment"
@@ -72,9 +73,16 @@
     <fragment
         android:id="@+id/cadastroFragment"
         android:name="br.com.compass.compassmart.ui.fragment.tela_cadastro.CadastroFragment"
-        android:label="CadastroFragment" >
+        android:label="fragment_cadastro"
+        tools:layout="@layout/fragment_cadastro" >
         <action
             android:id="@+id/action_cadastroFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/parabenizacaoFragment"
+        android:name="br.com.compass.compassmart.ui.fragment.tela_parabenizacao.ParabenizacaoFragment"
+        android:label="fragment_parabenizacao"
+        tools:layout="@layout/fragment_parabenizacao">
     </fragment>
 </navigation>
