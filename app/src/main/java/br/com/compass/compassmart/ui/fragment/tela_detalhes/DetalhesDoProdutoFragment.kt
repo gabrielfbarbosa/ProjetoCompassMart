@@ -25,7 +25,7 @@ class DetalhesDoProdutoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnComprarAgora.setOnClickListener{
-            Navigation.findNavController(view).navigate(R.id.action_detalhesDoProdutoFragment_to_carrinhoComprasFragment)
+            Navigation.findNavController(view).navigate(R.id.action_detalhesDoProdutoFragment_to_loginFragment)
         }
     }
 }
