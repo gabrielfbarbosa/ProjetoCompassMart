@@ -1,61 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".ui.fragment.tela_carrinhocompras.CarrinhoComprasFragment">
 
-    <TextView
-        android:id="@+id/fragment_carrinho_compras_titulo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="@string/carrinho_compras"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/fragment_carrinho_compras_recyclerview"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toTopOf="@+id/fragment_carrinho_compras_btn_continuar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_carrinho_compras_titulo"
-        tools:listitem="@layout/item_carrinho_compra" />
+        android:layout_height="wrap_content">
 
+        <TextView
+            android:id="@+id/fragment_carrinho_compras_titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/carrinho_compras"
+            android:textAlignment="center"
+            android:textColor="@color/orange_500"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/fragment_carrinho_compras_btn_add_mais_produto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:text="@string/btn_add_produto"
-        app:cornerRadius="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_carrinho_compras_recyclerview" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragment_carrinho_compras_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_carrinho_compras_titulo"
+            tools:listitem="@layout/item_carrinho_compra" />
 
-    <ImageButton
-        android:id="@+id/fragment_carrinho_compras_btn_continuar"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="3dp"
-        android:background="@color/orange_500"
-        android:src="@drawable/ic_baseline_navigate_next_24"
-        app:cornerRadius="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/fragment_carrinho_compras_btn_add_mais_produto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/fragment_carrinho_compras_btn_add_mais_produto"
-        app:layout_constraintTop_toTopOf="@+id/fragment_carrinho_compras_btn_add_mais_produto"
-        app:layout_constraintVertical_bias="0.0" />
+        <Button
+            android:id="@+id/fragment_carrinho_compras_btn_continuar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/btn_continuar"
+            app:layout_constraintBottom_toTopOf="@+id/fragment_carrinho_compras_btn_add_mais_produto"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_carrinho_compras_btn_add_mais_produto"
+            app:layout_constraintStart_toStartOf="@+id/fragment_carrinho_compras_btn_add_mais_produto"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_carrinho_compras_recyclerview"
+            app:layout_constraintVertical_bias="1.0" />
 
+        <Button
+            android:id="@+id/fragment_carrinho_compras_btn_add_mais_produto"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/btn_add_produto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
