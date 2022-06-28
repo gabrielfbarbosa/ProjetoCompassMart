@@ -1,36 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
-
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/fragment_cadastro_logo"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_width="225dp"
+        android:layout_height="225dp"
+        android:layout_marginTop="-40dp"
+        android:layout_marginStart="93dp"
+        android:layout_marginEnd="93dp"
         android:contentDescription="@string/app_name"
-        app:srcCompat="@drawable/logomarca_preta_sem_fundo"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/fragment_cadastro_txt_input_nome" />
+        app:srcCompat="@drawable/logomarca_preta_sem_fundo" />
+
+    <TextView
+        android:id="@+id/fragment_cadastro_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cadastro"
+        android:textColor="@color/orange_500"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_cadastro_logo"
+        app:layout_constraintStart_toStartOf="@+id/fragment_cadastro_logo"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_cadastro_logo" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/fragment_cadastro_txt_input_nome"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/fragment_cadastro_txt_input_email"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="56dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_cadastro_titulo">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -42,12 +51,14 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/fragment_cadastro_txt_input_email"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/fragment_cadastro_txt_input_senha"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="56dp"
         app:layout_constraintEnd_toEndOf="@+id/fragment_cadastro_txt_input_nome"
-        app:layout_constraintStart_toStartOf="@+id/fragment_cadastro_txt_input_nome">
+        app:layout_constraintStart_toStartOf="@+id/fragment_cadastro_txt_input_nome"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_cadastro_txt_input_nome">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -59,12 +70,14 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/fragment_cadastro_txt_input_senha"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/fragment_cadastro_txt_input_confirma_senha"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="56dp"
         app:layout_constraintEnd_toEndOf="@+id/fragment_cadastro_txt_input_email"
         app:layout_constraintStart_toStartOf="@+id/fragment_cadastro_txt_input_email"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_cadastro_txt_input_email"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -77,12 +90,14 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/fragment_cadastro_txt_input_confirma_senha"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/fragment_cadastro_btn_cadastrar"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="56dp"
         app:layout_constraintEnd_toEndOf="@+id/fragment_cadastro_txt_input_senha"
         app:layout_constraintStart_toStartOf="@+id/fragment_cadastro_txt_input_senha"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_cadastro_txt_input_senha"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -96,21 +111,20 @@
         android:id="@+id/fragment_cadastro_btn_cadastrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/btn_cadastrar"
         app:layout_constraintBottom_toTopOf="@+id/fragment_cadastro_txt_login"
-        app:layout_constraintEnd_toEndOf="@+id/fragment_cadastro_txt_input_confirma_senha"
-        app:layout_constraintStart_toStartOf="@+id/fragment_cadastro_txt_input_confirma_senha" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/fragment_cadastro_txt_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="24dp"
         android:text="@string/rodape_cadastro"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/fragment_cadastro_btn_cadastrar"
-        app:layout_constraintStart_toStartOf="@+id/fragment_cadastro_btn_cadastrar" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
