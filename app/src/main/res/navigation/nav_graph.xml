@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/onboardingFragment">
+    app:startDestination="@id/confirmacaoFragment">
            
     <fragment
         android:id="@+id/onboardingFragment"
@@ -85,4 +85,9 @@
         android:label="fragment_parabenizacao"
         tools:layout="@layout/fragment_parabenizacao">
     </fragment>
+    <fragment
+        android:id="@+id/confirmacaoFragment"
+        android:name="br.com.compass.compassmart.ui.fragment.tela_confirmacao.ConfirmacaoFragment"
+        android:label="fragment_confirmacao"
+        tools:layout="@layout/fragment_confirmacao" />
 </navigation>
