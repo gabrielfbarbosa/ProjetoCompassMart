@@ -7,14 +7,15 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragment.tela_endereco.EnderecoFragment">
 
-
     <TextView
-        android:id="@+id/fragment_endereco_txt_insira"
+        android:id="@+id/fragment_endereco_txt_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
-        android:text="Insira o endereço de entrega"
-        android:textSize="20sp"
+        android:text="@string/endereco"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/orange_500"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,7 +30,7 @@
         android:layout_marginEnd="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_endereco_txt_insira">
+        app:layout_constraintTop_toBottomOf="@+id/fragment_endereco_txt_titulo">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -138,13 +139,8 @@
         android:layout_width="145dp"
         android:layout_height="50dp"
         android:layout_marginTop="130dp"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="#FFFF8100"
-        android:bottomLeftRadius="20dp"
-        android:bottomRightRadius="20dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/btn_continuar"
-        android:topLeftRadius="20dp"
-        android:topRightRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fragment_endereco_edtxt_cidade" />
