@@ -22,6 +22,7 @@
     <string name="favoritos">Favoritos</string>
     <string name="perfil">Perfil do Usuário</string>
     <string name="carrinho_compras">Carrinho de Compras</string>
+    <string name="login">Faça Login</string>
     <string name="cadastro">Crie sua conta</string>
     <string name="endereco">Endereço de Entrega</string>
     <string name="pagamento">Forma de Pagamento</string>
@@ -44,6 +45,9 @@
         <item>Tenha o poder que você merece!</item>
         <item>Comece a comprar agora mesmo para mudar a sua vida!</item>
     </string-array>
+
+    <!-- Frases da tela principal -->
+    <string name="melhores_produtos">Os melhores produtos selecionados para você:</string>
 
     <!-- Frases da tela de Perfil -->
     <string name="info">Informações</string>
@@ -69,7 +73,7 @@
     <string name="frase_parabenizacao">Você acabou de adquirir o poder que merece!</string>
 
     <!-- Campos dos formulários -->
-    <string name="nome">Nome completo</string>
+    <string name="nome">Nome</string>
     <string name="email">E-mail</string>
     <string name="senha">Senha</string>
     <string name="confirma_senha">Confirme sua senha</string>
@@ -79,8 +83,5 @@
     <string name="bairro">Bairro</string>
     <string name="cidade">Cidade</string>
     <string name="uf">UF</string>
-
-    <!-- Frases da tela principal -->
-    <string name="melhores_produtos">Os melhores produtos selecionados para você:</string>
 
 </resources>
