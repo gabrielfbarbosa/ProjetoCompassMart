@@ -40,7 +40,7 @@ class EnderecoFragment : Fragment() {
                     .show()
             } else {
                 NavHostFragment.findNavController(this@EnderecoFragment)
-                    .navigate(R.id.action_enderecoFragment_to_meioPagamento2)
+                    .navigate(R.id.action_enderecoFragment_to_confirmacaoFragment)
             }
         }
     }

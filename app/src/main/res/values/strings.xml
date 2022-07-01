@@ -54,7 +54,7 @@
     <string name="mais_info">Mais informações</string>
 
     <!-- Frases da tela de Carrinho de Compras -->
-    <string name="quantidade">Quantidade</string>
+    <string name="quantidade">Quant.</string>
 
     <!-- Frases da tela de Confirmação -->
     <string name="valor">Valor total:</string>

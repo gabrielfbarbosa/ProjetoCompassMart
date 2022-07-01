@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import br.com.compass.compassmart.R
 import br.com.compass.compassmart.databinding.FragmentConfirmacaoBinding
 import br.com.compass.compassmart.ui.Produto
@@ -45,5 +46,9 @@ class ConfirmacaoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.recyclerView.adapter = ConfirmacaoAdapter(produto)
+
+        binding.btnConfirmar.setOnClickListener{
+            Navigation.findNavController(view).navigate(R.id.action_confirmacaoFragment_to_meioPagamento)
+        }
     }
 }
