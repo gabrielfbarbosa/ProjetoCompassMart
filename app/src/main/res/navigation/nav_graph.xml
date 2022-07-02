@@ -39,7 +39,11 @@
         android:id="@+id/meioPagamento"
         android:name="br.com.compass.compassmart.ui.fragment.tela_meiopagamento.MeioPagamento"
         android:label="fragment_meio_pagamento"
-        tools:layout="@layout/fragment_meio_pagamento" />
+        tools:layout="@layout/fragment_meio_pagamento" >
+        <action
+            android:id="@+id/action_meioPagamento_to_parabenizacaoFragment"
+            app:destination="@id/parabenizacaoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/produtosFragment"
         android:name="br.com.compass.compassmart.ui.fragment.tela_produtos.ProdutosFragment"
