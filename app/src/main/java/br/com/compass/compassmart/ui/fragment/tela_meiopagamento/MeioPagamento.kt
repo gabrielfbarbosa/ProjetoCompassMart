@@ -30,6 +30,9 @@ class MeioPagamento : Fragment(), View.OnClickListener{
 
         binding.cardCompassPay.setOnClickListener(this)
         binding.cardPix.setOnClickListener(this)
+        binding.btnContinuar.setOnClickListener{
+            Navigation.findNavController(view).navigate(R.id.action_meioPagamento_to_parabenizacaoFragment)
+        }
     }
 
     override fun onClick(v: View) {

@@ -12,13 +12,25 @@
             android:id="@+id/fragment_login_logo"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:layout_marginBottom="20dp"
             android:contentDescription="@string/app_name"
-            app:layout_constraintBottom_toTopOf="@+id/fragment_login_edtxt_email"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/fragment_login_titulo"
             app:srcCompat="@drawable/logomarca_preta_sem_fundo" />
+
+        <TextView
+            android:id="@+id/fragment_login_titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Faça Login"
+            android:textColor="@color/orange_500"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_login_logo"
+            app:layout_constraintStart_toStartOf="@+id/fragment_login_logo"
+            app:layout_constraintBottom_toTopOf="@+id/fragment_login_edtxt_email"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/fragment_login_edtxt_email"
