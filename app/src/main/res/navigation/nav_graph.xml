@@ -58,12 +58,12 @@
         android:name="br.com.compass.compassmart.ui.fragment.tela_detalhes.DetalhesDoProdutoFragment"
         android:label="fragment_detalhes_do_produto"
         tools:layout="@layout/fragment_detalhes_do_produto" >
-        <argument
-            android:name="fragment_detalhes_produto"
-            app:argType="br.com.compass.compassmart.ui.Produto" />
         <action
             android:id="@+id/action_detalhesDoProdutoFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <argument
+            android:name="produtos"
+            app:argType="br.com.compass.compassmart.ui.api.ProdutoResponse" />
     </fragment>
     <fragment
         android:id="@+id/enderecoFragment"
