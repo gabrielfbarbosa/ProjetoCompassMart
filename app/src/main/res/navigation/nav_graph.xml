@@ -50,9 +50,9 @@
         android:label="fragment_produtos"
         tools:layout="@layout/fragment_produtos" >
         <action
-            android:id="@+id/action_produtosFragment_to_detalhesDoProdutoFragment"
-            app:destination="@id/detalhesDoProdutoFragment" />
-    </fragment>
+    android:id="@+id/action_produtosFragment_to_detalhesDoProdutoFragment"
+    app:destination="@id/detalhesDoProdutoFragment" />
+</fragment>
     <fragment
         android:id="@+id/detalhesDoProdutoFragment"
         android:name="br.com.compass.compassmart.ui.fragment.tela_detalhes.DetalhesDoProdutoFragment"
@@ -62,7 +62,7 @@
             android:id="@+id/action_detalhesDoProdutoFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
         <argument
-            android:name="produtos"
+            android:name="produto"
             app:argType="br.com.compass.compassmart.ui.api.ProdutoResponse" />
     </fragment>
     <fragment

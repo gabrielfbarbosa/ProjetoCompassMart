@@ -9,6 +9,7 @@ import androidx.navigation.Navigation
 import br.com.compass.compassmart.R
 import br.com.compass.compassmart.databinding.FragmentCarrinhoComprasBinding
 import br.com.compass.compassmart.ui.Produto
+import br.com.compass.compassmart.ui.fragment.tela_carrinhocompras.model.Produtos
 
 class CarrinhoComprasFragment : Fragment() {
 
