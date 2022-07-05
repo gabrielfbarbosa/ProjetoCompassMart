@@ -33,14 +33,14 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:shapeAppearanceOverlay="@style/QuadradoArredondado"
-                app:srcCompat="@drawable/produto_galaxy_a52" />
+                tools:srcCompat="@drawable/produto_galaxy_a52" />
 
             <TextView
                 android:id="@+id/ProdutoModelo"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_marginTop="16dp"
-                android:text="Galaxy A52 5G"
+                tools:text="Galaxy A52 5G"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/imagemProduto"
@@ -51,11 +51,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_marginTop="16dp"
-                android:text="R$ 1779,00 à vista\nEm até 12x de R$ 148,25 sem juros"
+                android:textColor="@color/orange_700"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/ProdutoModelo"
+                app:layout_constraintTop_toBottomOf="@+id/ProdutoModelo"
+                tools:text="R$ 1779,00 à vista" />
+
+            <TextView
+                android:id="@+id/complementoDoProduto"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="Em até 12x de R$ 148,25 sem juros"
                 android:textColor="@color/orange_700"
                 android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="@+id/ProdutoModelo"
-                app:layout_constraintTop_toBottomOf="@+id/ProdutoModelo" />
+                app:layout_constraintStart_toStartOf="@+id/precoDoProduto"
+                app:layout_constraintTop_toBottomOf="@+id/precoDoProduto" />
 
             <TextView
                 android:id="@+id/descricaoDoProduto"
@@ -67,8 +78,8 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/precoDoProduto"
-                app:layout_constraintTop_toBottomOf="@+id/precoDoProduto" />
+                app:layout_constraintStart_toStartOf="@+id/complementoDoProduto"
+                app:layout_constraintTop_toBottomOf="@+id/complementoDoProduto" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

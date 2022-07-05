@@ -14,7 +14,7 @@ class ProdutosViewModel: ViewModel() {
     fun getProduto(){
         viewModelScope.launch {
             produtos.value = ApiProvider.getApiService().getProduto()
-            println(produtos)
+//            println(produtos)
         }
     }
 

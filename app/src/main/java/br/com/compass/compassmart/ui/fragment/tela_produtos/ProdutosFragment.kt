@@ -75,7 +75,7 @@ class ProdutosFragment : Fragment() {
                 object : ProdutosAdapter.MeuOnClickListener {
                     override fun onClick(produto: ProdutoResponse) {
                         findNavController().navigate(ProdutosFragmentDirections.actionProdutosFragmentToDetalhesDoProdutoFragment(
-                            produto))
+                            produto.id))
                     }
                 }
             )

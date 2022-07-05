@@ -63,7 +63,7 @@
             app:destination="@id/loginFragment" />
         <argument
             android:name="produto"
-            app:argType="br.com.compass.compassmart.ui.api.ProdutoResponse" />
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/enderecoFragment"
