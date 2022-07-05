@@ -1,11 +1,11 @@
-package br.com.compass.compassmart.ui
+package br.com.compass.compassmart.ui.fragment.tela_carrinhocompras.model
 
 import androidx.annotation.DrawableRes
-import java.io.Serializable
 
-data class Produto (
-    val modelo: String,
+data class Produtos(
+    val descricao : String,
     val quantidade: String,
     val preco: String,
     @DrawableRes val drawableId: Int
-) : Serializable
+)
+

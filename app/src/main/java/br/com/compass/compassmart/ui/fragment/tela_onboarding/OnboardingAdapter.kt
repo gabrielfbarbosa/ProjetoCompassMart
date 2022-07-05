@@ -14,12 +14,12 @@ class OnboardingAdapter(
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): OnboardingAdapter.PaginasViewHolder {
+    ): PaginasViewHolder {
         val view = ItemOnboardingBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return PaginasViewHolder(view.root)
     }
 
-    override fun onBindViewHolder(holder: OnboardingAdapter.PaginasViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: PaginasViewHolder, position: Int) {
         holder.bind(data[position])
     }
 

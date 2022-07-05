@@ -71,16 +71,17 @@
                 app:layout_constraintTop_toBottomOf="@+id/precoDoProduto" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </ScrollView>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_comprar_agora"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:background="@color/white"
         android:text="@string/btn_comprar"
         app:cornerRadius="0dp"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

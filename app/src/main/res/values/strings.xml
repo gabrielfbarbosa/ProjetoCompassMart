@@ -7,24 +7,27 @@
     <string name="btn_cadastrar">Cadastre-se</string>
     <string name="btn_continuar">Continuar</string>
     <string name="btn_voltar">Voltar</string>
-    <string name="btn_voltar_inicio">Voltar ao início </string>
+    <string name="btn_voltar_inicio">Voltar ao início</string>
     <string name="btn_onboarding">Ir às compras!</string>
     <string name="btn_comprar">Comprar agora</string>
     <string name="btn_add_produto_carrinho">Adicionar no carrinho</string>
     <string name="btn_add_produto">Adicionar mais produtos</string>
     <string name="btn_compras">Ver minhas compras</string>
     <string name="btn_finalizar">Finalizar compra</string>
+    <string name="rodape_login">Não tem conta? Faça o cadastro!</string>
+    <string name="rodape_cadastro">Não tem conta? Faça o login!</string>
 
     <!-- Títulos das telas -->
     <string name="categorias">Categorias</string>
     <string name="favoritos">Favoritos</string>
     <string name="perfil">Perfil do Usuário</string>
     <string name="carrinho_compras">Carrinho de Compras</string>
+    <string name="login">Faça Login</string>
     <string name="cadastro">Crie sua conta</string>
     <string name="endereco">Endereço de Entrega</string>
     <string name="pagamento">Forma de Pagamento</string>
     <string name="confirmacao">Confirme seu endereço e produtos</string>
-    <string name="parabenização">Parabéns!</string>
+    <string name="parabenizacao">Parabéns!</string>
 
     <!-- Títulos das subcategorias -->
     <string name="acessorios">Acessórios</string>
@@ -43,6 +46,9 @@
         <item>Comece a comprar agora mesmo para mudar a sua vida!</item>
     </string-array>
 
+    <!-- Frases da tela principal -->
+    <string name="melhores_produtos">Os melhores produtos selecionados para você:</string>
+
     <!-- Frases da tela de Perfil -->
     <string name="info">Informações</string>
     <string name="minhas_compras">Minhas compras</string>
@@ -52,21 +58,22 @@
     <string name="mais_info">Mais informações</string>
 
     <!-- Frases da tela de Carrinho de Compras -->
-    <string name="quantidade">Quantidade</string>
+    <string name="quantidade">Quant.</string>
 
     <!-- Frases da tela de Confirmação -->
     <string name="valor">Valor total:</string>
     <string name="produtos_escolhidos">Produto(s) escolhido(s):</string>
 
     <!-- Frases da tela de Pagamento -->
+    <string name="escolha_pagamento">Escolha a melhor forma de pagamento para você</string>
     <string name="compass_pay">Compass Pay</string>
     <string name="pix">Pix</string>
 
     <!-- Frases da tela de Parabenização -->
-    <string name="frase_parabenização">Você acabou de adquirir o poder que merece!</string>
+    <string name="frase_parabenizacao">Você acabou de adquirir o poder que merece!</string>
 
     <!-- Campos dos formulários -->
-    <string name="nome">Nome completo</string>
+    <string name="nome">Nome</string>
     <string name="email">E-mail</string>
     <string name="senha">Senha</string>
     <string name="confirma_senha">Confirme sua senha</string>
@@ -76,10 +83,5 @@
     <string name="bairro">Bairro</string>
     <string name="cidade">Cidade</string>
     <string name="uf">UF</string>
-
-    <!-- Frases da tela principal -->
-    <string name="placeholder_main">Placeholder da tela principal</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
