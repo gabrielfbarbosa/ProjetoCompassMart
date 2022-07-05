@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -32,7 +31,7 @@
         app:layout_constraintTop_toBottomOf="@+id/fragment_login_logo" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/fragment_login_edtxt_email"
+        android:id="@+id/fragment_login_textinputlayout_email"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -44,6 +43,7 @@
         app:layout_constraintTop_toBottomOf="@+id/fragment_login_titulo">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fragment_login_edtxt_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email"
@@ -53,7 +53,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/fragment_login_edtxt_senha"
+        android:id="@+id/fragment_login_textinputlayout_senha"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -61,11 +61,12 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="56dp"
         app:passwordToggleEnabled="true"
-        app:layout_constraintEnd_toEndOf="@+id/fragment_login_edtxt_email"
-        app:layout_constraintStart_toStartOf="@+id/fragment_login_edtxt_email"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_login_edtxt_email">
+        app:layout_constraintEnd_toEndOf="@+id/fragment_login_textinputlayout_email"
+        app:layout_constraintStart_toStartOf="@+id/fragment_login_textinputlayout_email"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_login_textinputlayout_email">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fragment_login_edtxt_senha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/senha"
