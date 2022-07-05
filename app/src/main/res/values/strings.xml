@@ -25,7 +25,7 @@
     <string name="login">Faça Login</string>
     <string name="cadastro">Crie sua conta</string>
     <string name="endereco">Endereço de Entrega</string>
-    <string name="pagamento">Forma de Pagamento</string>
+    <string name="forma_pagamento">Forma de Pagamento</string>
     <string name="confirmacao">Confirme seu endereço e produtos</string>
     <string name="parabenizacao">Parabéns!</string>
 
@@ -50,8 +50,10 @@
     <string name="melhores_produtos">Os melhores produtos selecionados para você:</string>
 
     <!-- Frases da tela de Perfil -->
-    <string name="info">Informações</string>
     <string name="minhas_compras">Minhas compras</string>
+    <string name="numero_pedido">Pedido</string>
+    <string name="data">Data</string>
+    <string name="pagamento">Pagamento</string>
 
     <!-- Frases da tela de Produto -->
     <string name="produto">Produto</string>

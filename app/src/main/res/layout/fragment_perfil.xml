@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.tela_perfil.PerfilFragment">
+
+    <TextView
+        android:id="@+id/fragment_perfil_txt_nome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nome"
+        android:textColor="@color/orange_700"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:drawableTopCompat="@drawable/ic_perfil" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:textColor="@color/orange_700"
+        android:textSize="20sp"
+        android:text="@string/email" />
+
+    <TextView
+        android:id="@+id/fragment_perfil_tab_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/email"
+        android:textSize="20sp"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        android:layout_marginVertical="18dp"/>
+
+    <TextView
+        android:id="@+id/fragment_perfil_txt_minhas_compras"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/minhas_compras"
+        android:textColor="@color/orange_700"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_perfil_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="18dp"
+        tools:listitem="@layout/item_minhas_compras"/>
+
+</LinearLayout>

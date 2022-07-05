@@ -98,4 +98,10 @@
             android:id="@+id/action_confirmacaoFragment_to_meioPagamento"
             app:destination="@id/meioPagamento" />
     </fragment>
+    <fragment
+        android:id="@+id/perfilFragment"
+        android:name="br.com.compass.compassmart.ui.fragment.tela_perfil.PerfilFragment"
+        android:label="fragment_perfil"
+        tools:layout="@layout/fragment_perfil" >
+    </fragment>
 </navigation>
