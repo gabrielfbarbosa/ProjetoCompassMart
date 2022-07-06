@@ -2,5 +2,5 @@ package br.com.compass.compassmart.api
 
 data class LoginPayload(
     val email: String,
-    val password: String
+    val senha: String
 )

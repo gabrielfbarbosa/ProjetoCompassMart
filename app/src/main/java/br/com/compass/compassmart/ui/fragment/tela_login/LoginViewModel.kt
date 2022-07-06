@@ -11,6 +11,7 @@ class LoginViewModel: ViewModel() {
     val erroEmail: MutableLiveData<String> = MutableLiveData()
     val erroSenha: MutableLiveData<String> = MutableLiveData()
     val navegueParaCarrinhoCompras: MutableLiveData<String> = MutableLiveData()
+    val erroLoginInvalido: MutableLiveData<String> = MutableLiveData()
 
     fun validaLogin(email: String?, senha: String?){
         if(email.isNullOrBlank()) {
@@ -19,9 +20,14 @@ class LoginViewModel: ViewModel() {
             erroEmail.postValue("")
             erroSenha.postValue("Digite uma senha")
         } else {
+            erroSenha.postValue("")
             viewModelScope.launch {
                 val response = getApiService().getLogin(LoginPayload(email, senha))
-                navegueParaCarrinhoCompras.postValue(response.token)
+                if(response.isSuccessful){
+                    navegueParaCarrinhoCompras.postValue(response.body()!!.token)
+                } else {
+                    erroLoginInvalido.postValue("Usuário e/ou senha incorretos")
+                }
             }
         }
     }
