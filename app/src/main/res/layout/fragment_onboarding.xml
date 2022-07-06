@@ -9,21 +9,22 @@
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/fragment_onboarding_view_pager"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_marginTop="60dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_onboarding_layout_progresso"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/fragment_onboarding_layout_progresso"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/fragment_onboarding_btn_comecar_comprar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_onboarding_view_pager">
+        app:layout_constraintStart_toStartOf="parent" >
 
         <androidx.cardview.widget.CardView
             android:id="@+id/fragment_onboarding_card_esquerda"
@@ -85,7 +86,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/fragment_onboarding_view_pager"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/btn_onboarding"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

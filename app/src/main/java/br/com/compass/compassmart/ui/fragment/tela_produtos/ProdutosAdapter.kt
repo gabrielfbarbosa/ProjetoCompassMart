@@ -5,11 +5,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import androidx.recyclerview.widget.RecyclerView
+import br.com.compass.compassmart.R
 import br.com.compass.compassmart.databinding.ItemProdutoBinding
 import br.com.compass.compassmart.ui.Produto
+import br.com.compass.compassmart.ui.api.ProdutoResponse
+import com.bumptech.glide.Glide
+import java.text.NumberFormat
 
 class ProdutosAdapter(
-    private val data: List<Produto>,
+    private val data: List<ProdutoResponse>,
     private val listener: MeuOnClickListener
 ) : RecyclerView.Adapter<ProdutosAdapter.ProdutosViewHolder>() {
 
@@ -32,16 +36,21 @@ class ProdutosAdapter(
     inner class ProdutosViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val binding: ItemProdutoBinding = ItemProdutoBinding.bind(itemView)
 
-        fun bind(produto: Produto) {
-            binding.itemProdutoModelo.text = produto.modelo
-            binding.itemProdutoPreco.text = produto.preco
-            binding.itemProdutoImagem.setImageResource(produto.drawableId)
+        fun bind(produto: ProdutoResponse) {
+            binding.itemProdutoModelo.text = produto.name
+            binding.itemProdutoPreco.text = NumberFormat.getCurrencyInstance().format(produto.price)
+            Glide.with(itemView.context)
+                .load(produto.pic)
+                .centerInside()
+                .placeholder(R.drawable.img_indisponivel)
+                .into(binding.itemProdutoImagem)
+
             binding.root.setOnClickListener{
                 listener.onClick(produto)
             }
         }
     }
     interface MeuOnClickListener{
-        fun onClick(produto: Produto)
+        fun onClick(produto: ProdutoResponse)
     }
 }

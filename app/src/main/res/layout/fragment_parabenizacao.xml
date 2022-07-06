@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,37 +13,55 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/parabenizacao"
-        android:textSize="26sp" />
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/fragment_parabenizacao_subtitulo"
-        android:layout_width="275dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
         android:text="@string/frase_parabenizacao"
         android:textAlignment="center"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_parabenizacao_titulo" />
 
     <ImageView
         android:id="@+id/fragment_parabenizacao_img"
-        android:layout_width="400dp"
-        android:layout_height="400dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_parabenizacao_btn_inicio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_parabenizacao_subtitulo"
         app:srcCompat="@drawable/img_parabenizacao" />
 
     <Button
         android:id="@+id/fragment_parabenizacao_btn_inicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="@string/btn_voltar_inicio" />
+        android:layout_marginBottom="20dp"
+        android:text="@string/btn_voltar_inicio"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_parabenizacao_btn_minhas_compras"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/fragment_parabenizacao_btn_minhas_compras"
+        style="?attr/materialButtonOutlinedStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/btn_compras"
-        style="?attr/materialButtonOutlinedStyle" />
-</LinearLayout>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_parabenizacao_btn_inicio"
+        app:layout_constraintStart_toStartOf="@+id/fragment_parabenizacao_btn_inicio" />
+</androidx.constraintlayout.widget.ConstraintLayout>
