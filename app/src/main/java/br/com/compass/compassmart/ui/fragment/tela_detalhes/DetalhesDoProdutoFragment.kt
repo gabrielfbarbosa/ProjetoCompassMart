@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import br.com.compass.compassmart.R
 import br.com.compass.compassmart.data.DbProvider
@@ -63,11 +64,13 @@ class DetalhesDoProdutoFragment : Fragment() {
         )
 
         binding.btnComprarAgora.setOnClickListener {
-
             viewModel.addProdutoCarrinho(produtoEscolhido)
-
             Navigation.findNavController(view)
                 .navigate(R.id.action_detalhesDoProdutoFragment_to_loginFragment)
+        }
+
+        binding.fabVoltar.setOnClickListener{
+            findNavController().navigate(DetalhesDoProdutoFragmentDirections.actionDetalhesDoProdutoFragmentToProdutosFragment())
         }
     }
 

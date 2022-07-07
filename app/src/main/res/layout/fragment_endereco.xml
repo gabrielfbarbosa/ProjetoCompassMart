@@ -46,7 +46,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="@string/logradouro"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:text="Avenida Compass" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -64,7 +65,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="@string/cep"
-                android:inputType="number" />
+                android:inputType="number"
+                android:text="12.345-678" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -82,7 +84,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="@string/numero"
-                android:inputType="number" />
+                android:inputType="number"
+                android:text="602" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -100,7 +103,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="@string/bairro"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:text="Zona Sul" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -118,7 +122,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="@string/cidade"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:text="Compasso de Minas" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -136,7 +141,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="@string/uf"
-                android:inputType="text" />
+                android:inputType="text"
+                android:text="MG" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="5dp"
     android:layout_marginStart="5dp"
+    android:layout_marginTop="5dp"
     android:layout_marginEnd="5dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -17,28 +16,28 @@
             android:id="@+id/imagem"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginEnd="8dp"
-            android:scaleType="fitCenter"
+            android:layout_margin="8dp"
+            android:scaleType="centerInside"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/descricao"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/produto_galaxy_a52" />
+            tools:srcCompat="@drawable/produto_galaxy_a52" />
 
         <TextView
             android:id="@+id/descricao"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:maxLines="4"
             android:textAlignment="viewStart"
             app:layout_constraintBottom_toBottomOf="@+id/imagem"
             app:layout_constraintEnd_toStartOf="@id/txt_quantidade"
             app:layout_constraintStart_toEndOf="@+id/imagem"
             app:layout_constraintTop_toTopOf="@+id/imagem"
-            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintVertical_bias="0.0"
             tools:text="Smartphone Samsung Galaxy A52 5G" />
 
         <TextView
@@ -55,29 +54,29 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="1"
+            android:layout_marginBottom="8dp"
             android:textAlignment="center"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imagem"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/txt_quantidade"
             app:layout_constraintStart_toStartOf="@+id/txt_quantidade"
             app:layout_constraintTop_toBottomOf="@+id/txt_quantidade"
-            app:layout_constraintVertical_bias="0.0" />
+            tools:text="1" />
 
         <TextView
             android:id="@+id/preco"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="R$ 1.799,00"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="15dp"
             android:textAlignment="center"
-            app:layout_constraintBottom_toBottomOf="@+id/imagem"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/num_quantidade"
             app:layout_constraintTop_toBottomOf="@+id/txt_preco"
-            app:layout_constraintVertical_bias="0.0" />
+            tools:text="R$ 1.790,00" />
 
         <TextView
             android:id="@+id/txt_preco"

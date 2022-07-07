@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import br.com.compass.compassmart.R
@@ -30,12 +31,9 @@ class CarrinhoComprasFragment : Fragment() {
         val produtos: List<Produto> = DbProvider.getCartDao().getAll()
 
         binding.fragmentCarrinhoComprasRecyclerview.adapter = CarrinhoCompraAdapter(produtos.toMutableList())
-
         binding.fragmentCarrinhoComprasBtnContinuar.setOnClickListener {
-            Navigation.findNavController(view)
-                .navigate(R.id.action_carrinhoComprasFragment_to_enderecoFragment)
+            findNavController().navigate(CarrinhoComprasFragmentDirections.actionCarrinhoComprasFragmentToEnderecoFragment())
         }
-
         binding.fragmentCarrinhoComprasBtnAddMaisProduto.setOnClickListener{
             findNavController().navigate(CarrinhoComprasFragmentDirections.actionCarrinhoComprasFragmentToProdutosFragment())
         }

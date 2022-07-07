@@ -78,7 +78,7 @@
             android:id="@+id/estado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Minas Gerais"
+            android:text="MG"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/cidade"
@@ -118,46 +118,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/produtos_escolhidos" />
 
-        <TextView
-            android:id="@+id/valor_total"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
-            android:text="Valor total: "
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerView"
-            tools:text="Valor total: " />
-
         <TableLayout
             android:id="@+id/tabela_precos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:stretchColumns="0"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/valor_total">
-
-            <TableRow>
-
-                <TextView
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:text="Valor total dos produtos: " />
-
-                <TextView
-                    android:id="@+id/preco_produtos"
-                    android:layout_marginEnd="15dip"
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:text="R$3.000,00 " />
-            </TableRow>
+            app:layout_constraintTop_toBottomOf="@+id/recyclerView">
 
             <View
                 android:layout_height="1dip"
@@ -168,45 +137,8 @@
                 <TextView
                     android:gravity="end"
                     android:padding="3dip"
-                    android:text="Valor do Frete: " />
-
-                <TextView
-                    android:id="@+id/preco_frete"
-                    android:layout_marginEnd="15dip"
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:text="R$30,00 " />
-            </TableRow>
-
-            <View
-                android:layout_height="1dip"
-                android:background="#FF909090" />
-
-            <TableRow>
-
-                <TextView
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:text="Valor do Desconto: " />
-
-                <TextView
-                    android:id="@+id/preco_desconto"
-                    android:layout_marginEnd="15dip"
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:text="R$15,00 " />
-            </TableRow>
-
-            <View
-                android:layout_height="1dip"
-                android:background="#FF909090" />
-
-            <TableRow>
-
-                <TextView
-                    android:gravity="end"
-                    android:padding="3dip"
-                    android:text="TOTAL: "
+                    android:text="Valor total: "
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -214,7 +146,8 @@
                     android:layout_marginEnd="15dip"
                     android:gravity="end"
                     android:padding="3dip"
-                    android:text="R$3.015,00 "
+                    android:text="R$3.000,00 "
+                    android:textSize="20sp"
                     android:textStyle="bold" />
             </TableRow>
 

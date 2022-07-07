@@ -58,7 +58,6 @@ class CarrinhoCompraAdapter(
 
         fun onDeleteItem(produto: Produto, onClick : () -> Unit) {
             binding.itemCarrinhoCompraExcluir.setOnClickListener{
-
                 AlertDialog.Builder(itemView.context)
                     .setTitle("Remover item do carrinho?")
                     .setPositiveButton("Sim") { _, _ ->

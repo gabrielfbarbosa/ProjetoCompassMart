@@ -40,11 +40,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_marginTop="16dp"
-                tools:text="Galaxy A52 5G"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/imagemProduto"
-                app:layout_constraintTop_toBottomOf="@+id/imagemProduto" />
+                app:layout_constraintTop_toBottomOf="@+id/imagemProduto"
+                tools:text="Galaxy A52 5G" />
 
             <TextView
                 android:id="@+id/precoDoProduto"
@@ -80,6 +80,18 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/complementoDoProduto"
                 app:layout_constraintTop_toBottomOf="@+id/complementoDoProduto" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_voltar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:src="@drawable/icon_voltar_preto"
+                app:backgroundTint="#FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

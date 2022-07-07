@@ -67,6 +67,9 @@
         <argument
             android:name="produto"
             app:argType="br.com.compass.compassmart.api.ProdutoResponse" />
+        <action
+            android:id="@+id/action_detalhesDoProdutoFragment_to_produtosFragment"
+            app:destination="@id/produtosFragment" />
     </fragment>
     <fragment
         android:id="@+id/enderecoFragment"
