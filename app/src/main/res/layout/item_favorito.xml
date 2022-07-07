@@ -11,7 +11,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/item_produto_imagem"
+            android:id="@+id/item_favorito_imagem"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="centerInside"
@@ -19,16 +19,16 @@
             app:srcCompat="@drawable/produto_galaxy_a52" />
 
         <ImageView
-            android:id="@+id/item_produto_lixeira"
-            android:layout_width="80dp"
-            android:layout_height="22dp"
-            android:layout_marginBottom="14dp"
-            app:layout_constraintStart_toEndOf="@+id/item_produto_preco"
+            android:id="@+id/item_favorito_lixeira"
+            android:layout_width="90dp"
+            android:layout_height="18dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintStart_toEndOf="@+id/item_favorito_preco"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:srcCompat="@drawable/icon_favorito_preto_vazio"/>
+            app:srcCompat="@drawable/icon_lixeira"/>
 
         <TextView
-            android:id="@+id/item_produto_modelo"
+            android:id="@+id/item_favorito_modelo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -38,18 +38,18 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/item_produto_imagem" />
+            app:layout_constraintTop_toBottomOf="@+id/item_favorito_imagem" />
 
         <TextView
-            android:id="@+id/item_produto_preco"
+            android:id="@+id/item_favorito_preco"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="R$ 1779,00"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="@+id/item_produto_modelo"
-            app:layout_constraintTop_toBottomOf="@+id/item_produto_modelo" />
+            app:layout_constraintStart_toStartOf="@+id/item_favorito_modelo"
+            app:layout_constraintTop_toBottomOf="@+id/item_favorito_modelo" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
