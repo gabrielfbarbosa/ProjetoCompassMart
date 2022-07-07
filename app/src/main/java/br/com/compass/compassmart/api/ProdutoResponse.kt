@@ -1,4 +1,4 @@
-package br.com.compass.compassmart.ui.api
+package br.com.compass.compassmart.api
 
 import java.io.Serializable
 

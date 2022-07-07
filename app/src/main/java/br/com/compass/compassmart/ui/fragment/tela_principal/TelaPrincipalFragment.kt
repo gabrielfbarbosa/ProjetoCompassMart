@@ -59,7 +59,8 @@ class TelaPrincipalFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.fragmentTelaPrincipalRecyclerViewSelecionados.layoutManager = GridLayoutManager(requireContext(), 2)
+        binding.fragmentTelaPrincipalRecyclerViewSelecionados.layoutManager =
+            GridLayoutManager(requireContext(), 2)
 //        binding.fragmentTelaPrincipalRecyclerView.adapter = TelaPrincipalAdapter(produtos,
 //            object : TelaPrincipalAdapter.MeuOnClickListener {
 //                override fun onClick(produto: Produto) {

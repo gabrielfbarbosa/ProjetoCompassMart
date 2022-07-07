@@ -60,13 +60,13 @@ class FavoritosFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.fragmentFavoritosRecyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
-        binding.fragmentFavoritosRecyclerView.adapter = FavoritosAdapter(produtos,
-            object : FavoritosAdapter.MeuOnClickListener {
-                override fun onClick(produto: Produto) {
-                    findNavController().navigate(FavoritosFragmentDirections.actionFavoritosFragmentToDetalhesDoProdutoFragment(
-                        produto))
-                }
-            }
-        )
+//        binding.fragmentFavoritosRecyclerView.adapter = FavoritosAdapter(produtos,
+//            object : FavoritosAdapter.MeuOnClickListener {
+//                override fun onClick(produto: Produto) {
+//                    findNavController().navigate(FavoritosFragmentDirections.actionFavoritosFragmentToDetalhesDoProdutoFragment(
+//                        produto))
+//                }
+//            }
+//        )
     }
 }

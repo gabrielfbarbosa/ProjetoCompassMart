@@ -19,10 +19,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@drawable/produto_galaxy_a52" />
             android:scaleType="centerInside"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/produto_galaxy_a52" />
+            tools:srcCompat="@drawable/produto_galaxy_a52" />
 
         <ImageView
             android:id="@+id/item_produto_lixeira"
@@ -50,7 +48,7 @@
             android:id="@+id/item_produto_preco"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="16dp"
             android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -6,9 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import br.com.compass.compassmart.R
 import br.com.compass.compassmart.databinding.FragmentConfirmacaoBinding
 import br.com.compass.compassmart.ui.Produto
+import br.com.compass.compassmart.ui.fragment.tela_carrinhocompras.CarrinhoComprasFragmentDirections
 
 class ConfirmacaoFragment : Fragment() {
 
@@ -47,8 +49,12 @@ class ConfirmacaoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.recyclerView.adapter = ConfirmacaoAdapter(produto)
 
-        binding.btnConfirmar.setOnClickListener{
-            Navigation.findNavController(view).navigate(R.id.action_confirmacaoFragment_to_meioPagamento)
+        binding.btnConfirmar.setOnClickListener {
+            Navigation.findNavController(view)
+                .navigate(R.id.action_confirmacaoFragment_to_meioPagamento)
+        }
+        binding.btnCancelar.setOnClickListener{
+            findNavController().navigate(ConfirmacaoFragmentDirections.actionConfirmacaoFragmentToProdutosFragment())
         }
     }
 }
