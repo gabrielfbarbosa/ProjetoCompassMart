@@ -85,4 +85,12 @@
         android:label="fragment_parabenizacao"
         tools:layout="@layout/fragment_parabenizacao">
     </fragment>
+    <fragment
+        android:id="@+id/favoritosFragment"
+        android:name="br.com.compass.compassmart.ui.fragment.tela_produtos.FavoritosFragment"
+        android:label="FavoritosFragment" >
+        <action
+            android:id="@+id/action_favoritosFragment_to_detalhesDoProdutoFragment"
+            app:destination="@id/detalhesDoProdutoFragment" />
+    </fragment>
 </navigation>
