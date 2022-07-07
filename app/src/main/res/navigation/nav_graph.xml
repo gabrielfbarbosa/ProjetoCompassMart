@@ -98,4 +98,12 @@
             android:id="@+id/action_confirmacaoFragment_to_meioPagamento"
             app:destination="@id/meioPagamento" />
     </fragment>
+    <fragment
+        android:id="@+id/favoritosFragment"
+        android:name="br.com.compass.compassmart.ui.fragment.tela_produtos.FavoritosFragment"
+        android:label="FavoritosFragment" >
+        <action
+            android:id="@+id/action_favoritosFragment_to_detalhesDoProdutoFragment"
+            app:destination="@id/detalhesDoProdutoFragment" />
+    </fragment>
 </navigation>
