@@ -12,7 +12,7 @@ class LoginViewModel : ViewModel() {
     val erroSenha: MutableLiveData<String> = MutableLiveData()
     val navegueParaCarrinhoCompras: MutableLiveData<String> = MutableLiveData()
 
-    fun validaLogin(email: String?, senha: String?) {
+    fun  validaLogin(email: String?, senha: String?) {
         if (email.isNullOrBlank()) {
             erroEmail.postValue("Digite seu email")
         } else if (senha.isNullOrBlank()) {

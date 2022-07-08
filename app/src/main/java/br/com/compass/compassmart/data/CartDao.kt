@@ -13,7 +13,7 @@ interface CartDao {
     @Delete
     fun deletaProduto(produto: Produto)
 
-    @Query("SELECT NOT EXISTS (SELECT * FROM produto WHERE id = :id)")
-    fun existeProduto (id : String) : Boolean
+    @Query("SELECT id FROM produto")
+    fun existeProduto () : String
 
 }

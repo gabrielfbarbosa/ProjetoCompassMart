@@ -55,12 +55,13 @@ class DetalhesDoProdutoFragment : Fragment() {
             .fitCenter()
             .placeholder(R.drawable.img_indisponivel)
             .into(binding.imagemProduto)
+        val quantidade = 0
 
         val produtoEscolhido = Produto(
             idProduto,
             nome,
             preco,
-            produtoArgs.produto.pic!!
+            produtoArgs.produto.pic!!,
         )
 
         binding.btnComprarAgora.setOnClickListener {

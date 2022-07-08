@@ -46,6 +46,7 @@ class LoginFragment : Fragment() {
             binding.fragmentLoginTextinputlayoutSenha.error = it
         }
 
+
         viewModel.navegueParaCarrinhoCompras.observe(viewLifecycleOwner) {
             val sharedPreferences =
                 requireActivity().getSharedPreferences(preferenceLoginKey, MODE_PRIVATE)

@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/meioPagamento"
-        android:name="br.com.compass.compassmart.ui.fragment.tela_meiopagamento.MeioPagamento"
+        android:name="br.com.compass.compassmart.ui.fragment.tela_meiopagamento.MeioPagamentoFragment"
         android:label="fragment_meio_pagamento"
         tools:layout="@layout/fragment_meio_pagamento" >
         <action
