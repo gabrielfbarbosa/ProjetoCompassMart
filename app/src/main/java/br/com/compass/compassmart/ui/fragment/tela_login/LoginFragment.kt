@@ -57,5 +57,9 @@ class LoginFragment : Fragment() {
             NavHostFragment.findNavController(this@LoginFragment)
                 .navigate(R.id.action_loginFragment_to_carrinhoComprasFragment)
         }
+
+        viewModel.erroLoginInvalido.observe(viewLifecycleOwner){
+            Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
+        }
     }
 }
