@@ -19,11 +19,11 @@ class LoginFragment : Fragment() {
     private val binding get() = _binding!!
     private val preferenceLoginKey = "chaveLogin"
     private val preferenceTokenKey = "token"
-    private val viewModel : LoginViewModel by viewModels()
+    private val viewModel: LoginViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
@@ -33,8 +33,9 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.fragmentLoginEdtxtEmail.requestFocus()
 
-        binding.fragmentLoginBtnLogin.setOnClickListener{
-            viewModel.validaLogin(binding.fragmentLoginEdtxtEmail.text.toString(), binding.fragmentLoginEdtxtSenha.text.toString())
+        binding.fragmentLoginBtnLogin.setOnClickListener {
+            viewModel.validaLogin(binding.fragmentLoginEdtxtEmail.text.toString(),
+                binding.fragmentLoginEdtxtSenha.text.toString())
         }
 
         viewModel.erroEmail.observe(viewLifecycleOwner) {
@@ -46,8 +47,9 @@ class LoginFragment : Fragment() {
         }
 
         viewModel.navegueParaCarrinhoCompras.observe(viewLifecycleOwner) {
-            val sharedPreferences = requireActivity().getSharedPreferences(preferenceLoginKey, MODE_PRIVATE)
-            val editor : SharedPreferences.Editor = sharedPreferences.edit()
+            val sharedPreferences =
+                requireActivity().getSharedPreferences(preferenceLoginKey, MODE_PRIVATE)
+            val editor: SharedPreferences.Editor = sharedPreferences.edit()
             editor.putString(preferenceTokenKey, it)
             editor.apply()
 

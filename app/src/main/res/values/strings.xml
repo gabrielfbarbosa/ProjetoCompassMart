@@ -58,7 +58,7 @@
     <string name="mais_info">Mais informações</string>
 
     <!-- Frases da tela de Carrinho de Compras -->
-    <string name="quantidade">Quantidade</string>
+    <string name="quantidade">Quant.</string>
 
     <!-- Frases da tela de Confirmação -->
     <string name="valor">Valor total:</string>
@@ -83,5 +83,7 @@
     <string name="bairro">Bairro</string>
     <string name="cidade">Cidade</string>
     <string name="uf">UF</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

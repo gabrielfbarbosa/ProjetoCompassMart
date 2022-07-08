@@ -1,148 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.fragment.tela_endereco.EnderecoFragment">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/fragment_endereco_txt_titulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:text="@string/endereco"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:textColor="@color/orange_500"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/fragment_endereco_edtxt_logradouro"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ConstraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_endereco_txt_titulo">
+        tools:context=".ui.fragment.tela_endereco.EnderecoFragment">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/fragment_endereco_txt_insira"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/logradouro"
-            android:inputType="textPersonName" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="10dp"
+            android:text="Insira o endereço de entrega"
+            android:textAlignment="center"
+            android:textColor="@color/orange_500"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/fragment_endereco_edtxt_cep"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="260dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toStartOf="@+id/fragment_endereco_edtxt_numero"
-        app:layout_constraintStart_toStartOf="@+id/fragment_endereco_edtxt_logradouro"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_endereco_edtxt_logradouro">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fragment_endereco_edtxt_logradouro"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/cep"
-            android:inputType="number" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_endereco_txt_insira">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/fragment_endereco_edtxt_numero"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="@+id/fragment_endereco_edtxt_logradouro"
-        app:layout_constraintStart_toEndOf="@+id/fragment_endereco_edtxt_cep"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_endereco_edtxt_logradouro">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/logradouro"
+                android:inputType="textPersonName"
+                android:text="Avenida Compass" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fragment_endereco_edtxt_cep"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/numero"
-            android:inputType="number" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/fragment_endereco_edtxt_numero"
+            app:layout_constraintStart_toStartOf="@+id/fragment_endereco_edtxt_logradouro"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_endereco_edtxt_logradouro">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/fragment_endereco_edtxt_bairro"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
-        app:layout_constraintEnd_toEndOf="@+id/fragment_endereco_edtxt_numero"
-        app:layout_constraintStart_toStartOf="@+id/fragment_endereco_edtxt_cep"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_endereco_edtxt_cep">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/cep"
+                android:inputType="number"
+                android:text="12.345-678" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fragment_endereco_edtxt_numero"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/bairro"
-            android:inputType="textPersonName" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginStart="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_endereco_edtxt_logradouro"
+            app:layout_constraintStart_toEndOf="@+id/fragment_endereco_edtxt_cep"
+            app:layout_constraintTop_toTopOf="@+id/fragment_endereco_edtxt_cep">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/fragment_endereco_edtxt_cidade"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="260dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toStartOf="@+id/fragment_endereco_edtxt_uf"
-        app:layout_constraintStart_toStartOf="@+id/fragment_endereco_edtxt_bairro"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_endereco_edtxt_bairro">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/numero"
+                android:inputType="number"
+                android:text="602" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fragment_endereco_edtxt_bairro"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/cidade"
-            android:inputType="textPersonName" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_endereco_edtxt_numero"
+            app:layout_constraintStart_toStartOf="@+id/fragment_endereco_edtxt_cep"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_endereco_edtxt_cep">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/fragment_endereco_edtxt_uf"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="@+id/fragment_endereco_edtxt_bairro"
-        app:layout_constraintStart_toEndOf="@+id/fragment_endereco_edtxt_cidade"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_endereco_edtxt_bairro">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/bairro"
+                android:inputType="textPersonName"
+                android:text="Zona Sul" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fragment_endereco_edtxt_cidade"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/uf"
-            android:inputType="text" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/fragment_endereco_edtxt_uf"
+            app:layout_constraintStart_toStartOf="@+id/fragment_endereco_edtxt_bairro"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_endereco_edtxt_bairro">
 
-    <Button
-        android:id="@+id/fragment_endereco_btn_continuar"
-        android:layout_width="145dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="130dp"
-        android:layout_marginBottom="16dp"
-        android:text="@string/btn_continuar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_endereco_edtxt_cidade" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/cidade"
+                android:inputType="textPersonName"
+                android:text="Compasso de Minas" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fragment_endereco_edtxt_uf"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_endereco_edtxt_bairro"
+            app:layout_constraintStart_toEndOf="@+id/fragment_endereco_edtxt_cidade"
+            app:layout_constraintTop_toTopOf="@+id/fragment_endereco_edtxt_cidade">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/uf"
+                android:inputType="text"
+                android:text="MG" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/fragment_endereco_btn_continuar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#FFFF8100"
+            android:bottomLeftRadius="20dp"
+            android:bottomRightRadius="20dp"
+            android:text="@string/btn_continuar"
+            android:topLeftRadius="20dp"
+            android:topRightRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_endereco_edtxt_cidade" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -10,29 +10,30 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/textoProdutos"
+            android:id="@+id/nomeFavoritos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="@string/melhores_produtos"
+            android:text="Favoritos"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:layout_marginStart="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/fragment_tela_principal_recycler_view"
+            android:id="@+id/fragment_favoritos_recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="12dp"
-
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            app:layout_constraintTop_toBottomOf="@+id/textoProdutos"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nomeFavoritos"
             app:spanCount="2"
-            tools:listitem="@layout/item_produto" />
+            tools:listitem="@layout/item_favorito" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

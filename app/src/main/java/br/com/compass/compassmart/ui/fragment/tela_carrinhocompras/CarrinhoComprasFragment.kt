@@ -5,27 +5,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import br.com.compass.compassmart.R
+import br.com.compass.compassmart.data.DbProvider
+import br.com.compass.compassmart.data.Produto
 import br.com.compass.compassmart.databinding.FragmentCarrinhoComprasBinding
-import br.com.compass.compassmart.ui.Produto
 
 class CarrinhoComprasFragment : Fragment() {
 
     private var _binding: FragmentCarrinhoComprasBinding? = null
     private val binding get() = _binding!!
-    private val produto = mutableListOf<Produto>(
-        Produto(
-            "Smartphone Samsung Galaxy A52 5G",
-            "1",
-            "R$ 1.799,00",
-            R.drawable.produto_galaxy_a52
-        )
-    )
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentCarrinhoComprasBinding.inflate(inflater, container, false)
         return binding.root
@@ -33,10 +28,14 @@ class CarrinhoComprasFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.fragmentCarrinhoComprasRecyclerview.adapter = CarrinhoCompraAdapter(produto)
+        val produtos: List<Produto> = DbProvider.getCartDao().getAll()
 
-        binding.fragmentCarrinhoComprasBtnContinuar.setOnClickListener{
-            Navigation.findNavController(view).navigate(R.id.action_carrinhoComprasFragment_to_enderecoFragment)
+        binding.fragmentCarrinhoComprasRecyclerview.adapter = CarrinhoCompraAdapter(produtos.toMutableList())
+        binding.fragmentCarrinhoComprasBtnContinuar.setOnClickListener {
+            findNavController().navigate(CarrinhoComprasFragmentDirections.actionCarrinhoComprasFragmentToEnderecoFragment())
+        }
+        binding.fragmentCarrinhoComprasBtnAddMaisProduto.setOnClickListener{
+            findNavController().navigate(CarrinhoComprasFragmentDirections.actionCarrinhoComprasFragmentToProdutosFragment())
         }
     }
 }

@@ -20,7 +20,7 @@ class OnboardingFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentOnboardingBinding.inflate(inflater, container, false)
         return binding.root
@@ -30,8 +30,9 @@ class OnboardingFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         conteudo()
         setupViewPager()
-        binding.fragmentOnboardingBtnComecarComprar.setOnClickListener{
-            Navigation.findNavController(view).navigate(R.id.action_onboardingFragment_to_produtosFragment)
+        binding.fragmentOnboardingBtnComecarComprar.setOnClickListener {
+            Navigation.findNavController(view)
+                .navigate(R.id.action_onboardingFragment_to_produtosFragment)
         }
     }
 
@@ -43,7 +44,7 @@ class OnboardingFragment : Fragment() {
             override fun onPageScrolled(
                 position: Int,
                 positionOffset: Float,
-                positionOffsetPixels: Int
+                positionOffsetPixels: Int,
             ) {
                 super.onPageScrolled(position, positionOffset, positionOffsetPixels)
                 mudarCorBolinhaProgresso()

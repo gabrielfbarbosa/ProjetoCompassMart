@@ -33,29 +33,40 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:shapeAppearanceOverlay="@style/QuadradoArredondado"
-                app:srcCompat="@drawable/produto_galaxy_a52" />
+                tools:srcCompat="@drawable/produto_galaxy_a52" />
 
             <TextView
                 android:id="@+id/ProdutoModelo"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_marginTop="16dp"
-                android:text="Galaxy A52 5G"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/imagemProduto"
-                app:layout_constraintTop_toBottomOf="@+id/imagemProduto" />
+                app:layout_constraintTop_toBottomOf="@+id/imagemProduto"
+                tools:text="Galaxy A52 5G" />
 
             <TextView
                 android:id="@+id/precoDoProduto"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_marginTop="16dp"
-                android:text="R$ 1779,00 à vista\nEm até 12x de R$ 148,25 sem juros"
+                android:textColor="@color/orange_700"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/ProdutoModelo"
+                app:layout_constraintTop_toBottomOf="@+id/ProdutoModelo"
+                tools:text="R$ 1779,00 à vista" />
+
+            <TextView
+                android:id="@+id/complementoDoProduto"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="Em até 12x de R$ 148,25 sem juros"
                 android:textColor="@color/orange_700"
                 android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="@+id/ProdutoModelo"
-                app:layout_constraintTop_toBottomOf="@+id/ProdutoModelo" />
+                app:layout_constraintStart_toStartOf="@+id/precoDoProduto"
+                app:layout_constraintTop_toBottomOf="@+id/precoDoProduto" />
 
             <TextView
                 android:id="@+id/descricaoDoProduto"
@@ -63,24 +74,37 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:text="Ficha Técnica e Informações:\n\nO Galaxy A52 5G faz parte dos lançamentos “duplos”, em que temos uma versão LTE e outra, mais atualizada, já suportando as novas redes 5G. De forma que ele traz configurações bastante semelhantes à versão 4G.\nAinda assim, é uma boa escolha para aqueles que procuram um celular com configurações intermediárias e com bom custo-benefício.\nO Galaxy A52 5G tem uma tela com taxa de atualização de 120 Hz, o que promove maior fluidez nas animações e filmes, trazendo maior suavidade nos movimentos. Para jogos, esse recurso também é um diferencial muito interessante e que pode melhorar a experiência.\nAlém disso, este celular conta com certificação IP67, garantindo proteção à água e à poeira. Isso oferece maior durabilidade e menor risco de prejudicar o celular em dias chuvosos.\nCom o Snapdragon 750G, o Galaxy A52 5G traz excelente performance e um consumo eficiente da bateria de 4.500 mAh, podendo chegar até o final do dia com certa folga. "
+                android:text="Ficha Técnica e Informações:\n\nO Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss deixa as pessoas mais interessantis.In elementis mé pra quem é amistosis quis leo.Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis.Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Detraxit consequat et quo num tendi nada.Per aumento de cachacis, eu reclamis.Atirei o pau no gatis, per gatis num morreus.Aenean aliquam molestie leo, vitae iaculis nisl. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget.Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis.Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo! "
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/precoDoProduto"
-                app:layout_constraintTop_toBottomOf="@+id/precoDoProduto" />
+                app:layout_constraintStart_toStartOf="@+id/complementoDoProduto"
+                app:layout_constraintTop_toBottomOf="@+id/complementoDoProduto" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_voltar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:src="@drawable/icon_voltar_preto"
+                app:backgroundTint="#FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </ScrollView>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_comprar_agora"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:background="@color/white"
         android:text="@string/btn_comprar"
         app:cornerRadius="0dp"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

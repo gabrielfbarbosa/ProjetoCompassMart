@@ -7,16 +7,16 @@ import br.com.compass.compassmart.api.ApiProvider.getApiService
 import br.com.compass.compassmart.api.LoginPayload
 import kotlinx.coroutines.launch
 
-class LoginViewModel: ViewModel() {
+class LoginViewModel : ViewModel() {
     val erroEmail: MutableLiveData<String> = MutableLiveData()
     val erroSenha: MutableLiveData<String> = MutableLiveData()
     val navegueParaCarrinhoCompras: MutableLiveData<String> = MutableLiveData()
     val erroLoginInvalido: MutableLiveData<String> = MutableLiveData()
 
-    fun validaLogin(email: String?, senha: String?){
-        if(email.isNullOrBlank()) {
+    fun validaLogin(email: String?, senha: String?) {
+        if (email.isNullOrBlank()) {
             erroEmail.postValue("Digite seu email")
-        } else if(senha.isNullOrBlank()) {
+        } else if (senha.isNullOrBlank()) {
             erroEmail.postValue("")
             erroSenha.postValue("Digite uma senha")
         } else {
