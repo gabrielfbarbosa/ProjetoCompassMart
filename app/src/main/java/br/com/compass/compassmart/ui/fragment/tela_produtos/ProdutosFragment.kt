@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import br.com.compass.compassmart.databinding.FragmentProdutosBinding
 import br.com.compass.compassmart.api.ProdutoResponse
+import br.com.compass.compassmart.ui.fragment.util.SharedPreference
 
 class ProdutosFragment : Fragment() {
 
@@ -27,6 +28,10 @@ class ProdutosFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        //Parar splash e onboarding aparecer uma vez apenas
+        SharedPreference(requireContext()).insereAcesso("usuarioAcessouSplsh", true)
+        SharedPreference(requireContext()).insereAcesso("usuarioAcessouOnboarding", true)
 
         viewModel.getProduto()
 

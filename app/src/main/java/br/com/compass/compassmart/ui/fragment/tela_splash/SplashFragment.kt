@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import br.com.compass.compassmart.R
 import br.com.compass.compassmart.databinding.FragmentSplashBinding
 import br.com.compass.compassmart.ui.fragment.tela_login.LoginFragmentDirections
+import br.com.compass.compassmart.ui.fragment.util.SharedPreference
 
 class SplashFragment : Fragment() {
 
@@ -20,16 +21,25 @@ class SplashFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
+    ): View {
         _binding = FragmentSplashBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Handler(Looper.myLooper()!!).postDelayed({
+
+        //Parar splash e onboarding aparecer uma vez apenas
+        val acessoUsuario = SharedPreference(requireContext()).pegaAcesso("usuarioAcessouSplsh")
+
+        if (acessoUsuario){
             findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToOnboardingFragment())
-        }, 3500)
+        }else{
+            Handler(Looper.myLooper()!!).postDelayed({
+                findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToOnboardingFragment())
+            }, 3500)
+        }
+
     }
 }
 

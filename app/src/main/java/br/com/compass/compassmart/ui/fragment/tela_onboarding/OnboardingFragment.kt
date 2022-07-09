@@ -6,11 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import br.com.compass.compassmart.R
 import br.com.compass.compassmart.databinding.FragmentOnboardingBinding
 import br.com.compass.compassmart.ui.fragment.tela_onboarding.OnboardingAdapter
 import br.com.compass.compassmart.ui.fragment.tela_onboarding.model.InformacoesModel
+import br.com.compass.compassmart.ui.fragment.util.SharedPreference
 
 class OnboardingFragment : Fragment() {
 
@@ -28,12 +30,26 @@ class OnboardingFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        conteudo()
-        setupViewPager()
-        binding.fragmentOnboardingBtnComecarComprar.setOnClickListener {
-            Navigation.findNavController(view)
-                .navigate(R.id.action_onboardingFragment_to_produtosFragment)
+
+        SharedPreference(requireContext()).insereAcesso("usuarioAcessouSplsh", true)
+
+        val acessoUsuario = SharedPreference(requireContext()).pegaAcesso("usuarioAcessouOnboarding")
+
+        if(acessoUsuario){
+            findNavController().navigate(OnboardingFragmentDirections.actionOnboardingFragmentToProdutosFragment())
+        }else{
+            conteudo()
+            setupViewPager()
+            binding.fragmentOnboardingBtnComecarComprar.setOnClickListener {
+                findNavController().navigate(OnboardingFragmentDirections.actionOnboardingFragmentToProdutosFragment())
+            }
         }
+
+//        conteudo()
+//        setupViewPager()
+//        binding.fragmentOnboardingBtnComecarComprar.setOnClickListener {
+//            findNavController().navigate(OnboardingFragmentDirections.actionOnboardingFragmentToProdutosFragment())
+//        }
     }
 
     private fun setupViewPager() {

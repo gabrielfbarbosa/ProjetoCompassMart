@@ -12,13 +12,12 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.NavHostFragment
 import br.com.compass.compassmart.R
 import br.com.compass.compassmart.databinding.FragmentLoginBinding
+import br.com.compass.compassmart.ui.fragment.util.SharedPreference
 
 class LoginFragment : Fragment() {
 
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
-    private val preferenceLoginKey = "chaveLogin"
-    private val preferenceTokenKey = "token"
     private val viewModel: LoginViewModel by viewModels()
 
     override fun onCreateView(
@@ -46,14 +45,8 @@ class LoginFragment : Fragment() {
             binding.fragmentLoginTextinputlayoutSenha.error = it
         }
 
-
         viewModel.navegueParaCarrinhoCompras.observe(viewLifecycleOwner) {
-            val sharedPreferences =
-                requireActivity().getSharedPreferences(preferenceLoginKey, MODE_PRIVATE)
-            val editor: SharedPreferences.Editor = sharedPreferences.edit()
-            editor.putString(preferenceTokenKey, it)
-            editor.apply()
-
+            SharedPreference(requireContext()).salvaToken(it)
             NavHostFragment.findNavController(this@LoginFragment)
                 .navigate(R.id.action_loginFragment_to_carrinhoComprasFragment)
         }
