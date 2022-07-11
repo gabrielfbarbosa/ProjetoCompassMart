@@ -5,8 +5,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import br.com.compass.compassmart.api.ApiProvider.getApiService
 import br.com.compass.compassmart.api.LoginPayload
-import br.com.compass.compassmart.ui.fragment.util.SharedPreference
+import br.com.compass.compassmart.api.LoginResponse
 import kotlinx.coroutines.launch
+import retrofit2.Response
 
 class LoginViewModel : ViewModel() {
     val erroEmail: MutableLiveData<String> = MutableLiveData()
@@ -23,17 +24,12 @@ class LoginViewModel : ViewModel() {
         } else {
             erroSenha.postValue("")
             viewModelScope.launch {
-
-                //VER PQ NÃO PEGA*****
-//                val response = getApiService().getLogin(LoginPayload(email, senha))
-//                if(response.isSuccessful){
-//                    navegueParaCarrinhoCompras.postValue(response.body()!!.token)
-//                } else {
-//                    erroLoginInvalido.postValue("Usuário e/ou senha incorretos")
-//                }
-
-                val response = getApiService().getLogin(LoginPayload(email, senha))
-                navegueParaCarrinhoCompras.postValue(response.token)
+                val response: Response<LoginResponse> = getApiService().getLogin(LoginPayload(email, senha))
+                if(response.isSuccessful){
+                    navegueParaCarrinhoCompras.postValue(response.body()!!.token)
+                } else {
+                    erroLoginInvalido.postValue("Usuário e/ou senha incorretos")
+                }
             }
         }
     }
