@@ -31,9 +31,7 @@ class OnboardingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        SharedPreference(requireContext()).insereAcesso("usuarioAcessouSplsh", true)
-
-        val acessoUsuario = SharedPreference(requireContext()).pegaAcesso("usuarioAcessouOnboarding")
+        val acessoUsuario = SharedPreference(requireContext()).pegaAcesso()
 
         if(acessoUsuario){
             findNavController().navigate(OnboardingFragmentDirections.actionOnboardingFragmentToProdutosFragment())
@@ -44,12 +42,6 @@ class OnboardingFragment : Fragment() {
                 findNavController().navigate(OnboardingFragmentDirections.actionOnboardingFragmentToProdutosFragment())
             }
         }
-
-//        conteudo()
-//        setupViewPager()
-//        binding.fragmentOnboardingBtnComecarComprar.setOnClickListener {
-//            findNavController().navigate(OnboardingFragmentDirections.actionOnboardingFragmentToProdutosFragment())
-//        }
     }
 
     private fun setupViewPager() {
@@ -75,7 +67,6 @@ class OnboardingFragment : Fragment() {
                 mudarCorBolinhaProgresso()
             }
         })
-
     }
 
     // Adiciona os conteudos dos cards

@@ -8,17 +8,19 @@
 
     <TextView
         android:id="@+id/nomeCategoria"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:background="@color/white"
         android:paddingStart="30dp"
         android:paddingTop="15dp"
+        android:paddingEnd="20dp"
         android:paddingBottom="5dp"
         android:text="Produtos"
         android:textAlignment="viewStart"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btn_carrinho"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,6 +37,19 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:listitem="@layout/item_produto" />
+
+    <ImageButton
+        android:id="@+id/btn_carrinho"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/orange_200"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_carrinho_preto"
+        app:layout_constraintBottom_toBottomOf="@+id/nomeCategoria"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nomeCategoria" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -30,14 +30,21 @@ class ProdutosFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         //Parar splash e onboarding aparecer uma vez apenas
-        SharedPreference(requireContext()).insereAcesso("usuarioAcessouSplsh", true)
-        SharedPreference(requireContext()).insereAcesso("usuarioAcessouOnboarding", true)
+        SharedPreference(requireContext()).insereAcesso(true)
 
         viewModel.getProduto()
 
         binding.fragmentProdutosRecyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
 
         viewModel.produtos.observe(viewLifecycleOwner) { produtos ->
+
+            binding.btnCarrinho.setOnClickListener {
+                if (SharedPreference(requireContext()).pegarToken().isNullOrBlank()){
+                    findNavController().navigate(ProdutosFragmentDirections.actionProdutosFragmentToLoginFragment())
+                }else{
+                    findNavController().navigate(ProdutosFragmentDirections.actionProdutosFragmentToCarrinhoComprasFragment())
+                }
+            }
 
             binding.fragmentProdutosRecyclerView.adapter = ProdutosAdapter(produtos,
                 object : ProdutosAdapter.MeuOnClickListener {

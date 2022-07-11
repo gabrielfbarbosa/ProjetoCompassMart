@@ -8,6 +8,7 @@ class SharedPreference(val context: Context) {
 
     private val preferenceLoginKey = "chaveLogin"
     private val preferenceTokenKey = "token"
+    private val preferenceOnboardingKey = "usuarioAcessouOnboarding"
     private val prefs = context.getSharedPreferences(preferenceLoginKey, Context.MODE_PRIVATE)
 
     fun salvaToken(token: String) {
@@ -21,12 +22,12 @@ class SharedPreference(val context: Context) {
         return prefs.getString(preferenceTokenKey, null)
     }
 
-    fun pegaAcesso(key: String) : Boolean {
-        return prefs.getBoolean(key, false)
+    fun pegaAcesso() : Boolean {
+            return prefs.getBoolean(preferenceOnboardingKey, false)
     }
 
-    fun insereAcesso(key: String, valor: Boolean) {
-        prefs.edit().putBoolean(key, valor).apply()
+    fun insereAcesso(valor: Boolean) {
+        prefs.edit().putBoolean(preferenceOnboardingKey, valor).apply()
     }
 
 }

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
@@ -29,13 +30,27 @@ class CarrinhoComprasFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val produtos: List<Produto> = DbProvider.getCartDao().getAll()
+        visibilidadeRecycler(produtos.isEmpty())
 
-        binding.fragmentCarrinhoComprasRecyclerview.adapter = CarrinhoCompraAdapter(produtos.toMutableList())
+        binding.fragmentCarrinhoComprasRecyclerview.adapter = CarrinhoCompraAdapter(produtos.toMutableList()) { listaVazia ->
+            visibilidadeRecycler(listaVazia)
+        }
         binding.fragmentCarrinhoComprasBtnContinuar.setOnClickListener {
             findNavController().navigate(CarrinhoComprasFragmentDirections.actionCarrinhoComprasFragmentToEnderecoFragment())
         }
         binding.fragmentCarrinhoComprasBtnAddMaisProduto.setOnClickListener{
             findNavController().navigate(CarrinhoComprasFragmentDirections.actionCarrinhoComprasFragmentToProdutosFragment())
+        }
+    }
+
+    fun visibilidadeRecycler(listaVazia: Boolean){
+        binding.txtCarrinhoVazio.isVisible = listaVazia
+        binding.fragmentCarrinhoComprasRecyclerview.isVisible = !listaVazia
+        if (listaVazia){
+
+            binding.fragmentCarrinhoComprasBtnContinuar.isClickable = false
+            binding.fragmentCarrinhoComprasBtnContinuar.setBackgroundResource(androidx.appcompat.R.color.material_grey_600)
+            binding.fragmentCarrinhoComprasBtnContinuar.setImageResource(com.google.android.material.R.drawable.ic_m3_chip_close)
         }
     }
 }

@@ -28,18 +28,9 @@ class SplashFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        //Parar splash e onboarding aparecer uma vez apenas
-        val acessoUsuario = SharedPreference(requireContext()).pegaAcesso("usuarioAcessouSplsh")
-
-        if (acessoUsuario){
+        Handler(Looper.myLooper()!!).postDelayed({
             findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToOnboardingFragment())
-        }else{
-            Handler(Looper.myLooper()!!).postDelayed({
-                findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToOnboardingFragment())
-            }, 3500)
-        }
-
+        }, 3500)
     }
 }
 
