@@ -16,7 +16,7 @@ class CadastroFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentCadastroBinding.inflate(inflater, container, false)
         return binding.root
@@ -26,29 +26,32 @@ class CadastroFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.fragmentCadastroTxtInputNome.requestFocus()
 
-        binding.fragmentCadastroBtnCadastrar.setOnClickListener{
-            if (binding.fragmentCadastroTxtInputNome.editText?.text.toString().isEmpty()  ||
+        binding.fragmentCadastroBtnCadastrar.setOnClickListener {
+            if (binding.fragmentCadastroTxtInputNome.editText?.text.toString().isEmpty() ||
                 binding.fragmentCadastroTxtInputEmail.editText?.text.toString().isEmpty() ||
                 binding.fragmentCadastroTxtInputSenha.editText?.text.toString().isEmpty() ||
-                binding.fragmentCadastroTxtInputConfirmaSenha.editText?.text.toString().isEmpty()) {
-                Toast.makeText(requireActivity(), "Preencha todos os campos!", Toast.LENGTH_SHORT).show()
+                binding.fragmentCadastroTxtInputConfirmaSenha.editText?.text.toString().isEmpty()
+            ) {
+                Toast.makeText(requireActivity(), "Preencha todos os campos!", Toast.LENGTH_SHORT)
+                    .show()
 
-            }
-            else{
+            } else {
                 if (binding.fragmentCadastroTxtInputSenha.editText?.text.toString() ==
-                    binding.fragmentCadastroTxtInputConfirmaSenha.editText?.text.toString()) {
+                    binding.fragmentCadastroTxtInputConfirmaSenha.editText?.text.toString()
+                ) {
                     // TODO: Cadastra usuário
                     NavHostFragment.findNavController(this@CadastroFragment)
                         .navigate(R.id.action_cadastroFragment_to_loginFragment)
-                }
-                else {
+                } else {
                     // TODO: Ambos os TextInput ficam vermelho e mostra mensagem de erro embaixo dele
-                    Toast.makeText(requireActivity(), "As senhas não são iguais", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireActivity(),
+                        "As senhas não são iguais",
+                        Toast.LENGTH_SHORT).show()
                 }
             }
         }
 
-        binding.fragmentCadastroTxtLogin.setOnClickListener{
+        binding.fragmentCadastroTxtLogin.setOnClickListener {
             NavHostFragment.findNavController(this@CadastroFragment)
                 .navigate(R.id.action_cadastroFragment_to_loginFragment)
         }

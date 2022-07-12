@@ -3,10 +3,12 @@ package br.com.compass.compassmart.ui.fragment.tela_confirmacao
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.RecyclerView
+import br.com.compass.compassmart.R
+import br.com.compass.compassmart.data.Produto
 import br.com.compass.compassmart.databinding.ItemConfirmacaoBinding
-import br.com.compass.compassmart.ui.Produto
+import com.bumptech.glide.Glide
+import java.text.NumberFormat
 
 class ConfirmacaoAdapter(private val data: List<Produto>) :
     RecyclerView.Adapter<ConfirmacaoAdapter.ConfirmacaoViewHolder>() {
@@ -30,10 +32,14 @@ class ConfirmacaoAdapter(private val data: List<Produto>) :
         private val binding: ItemConfirmacaoBinding = ItemConfirmacaoBinding.bind(itemView)
 
         fun bind(produto: Produto) {
-            binding.descricao.text = produto.modelo
-            binding.numQuantidade.text = produto.quantidade
-            binding.preco.text = produto.preco
-            binding.imagem.setImageResource(produto.drawableId)
+            binding.descricao.text = produto.name
+            binding.numQuantidade.text = "1"
+            binding.preco.text = NumberFormat.getCurrencyInstance().format(produto.price)
+            Glide.with(itemView.context)
+                .load(produto.pic)
+
+                .placeholder(R.drawable.img_indisponivel)
+                .into(binding.imagem)
         }
     }
 }

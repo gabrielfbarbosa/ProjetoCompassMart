@@ -8,12 +8,12 @@ import br.com.compass.compassmart.databinding.ItemOnboardingBinding
 import br.com.compass.compassmart.ui.fragment.tela_onboarding.model.InformacoesModel
 
 class OnboardingAdapter(
-    private val data: List<InformacoesModel>
+    private val data: List<InformacoesModel>,
 ) : RecyclerView.Adapter<OnboardingAdapter.PaginasViewHolder>() {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
-        viewType: Int
+        viewType: Int,
     ): PaginasViewHolder {
         val view = ItemOnboardingBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return PaginasViewHolder(view.root)

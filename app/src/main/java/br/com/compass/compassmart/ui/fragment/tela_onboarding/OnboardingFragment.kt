@@ -6,11 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import br.com.compass.compassmart.R
 import br.com.compass.compassmart.databinding.FragmentOnboardingBinding
 import br.com.compass.compassmart.ui.fragment.tela_onboarding.OnboardingAdapter
 import br.com.compass.compassmart.ui.fragment.tela_onboarding.model.InformacoesModel
+import br.com.compass.compassmart.ui.fragment.util.SharedPreference
 
 class OnboardingFragment : Fragment() {
 
@@ -20,7 +22,7 @@ class OnboardingFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentOnboardingBinding.inflate(inflater, container, false)
         return binding.root
@@ -28,10 +30,17 @@ class OnboardingFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        conteudo()
-        setupViewPager()
-        binding.fragmentOnboardingBtnComecarComprar.setOnClickListener{
-            Navigation.findNavController(view).navigate(R.id.action_onboardingFragment_to_produtosFragment)
+
+        val acessoUsuario = SharedPreference(requireContext()).pegaAcesso()
+
+        if(acessoUsuario){
+            findNavController().navigate(OnboardingFragmentDirections.actionOnboardingFragmentToProdutosFragment())
+        }else{
+            conteudo()
+            setupViewPager()
+            binding.fragmentOnboardingBtnComecarComprar.setOnClickListener {
+                findNavController().navigate(OnboardingFragmentDirections.actionOnboardingFragmentToProdutosFragment())
+            }
         }
     }
 
@@ -43,7 +52,7 @@ class OnboardingFragment : Fragment() {
             override fun onPageScrolled(
                 position: Int,
                 positionOffset: Float,
-                positionOffsetPixels: Int
+                positionOffsetPixels: Int,
             ) {
                 super.onPageScrolled(position, positionOffset, positionOffsetPixels)
                 mudarCorBolinhaProgresso()
@@ -58,7 +67,6 @@ class OnboardingFragment : Fragment() {
                 mudarCorBolinhaProgresso()
             }
         })
-
     }
 
     // Adiciona os conteudos dos cards
