@@ -54,6 +54,7 @@
     <string name="numero_pedido">Pedido</string>
     <string name="data">Data</string>
     <string name="pagamento">Pagamento</string>
+    <string name="sair">Sair</string>
 
     <!-- Frases da tela de Produto -->
     <string name="produto">Produto</string>
