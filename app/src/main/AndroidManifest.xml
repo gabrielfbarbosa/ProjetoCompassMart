@@ -23,5 +23,8 @@
             </intent-filter>
         </activity>
     </application>
+    <queries>
+        <package android:name="bank.com.br.compassbank"/>
+    </queries>
 
 </manifest>

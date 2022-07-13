@@ -1,10 +1,8 @@
 package br.com.compass.compassmart.ui.fragment.tela_detalhes
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
@@ -55,13 +53,13 @@ class DetalhesDoProdutoFragment : Fragment() {
             .fitCenter()
             .placeholder(R.drawable.img_indisponivel)
             .into(binding.imagemProduto)
-        val quantidade = 0
 
         val produtoEscolhido = Produto(
             idProduto,
             nome,
             preco,
             produtoArgs.produto.pic!!,
+            1
         )
 
         binding.btnComprarAgora.setOnClickListener {
@@ -74,6 +72,4 @@ class DetalhesDoProdutoFragment : Fragment() {
             findNavController().navigate(DetalhesDoProdutoFragmentDirections.actionDetalhesDoProdutoFragmentToProdutosFragment())
         }
     }
-
-
 }

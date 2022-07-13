@@ -1,6 +1,7 @@
 package br.com.compass.compassmart.data
 
 import androidx.room.*
+import java.net.IDN
 
 @Dao
 interface CartDao {
@@ -14,6 +15,11 @@ interface CartDao {
     fun deletaProduto(produto: Produto)
 
     @Query("SELECT id FROM produto")
-    fun existeProduto () : String
+    fun existeProduto(): String
 
+    @Query("SELECT * FROM produto WHERE id LIKE :id")
+    suspend fun getProduto(id: String): Produto
+
+    @Update
+    suspend fun updateProduto(produto: Produto)
 }

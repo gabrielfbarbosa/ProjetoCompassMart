@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/parabenizacao"
-        android:textSize="26sp"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,12 +23,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:text="@string/frase_parabenizacao"
         android:textAlignment="center"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fragment_parabenizacao_titulo" />
 
@@ -36,12 +37,12 @@
         android:id="@+id/fragment_parabenizacao_img"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/fragment_parabenizacao_btn_inicio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_parabenizacao_subtitulo"
+        app:layout_constraintTop_toBottomOf="@+id/chave_pix"
         app:srcCompat="@drawable/img_parabenizacao" />
 
     <Button
@@ -64,4 +65,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/fragment_parabenizacao_btn_inicio"
         app:layout_constraintStart_toStartOf="@+id/fragment_parabenizacao_btn_inicio" />
+
+    <TextView
+        android:id="@+id/chave_pix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Chave Pix:\n p7x1XsFx#fE$D$VE%%#35d "
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/orange_500"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_parabenizacao_subtitulo" />
 </androidx.constraintlayout.widget.ConstraintLayout>

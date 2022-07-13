@@ -41,7 +41,7 @@
             android:id="@+id/item_carrinho_compra_txt_quantidade"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="25dp"
             android:text="@string/quantidade"
             app:layout_constraintEnd_toStartOf="@+id/item_carrinho_compra_excluir"
             app:layout_constraintTop_toTopOf="@+id/item_carrinho_compra_descricao" />
@@ -51,7 +51,7 @@
             style="@android:style/Widget.ImageButton"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="8dp"
             android:background="#00FFFFFF"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toBottomOf="@+id/item_carrinho_compra_imagem"
@@ -64,13 +64,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="1"
-            android:textSize="16sp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@+id/item_carrinho_compra_imagem"
             app:layout_constraintEnd_toEndOf="@+id/item_carrinho_compra_txt_quantidade"
             app:layout_constraintStart_toStartOf="@+id/item_carrinho_compra_txt_quantidade"
             app:layout_constraintTop_toBottomOf="@+id/item_carrinho_compra_txt_quantidade"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="1" />
 
         <TextView
             android:id="@+id/item_carrinho_compra_preco"
@@ -85,20 +85,31 @@
             app:layout_constraintTop_toBottomOf="@+id/item_carrinho_compra_descricao"
             app:layout_constraintVertical_bias="1.0" />
 
-<!--        <TextView-->
-<!--            android:id="@+id/carrinho_vazio"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:textSize="20sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/item_carrinho_compra_preco"-->
-<!--            tools:text="CARRINHO VAZIO" />-->
+        <ImageButton
+            android:id="@+id/menos_produto"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="2dp"
+            android:background="@color/orange_200"
+            android:scaleType="center"
+            app:layout_constraintBottom_toBottomOf="@+id/item_carrinho_compra_numero_quantidade"
+            app:layout_constraintEnd_toStartOf="@+id/item_carrinho_compra_numero_quantidade"
+            app:layout_constraintTop_toTopOf="@+id/item_carrinho_compra_numero_quantidade"
+            app:srcCompat="@drawable/ic_baseline_remove_24" />
+
+        <ImageButton
+            android:id="@+id/mais_produto"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="2dp"
+            android:background="@color/orange_200"
+            android:scaleType="center"
+            app:layout_constraintBottom_toBottomOf="@+id/item_carrinho_compra_numero_quantidade"
+            app:layout_constraintStart_toEndOf="@+id/item_carrinho_compra_numero_quantidade"
+            app:layout_constraintTop_toTopOf="@+id/item_carrinho_compra_numero_quantidade"
+            app:srcCompat="@drawable/ic_baseline_add_24" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 </androidx.cardview.widget.CardView>

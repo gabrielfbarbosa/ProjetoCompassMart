@@ -103,6 +103,9 @@
         <action
             android:id="@+id/action_parabenizacaoFragment_to_produtosFragment"
             app:destination="@id/produtosFragment" />
+        <argument
+            android:name="pix"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/confirmacaoFragment"

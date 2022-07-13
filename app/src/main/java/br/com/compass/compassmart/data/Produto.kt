@@ -10,4 +10,5 @@ data class Produto(
     val name: String,
     val price: Double,
     val pic: String,
+    val amount: Int,
 ): Serializable
