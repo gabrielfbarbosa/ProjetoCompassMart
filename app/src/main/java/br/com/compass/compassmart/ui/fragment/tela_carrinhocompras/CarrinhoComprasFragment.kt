@@ -25,7 +25,7 @@ class CarrinhoComprasFragment : Fragment() {
             viewModel.deleteProduto(produto)
         },
         alteraQtd = { quantidade: Int, produto: Produto ->
-            viewModel.atualizaQtd(produto.copy(amount = quantidade))
+            viewModel.atualizaQtd(produto.copy(amount = quantidade),requireContext())
         }
     )
 
@@ -39,13 +39,9 @@ class CarrinhoComprasFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        val produtos: List<Produto> = DbProvider.getCartDao().getAll()
-
         escutaLiveData()
         viewModel.getProdutos()
-
         binding.fragmentCarrinhoComprasRecyclerview.adapter = adapter
-
         binding.fragmentCarrinhoComprasBtnContinuar.setOnClickListener {
             findNavController().navigate(CarrinhoComprasFragmentDirections.actionCarrinhoComprasFragmentToEnderecoFragment())
         }

@@ -1,5 +1,7 @@
 package br.com.compass.compassmart.ui.fragment.tela_carrinhocompras
 
+import android.content.Context
+import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -18,14 +20,24 @@ class CarrinhoCompraViewModel : ViewModel() {
         }
     }
 
-    fun atualizaQtd(produto: Produto) {
+    fun atualizaQtd(produto: Produto, context: Context) {
         viewModelScope.launch {
             alterado.value = false
-            if (produto.amount < 1) {
-                DbProvider.getCartDao().deletaProduto(produto)
+        if (produto.amount < 1) {
+                AlertDialog.Builder(context)
+                    .setTitle("Remover item do carrinho?")
+                    .setPositiveButton("Sim") { _, _ ->
+                        DbProvider.getCartDao().deletaProduto(produto)
+                        getProdutos()
+                    }
+                    .setNegativeButton("Não", null)
+                    .create()
+                    .show()
+
             } else {
                 DbProvider.getCartDao().updateProduto(produto)
             }
+
             alterado.value = true
         }
     }

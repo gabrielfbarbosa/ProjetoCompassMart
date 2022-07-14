@@ -21,6 +21,7 @@ class MeioPagamentoFragment : Fragment(), View.OnClickListener {
     private val binding get() = _binding!!
     private var escolha: Int = 0
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
@@ -31,8 +32,14 @@ class MeioPagamentoFragment : Fragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        escolha = 0
+
+        binding.btnContinuar.setOnClickListener {
+            Toast.makeText(requireContext(), "Seleciono o metodo de pagamento", Toast.LENGTH_SHORT)
+                .show()
+        }
+
         binding.cardCompassPay.setOnClickListener(this)
+
         binding.cardPix.setOnClickListener(this)
     }
 
@@ -43,7 +50,6 @@ class MeioPagamentoFragment : Fragment(), View.OnClickListener {
                 binding.constraintLayoutCompassPay.setBackgroundResource(R.color.orange_500)
                 binding.constraintLayoutPix.setBackgroundResource(R.color.white)
                 escolha = 1
-
             }
             binding.cardPix.id -> {
                 binding.constraintLayoutCompassPay.setBackgroundResource(R.color.white)
@@ -51,48 +57,43 @@ class MeioPagamentoFragment : Fragment(), View.OnClickListener {
                 escolha = 2
             }
         }
-
-        if (escolha != 1 && escolha != 2) {
-            binding.btnContinuar.isEnabled = false
-            Toast.makeText(requireContext(), "Seleciono o metodo de pagamento", Toast.LENGTH_SHORT).show()
-        } else {
-
-            if (escolha == 1) {
-                binding.btnContinuar.setOnClickListener {
-                    binding.constraintLayoutCompassPay.setBackgroundResource(R.color.orange_500)
-                    binding.constraintLayoutPix.setBackgroundResource(R.color.white)
-                    val launchIntent: Intent? =
-                        requireActivity().packageManager.getLaunchIntentForPackage("bank.com.br.compassbank")
-                    try {
-                        startActivity(launchIntent)
-                    } catch (e: Exception) {
-                        // Define what your app should do if no activity can handle the intent.
-                        e.printStackTrace()
-                    }
-
+        if (escolha != 1 && escolha != 2){
+            Toast.makeText(requireContext(), "Selecione o metdo de pagamento", Toast.LENGTH_SHORT).show()
+        }
+        if (escolha == 1) {
+            binding.btnContinuar.setOnClickListener {
+                binding.constraintLayoutCompassPay.setBackgroundResource(R.color.orange_500)
+                binding.constraintLayoutPix.setBackgroundResource(R.color.white)
+                val launchIntent: Intent? =
+                    requireActivity().packageManager.getLaunchIntentForPackage("bank.com.br.compassbank")
+                try {
+                    startActivity(launchIntent)
+                } catch (e: Exception) {
+                    // Define what your app should do if no activity can handle the intent.
+                    e.printStackTrace()
                 }
-
             }
-            if (escolha == 2) {
-
-                binding.btnContinuar.setOnClickListener {
-                    SharedPreference(requireContext()).pegarToken()?.let {
-                        viewModel.retornaCodigoPix(it)
-                    }
+        }
+        if (escolha == 2) {
+            binding.btnContinuar.setOnClickListener {
+                SharedPreference(requireContext()).pegarToken()?.let {
+                    viewModel.retornaCodigoPix(it)
+                }
+                if (SharedPreference(requireContext()).pegarToken().isNullOrEmpty()){
 
                 }
                 viewModel.vaiParaParabenizacao.observe(viewLifecycleOwner) {
-                    Navigation.findNavController(v)
-                        .navigate(MeioPagamentoFragmentDirections.actionMeioPagamentoToParabenizacaoFragment(
-                            it))
-                    Toast.makeText(requireContext(), "Pix: $it", Toast.LENGTH_SHORT).show()
+                    view?.let { view ->
+                        Navigation.findNavController(view)
+                            .navigate(MeioPagamentoFragmentDirections.actionMeioPagamentoToParabenizacaoFragment(it))
+                    }
                 }
-
             }
         }
     }
+}
 
-    //Abrir CompassPay
+//Abrir CompassPay
 //    private fun vaiParaCompassPay() {
 //        binding.cardCompassPay.setOnClickListener {
 //            val launchIntent: Intent? =
@@ -105,4 +106,4 @@ class MeioPagamentoFragment : Fragment(), View.OnClickListener {
 //            }
 //        }
 //    }
-}
+

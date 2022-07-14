@@ -32,9 +32,11 @@ class ConfirmacaoFragment : Fragment() {
         binding.recyclerView.adapter = ConfirmacaoAdapter(produtos)
 
         var valorTotal: Double = 0.0
+        var valorQtd: Double = 0.0
 
         for (i in produtos.indices ){
-            valorTotal += produtos[i].price
+            valorQtd = produtos[i].price * produtos[i].amount
+            valorTotal += valorQtd
         }
         binding.precoTotal.text = NumberFormat.getCurrencyInstance().format(valorTotal)
 

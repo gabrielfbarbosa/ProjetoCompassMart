@@ -33,7 +33,7 @@ class ConfirmacaoAdapter(private val data: List<Produto>) :
 
         fun bind(produto: Produto) {
             binding.descricao.text = produto.name
-            binding.numQuantidade.text = "1"
+            binding.numQuantidade.text = produto.amount.toString()
             binding.preco.text = NumberFormat.getCurrencyInstance().format(produto.price)
             Glide.with(itemView.context)
                 .load(produto.pic)
