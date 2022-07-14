@@ -15,7 +15,7 @@ class MeioPagamentoViewModel: ViewModel() {
 
     fun retornaCodigoPix(token: String){
         val produtos: List<Produto> = DbProvider.getCartDao().getAll()
-        val produtosPayload: List<PixPayload> = produtos.map { PixPayload(it.id, 1) }
+        val produtosPayload: List<PixPayload> = produtos.map { PixPayload(it.id, it.amount) }
 
         viewModelScope.launch {
             val response = ApiProvider.getApiService().getPix(token, produtosPayload)

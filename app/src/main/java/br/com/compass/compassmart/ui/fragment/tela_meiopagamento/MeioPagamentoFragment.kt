@@ -1,18 +1,24 @@
 package br.com.compass.compassmart.ui.fragment.tela_meiopagamento
 
+import android.R.attr.label
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
+import android.content.Context.CLIPBOARD_SERVICE
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
 import br.com.compass.compassmart.R
 import br.com.compass.compassmart.databinding.FragmentMeioPagamentoBinding
 import br.com.compass.compassmart.ui.fragment.util.SharedPreference
+
 
 class MeioPagamentoFragment : Fragment(), View.OnClickListener {
     private val viewModel: MeioPagamentoViewModel by viewModels()
@@ -31,6 +37,7 @@ class MeioPagamentoFragment : Fragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         binding.btnContinuar.setOnClickListener {
             Toast.makeText(requireContext(), "Seleciono o metodo de pagamento", Toast.LENGTH_SHORT)
                 .show()
@@ -40,6 +47,7 @@ class MeioPagamentoFragment : Fragment(), View.OnClickListener {
     }
 
     override fun onClick(v: View) {
+
 
         when (v.id) {
             binding.cardCompassPay.id -> {
@@ -53,8 +61,9 @@ class MeioPagamentoFragment : Fragment(), View.OnClickListener {
                 escolha = 2
             }
         }
-        if (escolha != 1 && escolha != 2){
-            Toast.makeText(requireContext(), "Selecione o metdo de pagamento", Toast.LENGTH_SHORT).show()
+        if (escolha != 1 && escolha != 2) {
+            Toast.makeText(requireContext(), "Selecione o metdo de pagamento", Toast.LENGTH_SHORT)
+                .show()
         }
         if (escolha == 1) {
             binding.btnContinuar.setOnClickListener {
@@ -70,16 +79,17 @@ class MeioPagamentoFragment : Fragment(), View.OnClickListener {
                 }
             }
         }
+
         if (escolha == 2) {
             binding.btnContinuar.setOnClickListener {
                 SharedPreference(requireContext()).pegarToken()?.let {
                     viewModel.retornaCodigoPix(it)
-                }
-
-                viewModel.vaiParaParabenizacao.observe(viewLifecycleOwner) {
-                    view?.let { view ->
-                        Navigation.findNavController(view)
-                            .navigate(MeioPagamentoFragmentDirections.actionMeioPagamentoToParabenizacaoFragment(it))
+                    viewModel.vaiParaParabenizacao.observe(viewLifecycleOwner) {
+                        view?.let { view ->
+                            Navigation.findNavController(view)
+                                .navigate(MeioPagamentoFragmentDirections.actionMeioPagamentoToParabenizacaoFragment(
+                                    it))
+                        }
                     }
                 }
             }
