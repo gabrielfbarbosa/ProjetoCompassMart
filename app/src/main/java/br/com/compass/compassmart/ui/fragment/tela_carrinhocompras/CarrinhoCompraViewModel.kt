@@ -33,18 +33,29 @@ class CarrinhoCompraViewModel : ViewModel() {
                     .setNegativeButton("Não", null)
                     .create()
                     .show()
-
             } else {
                 DbProvider.getCartDao().updateProduto(produto)
             }
-
             alterado.value = true
         }
     }
 
-    fun deleteProduto(produto: Produto){
+    fun deleteProduto(produto: Produto, context: Context){
         viewModelScope.launch {
+            alterado.value = false
             DbProvider.getCartDao().deletaProduto(produto)
+
+//            AlertDialog.Builder(context)
+//                .setTitle("Remover item do carrinho?")
+//                .setPositiveButton("Sim") { _, _ ->
+//                    DbProvider.getCartDao().deletaProduto(produto)
+//                    getProdutos()
+//                }
+//                .setNegativeButton("Não", null)
+//                .create()
+//                .show()
+            alterado.value = true
         }
+
     }
 }

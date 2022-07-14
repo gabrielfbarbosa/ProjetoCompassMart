@@ -32,7 +32,7 @@ class CarrinhoCompraAdapter(
             produto = dataProduto[position],
             onDeleteItem = {
                 itemRemovido(dataProduto[position])
-                removerItem(dataProduto[position])
+//                removerItem(dataProduto[position])
             },
             alteraQtd = { quantidade ->
                 alteraQtd(quantidade, dataProduto[position])
@@ -46,7 +46,7 @@ class CarrinhoCompraAdapter(
         notifyDataSetChanged()
     }
 
-    private fun removerItem(produto: Produto) {
+    fun removerItem(produto: Produto) {
         dataProduto.remove(produto)
         notifyDataSetChanged()
     }
@@ -68,7 +68,7 @@ class CarrinhoCompraAdapter(
                 .placeholder(R.drawable.img_indisponivel)
                 .into(binding.itemCarrinhoCompraImagem)
 
-            //Delete
+
             binding.itemCarrinhoCompraExcluir.setOnClickListener {
                 AlertDialog.Builder(itemView.context)
                     .setTitle("Remover item do carrinho?")

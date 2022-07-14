@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<ScrollView >-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.tela_confirmacao.ConfirmacaoFragment"
+    android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.fragment.tela_confirmacao.ConfirmacaoFragment">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/titulo_pagina"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:text="Confirmação de pedido:"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -26,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:text="Endereço de entrega:"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -38,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="8dp"
             android:text="Avenida Compass, "
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_endereço_entrega" />
@@ -59,7 +61,7 @@
             android:id="@+id/bairro"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="8dp"
             android:text="Zona Sul"
             app:layout_constraintStart_toStartOf="@+id/rua"
             app:layout_constraintTop_toBottomOf="@+id/rua" />
@@ -68,7 +70,7 @@
             android:id="@+id/cidade"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="8dp"
             android:text="Compasso de Minas - "
             app:layout_constraintStart_toStartOf="@+id/bairro"
             app:layout_constraintTop_toBottomOf="@+id/bairro" />
@@ -87,7 +89,7 @@
             android:id="@+id/cep"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="8dp"
             android:text="CEP: 12.345 - 678"
             app:layout_constraintStart_toStartOf="@+id/cidade"
             app:layout_constraintTop_toBottomOf="@+id/cidade" />
@@ -97,7 +99,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:text="Produto(s) escolhido(s):"
             android:textAlignment="viewStart"
             android:textSize="20sp"
@@ -107,54 +109,54 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cep" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toTopOf="@+id/tabela_precos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/produtos_escolhidos" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/tabela_precos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/produtos_escolhidos" />
 
-    <TableLayout
-        android:id="@+id/tabela_precos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:stretchColumns="0"
-        app:layout_constraintBottom_toTopOf="@+id/btn_cancelar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        <TableLayout
+            android:id="@+id/tabela_precos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:stretchColumns="0"
+            app:layout_constraintBottom_toTopOf="@+id/btn_cancelar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
-        <View
-            android:layout_height="1dip"
-            android:background="#FF909090" />
+            <View
+                android:layout_height="1dip"
+                android:background="#FF909090" />
 
-        <TableRow>
+            <TableRow>
 
-            <TextView
-                android:gravity="end"
-                android:padding="3dip"
-                android:text="Valor total: "
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                <TextView
+                    android:gravity="end"
+                    android:padding="3dip"
+                    android:text="Valor total: "
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/preco_total"
-                android:layout_marginEnd="15dip"
-                android:gravity="end"
-                android:padding="3dip"
-                android:text="R$3.000,00 "
-                android:textSize="20sp"
-                android:textStyle="bold" />
-        </TableRow>
+                <TextView
+                    android:id="@+id/preco_total"
+                    android:layout_marginEnd="15dip"
+                    android:gravity="end"
+                    android:padding="3dip"
+                    android:text="R$3.000,00 "
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </TableRow>
 
-        <View
-            android:layout_height="1dip"
-            android:background="#FF909090" />
-    </TableLayout>
+            <View
+                android:layout_height="1dip"
+                android:background="#FF909090" />
+        </TableLayout>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_confirmar"
@@ -169,17 +171,16 @@
             app:layout_constraintStart_toEndOf="@+id/btn_cancelar"
             app:layout_constraintTop_toTopOf="@+id/btn_cancelar" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_cancelar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:text="Cancelar"
-        app:cornerRadius="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_confirmar"
-        app:layout_constraintStart_toStartOf="parent" />
-
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_cancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:text="Cancelar"
+            app:cornerRadius="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_confirmar"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-<!--</ScrollView>-->
+</ScrollView>

@@ -79,9 +79,7 @@ class MeioPagamentoFragment : Fragment(), View.OnClickListener {
                 SharedPreference(requireContext()).pegarToken()?.let {
                     viewModel.retornaCodigoPix(it)
                 }
-                if (SharedPreference(requireContext()).pegarToken().isNullOrEmpty()){
 
-                }
                 viewModel.vaiParaParabenizacao.observe(viewLifecycleOwner) {
                     view?.let { view ->
                         Navigation.findNavController(view)

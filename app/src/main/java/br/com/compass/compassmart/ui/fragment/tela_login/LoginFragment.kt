@@ -56,6 +56,11 @@ class LoginFragment : Fragment() {
             viewModel.erroLoginInvalido.observe(viewLifecycleOwner){
                 Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
             }
+
+            binding.fragmentLoginTxtCadastro.setOnClickListener {
+                NavHostFragment.findNavController(this@LoginFragment)
+                    .navigate(R.id.action_loginFragment_to_cadastroFragment)
+            }
         }else{
             findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToCarrinhoComprasFragment())
         }

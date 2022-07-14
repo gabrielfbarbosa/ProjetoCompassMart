@@ -40,6 +40,8 @@ class CadastroFragment : Fragment() {
                     binding.fragmentCadastroTxtInputConfirmaSenha.editText?.text.toString()
                 ) {
                     // TODO: Cadastra usuário
+                    Toast.makeText(requireActivity(), "Cadastrado com sucesso.", Toast.LENGTH_SHORT)
+                        .show()
                     NavHostFragment.findNavController(this@CadastroFragment)
                         .navigate(R.id.action_cadastroFragment_to_loginFragment)
                 } else {

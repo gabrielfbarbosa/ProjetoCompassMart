@@ -22,7 +22,7 @@ class CarrinhoComprasFragment : Fragment() {
     private val adapter = CarrinhoCompraAdapter(
         dataProduto = mutableListOf(),
         itemRemovido = { produto ->
-            viewModel.deleteProduto(produto)
+            viewModel.deleteProduto(produto, requireContext())
         },
         alteraQtd = { quantidade: Int, produto: Produto ->
             viewModel.atualizaQtd(produto.copy(amount = quantidade),requireContext())
@@ -56,14 +56,14 @@ class CarrinhoComprasFragment : Fragment() {
                 viewModel.getProdutos()
             }
         }
+
         viewModel.produtos.observe(viewLifecycleOwner) { produtos ->
             adapter.addAll(produtos)
             visibilidadeRecycler(produtos.isEmpty())
         }
-
     }
 
-    private fun visibilidadeRecycler(listaVazia: Boolean) {
+     private fun visibilidadeRecycler(listaVazia: Boolean): Boolean {
         binding.txtCarrinhoVazio.isVisible = listaVazia
         binding.fragmentCarrinhoComprasRecyclerview.isVisible = !listaVazia
         if (listaVazia) {
@@ -71,5 +71,6 @@ class CarrinhoComprasFragment : Fragment() {
             binding.fragmentCarrinhoComprasBtnContinuar.setBackgroundResource(androidx.appcompat.R.color.material_grey_600)
             binding.fragmentCarrinhoComprasBtnContinuar.setImageResource(com.google.android.material.R.drawable.ic_m3_chip_close)
         }
+        return listaVazia
     }
 }
