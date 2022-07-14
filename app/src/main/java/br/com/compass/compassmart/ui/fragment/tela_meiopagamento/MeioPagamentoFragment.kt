@@ -9,10 +9,10 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
 import br.com.compass.compassmart.R
 import br.com.compass.compassmart.databinding.FragmentMeioPagamentoBinding
 import br.com.compass.compassmart.ui.fragment.util.SharedPreference
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MeioPagamentoFragment : Fragment(), View.OnClickListener {
 
@@ -27,6 +27,8 @@ class MeioPagamentoFragment : Fragment(), View.OnClickListener {
         savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentMeioPagamentoBinding.inflate(inflater, container, false)
+        val view = requireActivity().findViewById<BottomNavigationView>(R.id.bottom_nav)
+        view.visibility = View.GONE
         return binding.root
     }
 
@@ -34,7 +36,7 @@ class MeioPagamentoFragment : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnContinuar.setOnClickListener {
-            Toast.makeText(requireContext(), "Seleciono o metodo de pagamento", Toast.LENGTH_SHORT)
+            Toast.makeText(requireContext(), "Selecione um método de pagamento", Toast.LENGTH_SHORT)
                 .show()
         }
 
@@ -58,7 +60,7 @@ class MeioPagamentoFragment : Fragment(), View.OnClickListener {
             }
         }
         if (escolha != 1 && escolha != 2){
-            Toast.makeText(requireContext(), "Selecione o metdo de pagamento", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "Selecione um método de pagamento", Toast.LENGTH_SHORT).show()
         }
         if (escolha == 1) {
             binding.btnContinuar.setOnClickListener {

@@ -3,15 +3,14 @@ package br.com.compass.compassmart.ui.fragment.tela_splash
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import br.com.compass.compassmart.R
 import br.com.compass.compassmart.databinding.FragmentSplashBinding
-import br.com.compass.compassmart.ui.fragment.tela_login.LoginFragmentDirections
-import br.com.compass.compassmart.ui.fragment.util.SharedPreference
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class SplashFragment : Fragment() {
 
@@ -23,6 +22,8 @@ class SplashFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentSplashBinding.inflate(inflater, container, false)
+        val view = requireActivity().findViewById<BottomNavigationView>(R.id.bottom_nav)
+        view.visibility = View.GONE
         return binding.root
     }
 

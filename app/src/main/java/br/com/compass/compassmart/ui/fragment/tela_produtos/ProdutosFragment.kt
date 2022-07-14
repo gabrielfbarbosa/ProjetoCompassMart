@@ -8,9 +8,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import br.com.compass.compassmart.databinding.FragmentProdutosBinding
+import br.com.compass.compassmart.R
 import br.com.compass.compassmart.api.ProdutoResponse
+import br.com.compass.compassmart.databinding.FragmentProdutosBinding
 import br.com.compass.compassmart.ui.fragment.util.SharedPreference
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class ProdutosFragment : Fragment() {
 
@@ -23,6 +25,8 @@ class ProdutosFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentProdutosBinding.inflate(inflater, container, false)
+        val view = requireActivity().findViewById<BottomNavigationView>(R.id.bottom_nav)
+        view.visibility = View.VISIBLE
         return binding.root
     }
 

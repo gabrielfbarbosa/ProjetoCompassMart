@@ -1,7 +1,5 @@
 package br.com.compass.compassmart.ui.fragment.tela_login
 
-import android.content.Context.MODE_PRIVATE
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import br.com.compass.compassmart.R
 import br.com.compass.compassmart.databinding.FragmentLoginBinding
 import br.com.compass.compassmart.ui.fragment.util.SharedPreference
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class LoginFragment : Fragment() {
 
@@ -26,6 +25,8 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
+        val view = requireActivity().findViewById<BottomNavigationView>(R.id.bottom_nav)
+        view.visibility = View.GONE
         return binding.root
     }
 

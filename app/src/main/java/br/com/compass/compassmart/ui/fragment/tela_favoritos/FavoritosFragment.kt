@@ -1,15 +1,15 @@
-package br.com.compass.compassmart.ui.fragment.tela_produtos
+package br.com.compass.compassmart.ui.fragment.tela_favoritos
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import br.com.compass.compassmart.R
 import br.com.compass.compassmart.databinding.FragmentFavoritosBinding
 import br.com.compass.compassmart.ui.Produto
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class FavoritosFragment : Fragment() {
 
@@ -54,6 +54,8 @@ class FavoritosFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentFavoritosBinding.inflate(inflater, container, false)
+        val view = requireActivity().findViewById<BottomNavigationView>(R.id.bottom_nav)
+        view.visibility = View.VISIBLE
         return binding.root
     }
 

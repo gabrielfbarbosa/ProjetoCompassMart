@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import br.com.compass.compassmart.R
 import br.com.compass.compassmart.databinding.FragmentParabenizacaoBinding
-import br.com.compass.compassmart.ui.fragment.tela_carrinhocompras.CarrinhoComprasFragmentDirections
-import br.com.compass.compassmart.ui.fragment.tela_detalhes.DetalhesDoProdutoFragmentArgs
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class ParabenizacaoFragment : Fragment() {
 
@@ -22,6 +22,8 @@ class ParabenizacaoFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentParabenizacaoBinding.inflate(inflater, container, false)
+        val view = requireActivity().findViewById<BottomNavigationView>(R.id.bottom_nav)
+        view.visibility = View.GONE
         return binding.root
     }
 

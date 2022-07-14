@@ -1,7 +1,9 @@
 package br.com.compass.compassmart.ui.fragment.tela_detalhes
 
 import android.os.Bundle
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
@@ -12,6 +14,7 @@ import br.com.compass.compassmart.data.DbProvider
 import br.com.compass.compassmart.data.Produto
 import br.com.compass.compassmart.databinding.FragmentDetalhesDoProdutoBinding
 import com.bumptech.glide.Glide
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import java.text.NumberFormat
 
 class DetalhesDoProdutoFragment : Fragment() {
@@ -26,6 +29,8 @@ class DetalhesDoProdutoFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentDetalhesDoProdutoBinding.inflate(inflater, container, false)
+        val view = requireActivity().findViewById<BottomNavigationView>(R.id.bottom_nav)
+        view.visibility = View.VISIBLE
         return binding.root
     }
 

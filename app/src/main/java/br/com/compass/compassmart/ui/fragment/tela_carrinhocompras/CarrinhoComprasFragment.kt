@@ -4,15 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AlertDialog
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import br.com.compass.compassmart.data.DbProvider
+import br.com.compass.compassmart.R
 import br.com.compass.compassmart.data.Produto
 import br.com.compass.compassmart.databinding.FragmentCarrinhoComprasBinding
-import br.com.compass.compassmart.ui.fragment.tela_detalhes.DetalhesDoProdutoViewModel
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class CarrinhoComprasFragment : Fragment() {
 
@@ -34,6 +33,8 @@ class CarrinhoComprasFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentCarrinhoComprasBinding.inflate(inflater, container, false)
+        val view = requireActivity().findViewById<BottomNavigationView>(R.id.bottom_nav)
+        view.visibility = View.VISIBLE
         return binding.root
     }
 

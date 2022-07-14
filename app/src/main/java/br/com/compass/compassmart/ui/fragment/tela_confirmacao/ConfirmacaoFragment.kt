@@ -5,12 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import br.com.compass.compassmart.R
 import br.com.compass.compassmart.data.DbProvider
 import br.com.compass.compassmart.data.Produto
 import br.com.compass.compassmart.databinding.FragmentConfirmacaoBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import java.text.NumberFormat
 
 class ConfirmacaoFragment : Fragment() {
@@ -21,8 +21,10 @@ class ConfirmacaoFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
+    ): View {
         _binding = FragmentConfirmacaoBinding.inflate(inflater, container, false)
+        val view = requireActivity().findViewById<BottomNavigationView>(R.id.bottom_nav)
+        view.visibility = View.GONE
         return binding.root
     }
 
