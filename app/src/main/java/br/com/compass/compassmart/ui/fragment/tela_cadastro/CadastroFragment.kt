@@ -25,7 +25,6 @@ class CadastroFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.fragmentCadastroTxtInputNome.requestFocus()
-
         binding.fragmentCadastroBtnCadastrar.setOnClickListener {
             if (binding.fragmentCadastroTxtInputNome.editText?.text.toString().isEmpty() ||
                 binding.fragmentCadastroTxtInputEmail.editText?.text.toString().isEmpty() ||
@@ -34,7 +33,6 @@ class CadastroFragment : Fragment() {
             ) {
                 Toast.makeText(requireActivity(), "Preencha todos os campos!", Toast.LENGTH_SHORT)
                     .show()
-
             } else {
                 if (binding.fragmentCadastroTxtInputSenha.editText?.text.toString() ==
                     binding.fragmentCadastroTxtInputConfirmaSenha.editText?.text.toString()
@@ -52,7 +50,6 @@ class CadastroFragment : Fragment() {
                 }
             }
         }
-
         binding.fragmentCadastroTxtLogin.setOnClickListener {
             NavHostFragment.findNavController(this@CadastroFragment)
                 .navigate(R.id.action_cadastroFragment_to_loginFragment)

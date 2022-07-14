@@ -41,6 +41,7 @@ class FavoritosAdapter(
             }
         }
     }
+
     interface MeuOnClickListener{
         fun onClick(produto: Produto)
     }

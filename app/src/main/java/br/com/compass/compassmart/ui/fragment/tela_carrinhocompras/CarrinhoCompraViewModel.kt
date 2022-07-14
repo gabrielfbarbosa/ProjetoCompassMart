@@ -44,18 +44,7 @@ class CarrinhoCompraViewModel : ViewModel() {
         viewModelScope.launch {
             alterado.value = false
             DbProvider.getCartDao().deletaProduto(produto)
-
-//            AlertDialog.Builder(context)
-//                .setTitle("Remover item do carrinho?")
-//                .setPositiveButton("Sim") { _, _ ->
-//                    DbProvider.getCartDao().deletaProduto(produto)
-//                    getProdutos()
-//                }
-//                .setNegativeButton("Não", null)
-//                .create()
-//                .show()
             alterado.value = true
         }
-
     }
 }

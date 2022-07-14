@@ -37,7 +37,6 @@ class ConfirmacaoAdapter(private val data: List<Produto>) :
             binding.preco.text = NumberFormat.getCurrencyInstance().format(produto.price)
             Glide.with(itemView.context)
                 .load(produto.pic)
-
                 .placeholder(R.drawable.img_indisponivel)
                 .into(binding.imagem)
         }

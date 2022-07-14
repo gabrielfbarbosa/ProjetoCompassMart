@@ -5,8 +5,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.compass.compassmart.R
-import br.com.compass.compassmart.databinding.ItemProdutoBinding
 import br.com.compass.compassmart.api.ProdutoResponse
+import br.com.compass.compassmart.databinding.ItemProdutoBinding
 import com.bumptech.glide.Glide
 import java.text.NumberFormat
 

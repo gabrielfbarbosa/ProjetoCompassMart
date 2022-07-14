@@ -1,7 +1,9 @@
 package br.com.compass.compassmart.ui.fragment.tela_detalhes
 
 import android.os.Bundle
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
@@ -67,7 +69,6 @@ class DetalhesDoProdutoFragment : Fragment() {
             Navigation.findNavController(view)
                 .navigate(R.id.action_detalhesDoProdutoFragment_to_loginFragment)
         }
-
         binding.fabVoltar.setOnClickListener{
             findNavController().navigate(DetalhesDoProdutoFragmentDirections.actionDetalhesDoProdutoFragmentToProdutosFragment())
         }

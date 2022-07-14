@@ -8,12 +8,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import br.com.compass.compassmart.databinding.FragmentProdutosBinding
 import br.com.compass.compassmart.api.ProdutoResponse
+import br.com.compass.compassmart.databinding.FragmentProdutosBinding
 import br.com.compass.compassmart.ui.fragment.util.SharedPreference
 
 class ProdutosFragment : Fragment() {
-
     private val viewModel: ProdutosViewModel by viewModels()
     private var _binding: FragmentProdutosBinding? = null
     private val binding get() = _binding!!
@@ -28,20 +27,16 @@ class ProdutosFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         //Parar splash e onboarding aparecer uma vez apenas
         SharedPreference(requireContext()).insereAcesso(true)
-
         viewModel.getProduto()
-
         binding.fragmentProdutosRecyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
 
         viewModel.produtos.observe(viewLifecycleOwner) { produtos ->
-
             binding.btnCarrinho.setOnClickListener {
-                if (SharedPreference(requireContext()).pegarToken().isNullOrBlank()){
+                if (SharedPreference(requireContext()).pegarToken().isNullOrBlank()) {
                     findNavController().navigate(ProdutosFragmentDirections.actionProdutosFragmentToLoginFragment())
-                }else{
+                } else {
                     findNavController().navigate(ProdutosFragmentDirections.actionProdutosFragmentToCarrinhoComprasFragment())
                 }
             }

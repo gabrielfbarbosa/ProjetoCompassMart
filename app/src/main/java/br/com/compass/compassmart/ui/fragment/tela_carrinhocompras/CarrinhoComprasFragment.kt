@@ -4,15 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AlertDialog
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import br.com.compass.compassmart.data.DbProvider
 import br.com.compass.compassmart.data.Produto
 import br.com.compass.compassmart.databinding.FragmentCarrinhoComprasBinding
-import br.com.compass.compassmart.ui.fragment.tela_detalhes.DetalhesDoProdutoViewModel
 
 class CarrinhoComprasFragment : Fragment() {
 
@@ -56,7 +53,6 @@ class CarrinhoComprasFragment : Fragment() {
                 viewModel.getProdutos()
             }
         }
-
         viewModel.produtos.observe(viewLifecycleOwner) { produtos ->
             adapter.addAll(produtos)
             visibilidadeRecycler(produtos.isEmpty())

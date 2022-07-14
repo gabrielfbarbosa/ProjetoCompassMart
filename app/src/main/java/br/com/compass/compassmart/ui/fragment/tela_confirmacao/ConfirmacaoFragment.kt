@@ -5,9 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
-import br.com.compass.compassmart.R
 import br.com.compass.compassmart.data.DbProvider
 import br.com.compass.compassmart.data.Produto
 import br.com.compass.compassmart.databinding.FragmentConfirmacaoBinding
@@ -29,12 +27,11 @@ class ConfirmacaoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val produtos: List<Produto> = DbProvider.getCartDao().getAll()
-        binding.recyclerView.adapter = ConfirmacaoAdapter(produtos)
-
         var valorTotal: Double = 0.0
         var valorQtd: Double = 0.0
 
-        for (i in produtos.indices ){
+        binding.recyclerView.adapter = ConfirmacaoAdapter(produtos)
+        for (i in produtos.indices) {
             valorQtd = produtos[i].price * produtos[i].amount
             valorTotal += valorQtd
         }

@@ -15,12 +15,10 @@ import br.com.compass.compassmart.databinding.FragmentMeioPagamentoBinding
 import br.com.compass.compassmart.ui.fragment.util.SharedPreference
 
 class MeioPagamentoFragment : Fragment(), View.OnClickListener {
-
     private val viewModel: MeioPagamentoViewModel by viewModels()
     private var _binding: FragmentMeioPagamentoBinding? = null
     private val binding get() = _binding!!
     private var escolha: Int = 0
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,9 +35,7 @@ class MeioPagamentoFragment : Fragment(), View.OnClickListener {
             Toast.makeText(requireContext(), "Seleciono o metodo de pagamento", Toast.LENGTH_SHORT)
                 .show()
         }
-
         binding.cardCompassPay.setOnClickListener(this)
-
         binding.cardPix.setOnClickListener(this)
     }
 
@@ -90,18 +86,4 @@ class MeioPagamentoFragment : Fragment(), View.OnClickListener {
         }
     }
 }
-
-//Abrir CompassPay
-//    private fun vaiParaCompassPay() {
-//        binding.cardCompassPay.setOnClickListener {
-//            val launchIntent: Intent? =
-//                requireActivity().packageManager.getLaunchIntentForPackage("bank.com.br.compassbank")
-//            try {
-//                startActivity(launchIntent)
-//            } catch (e: Exception) {
-//                // Define what your app should do if no activity can handle the intent.
-//                e.printStackTrace()
-//            }
-//        }
-//    }
 

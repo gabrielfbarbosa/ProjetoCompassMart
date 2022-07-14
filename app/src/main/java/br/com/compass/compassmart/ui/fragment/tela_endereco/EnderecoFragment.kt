@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.NavHostFragment
 import br.com.compass.compassmart.R
 import br.com.compass.compassmart.databinding.FragmentEnderecoBinding
@@ -26,8 +25,8 @@ class EnderecoFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.fragmentEnderecoEdtxtLogradouro.requestFocus()
 
+        binding.fragmentEnderecoEdtxtLogradouro.requestFocus()
         binding.fragmentEnderecoBtnContinuar.setOnClickListener {
 
             if (binding.fragmentEnderecoEdtxtLogradouro.editText?.text.toString().isNullOrBlank() ||

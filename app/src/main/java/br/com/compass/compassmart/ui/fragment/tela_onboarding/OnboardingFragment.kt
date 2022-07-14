@@ -5,12 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import br.com.compass.compassmart.R
 import br.com.compass.compassmart.databinding.FragmentOnboardingBinding
-import br.com.compass.compassmart.ui.fragment.tela_onboarding.OnboardingAdapter
 import br.com.compass.compassmart.ui.fragment.tela_onboarding.model.InformacoesModel
 import br.com.compass.compassmart.ui.fragment.util.SharedPreference
 
