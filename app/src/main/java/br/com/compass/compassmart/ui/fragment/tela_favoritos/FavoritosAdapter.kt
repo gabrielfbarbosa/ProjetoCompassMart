@@ -1,4 +1,4 @@
-package br.com.compass.compassmart.ui.fragment.tela_produtos
+package br.com.compass.compassmart.ui.fragment.tela_favoritos
 
 import android.view.LayoutInflater
 import android.view.View
